@@ -1,0 +1,8 @@
+var card=$("[data-services-card]"),result=$("#services-result ul");card.on("change",function(){1==$(this).prop("checked")?($("#services-result").addClass("is--visible"),$(document).find(result).append("<li>"+$(this).val()+"</li>")):($(document).find("li:contains('"+$(this).val()+"')").remove(),0==$("#services-result ul li").length&&$("#services-result").removeClass("is--visible"))});
+var form_panel=$("[data-form-validation]"),phone=$(".form__control[type='tel']"),file=$(".form__file-input"),file_name=$(".form__file-name"),input=$(".form__control"),reset=$(".form__reset");phone.mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"}),form_panel.validationEngine("attach",{promptPosition:"bottomLeft",scroll:!1}),input.on("input",function(){$(this).siblings(".form__result").addClass("is--open"),$(this).siblings(".form__clear").addClass("is--active")}),file.on("change",function(e){console.log($(this).val()),$(this).siblings(".form__file-name").html($(this).val().replace(/.*(\/|\\)/,""))}),reset.on("click",function(e){file_name.html(file_name.data("heading"))});
+$("img").addClass("img-responsive");
+
+
+var humb=$("[data-hamburger]"),collapse=$(".navbar__aside"),html=$("html");humb.on("click",function(){$(this).toggleClass("is--active"),$(collapse).toggleClass("is--open"),$(html).toggleClass("is--open-navbar")}),$(document.body).on("click",function(a){0==$(a.target).closest(".navbar__aside-container").length&&0==$(a.target).closest("[data-hamburger]").length&&(humb.removeClass("is--active"),$(html).removeClass("is--open-navbar"),$(collapse).removeClass("is--open"))});
+
+$(".text__block table").addClass("table").wrap('<div class="table-responsive"></div>'),$(".text__block ol").addClass("is--counts"),$(".text__block ul").addClass("is--styled");

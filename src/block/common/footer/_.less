@@ -1,0 +1,72 @@
+.footer__{
+	&block{
+		position: relative;
+		@media print{display: none;}
+		background: @footer_bg;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		.media-breakpoint-up(@xl; {
+			padding-top: 80px;
+			padding-bottom: 80px;			
+		});
+		a{
+			color: @white;
+		}
+	}
+	&row{
+		flex-direction: column;
+		align-items: center;
+		margin-top: -15px;
+		.media-breakpoint-up(@sm; {
+			flex-direction: row;
+			justify-content: space-between;
+		});
+		.media-breakpoint-up(@xl; {
+			&.row{
+				margin-left: -(@container_gap + 25px);
+				margin-right: -(@container_gap + 25px);
+			}
+		});
+	}
+	&cols{
+		margin-top: 15px;
+		.media-breakpoint-up(@xl; {
+			&.cols{
+				padding-left: (@container_gap + 25px);
+				padding-right: (@container_gap + 25px);
+			}
+		});
+	}
+	&logotip{
+		display: block;
+		width: 199px;
+		height: 29px;
+	}
+	&email{
+		font-weight: 700;
+		&,
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&value{
+		display: flex;
+		align-items: center;
+		font-size: 0.813em;
+		line-height: 200%;
+		margin: 2px 0;
+		a{
+			color: @default;
+		}
+		&.is--phone{
+			font-weight: 700;
+			font-size: 0.89em;
+		}
+	}
+	&icon{
+		min-width: 21px;
+		width: 21px;
+		height: 21px;
+		margin-right: 15px;
+	}
+}

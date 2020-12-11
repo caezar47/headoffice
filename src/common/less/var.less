@@ -1,0 +1,360 @@
+//===== url =====//
+@url-site 					: 	'';
+@url-path 					: 	'/wp-content/themes/azbn7theme'; 
+@url-path 					: 	'..';
+@url-path-css 				: 	'@{url-path}/css';
+@url-path-fonts 			: 	'@{url-path}/fonts';
+@url-path-img 				: 	'@{url-path}/img';
+@url-path-js 				: 	'@{url-path}/js';
+
+//===== color =====//
+//= social
+@color-vk 					: 	#4d7198;
+@color-yb 					: 	#bb0000;
+@color-skype 				: 	#4d7198;
+@color-viber 				: 	#7F40BD;
+@color-whatsapp 			: 	#7AD06D;
+@color-ok 					: 	#ee8208;
+@color-fb 					: 	#3b5998;
+@color-tw 					: 	#1faee9;
+@color-be 					: 	#4176fa;
+@color-pint 				:	#cd1f28;
+@color-inst 				: 	#f26798;
+@color-drb 					: 	#f26798;
+@color-pdf 					:	#bb0706;
+@color-doc 					:	#2186fa;
+@color-xls 					:	#23a565;
+@color-ppt 					:	#cd4b33;
+@color-jpg 					:	#208895;
+@color-zip 					:	#f2e295;
+@color-txt 					:	#6fbbcc;
+
+@white-eb 					:	#EBEAEA;
+@black-33 					: 	#333;
+@black-2b 					: 	#2B2A29;
+@black-b5 					: 	#B5B5BD;
+@orange 					:	#FF7D05;
+@yellow 					:	#FF8E26;
+@gray 						:	#545C60;
+@blue 						:	#42A7E0;
+@blue-dark 					:	#1F3448;
+
+//old
+@black-34 					: 	#343A40;
+@gray2 						:	#E9ECEF;
+@gray3 						:	#DEE2E6;
+@gray4 						:	#ADB5BD;
+@red 						:	#EB5757;
+//= default
+@white 						:	#fff;
+@white-f4 					:	#F4F6F9;
+@white-e5 					:	#E5E5E5;
+@black 						: 	#000;
+@black-25 					: 	#000025;
+@black-d5 					: 	#D5DCE9;
+@black-8d 					: 	#8D8D9E;
+@green 						: 	#4AB969;
+@blue-dark 					: 	#474763;
+@gray 						:	#E8ECF1;
+
+@primary 					:	@green;
+@default 					:	@black-25;
+@warning 					:	@white-e5;
+@success 					:	@blue-dark;
+@info 						:	@gray;
+@danger 					:	@white-f4;
+@custom 					: 	@red;
+
+
+//===== fonts =====//
+@inter 						:	inter-400;
+@inter-600					:	inter-600;
+@inter-700					:	inter-700;
+
+
+@magistral 					:	magistral-400;
+@magistral-700 				:	magistral-700;
+@magistral-900 				:	magistral-900; 
+
+@roboto 					:	roboto-400; 
+@roboto-700 				:	roboto-700; 
+
+@normalidad-300 			:	normalidad-300; 
+@normalidad 				:	normalidad-400; 
+@normalidad-600 			:	normalidad-600; 
+@normalidad-700 			:	normalidad-700; 
+@normalidad-800 			:	normalidad-800; 
+
+//===== base =====//
+@xs 						:	0px;
+@sm 						:	575px;
+@md 						:	768px;
+@lg 						:	992px;
+@xl 						:	1200px;
+@xxl 						:	1600px;
+
+@site_bg 					: 	@danger;
+@site_ff 					: 	@normalidad;
+@site_fs 					: 	16px;
+@site_lh 					: 	137.5%; //22px
+@site_br 					: 	4px;
+@site_color 				: 	@default;
+@site_color_a 				: 	@primary;
+@site_color_a_hover 		: 	@primary;
+//@site_color_a_hover 		: 	fadeout(@primary, 50%);
+
+
+@b-html-bg 					:	@white; 
+@b-body-bg 					:	@white; 
+@b-ff 						:	@inter;
+@b-ff-2 					:	@inter;
+@b-italic 					:	@b-ff;
+@b-bold 					:	@b-ff; 		
+@b-fs 						: 	18px;
+@b-lh 						: 	24px;
+@trs-site 					: 	all 0.35s ease; 
+@trs-option 				: 	0.35s ease; 
+@b_rad 						: 	5px; 
+
+@container_gap 				:	15px;
+@container  				:	1130px;
+@container_default  		:	1035px;
+
+
+//===== navbar =====//
+
+//== header ==//
+@header_size_xs 		:	69px;
+@header_size 			:	119px;
+@header_bg 				:	@site_bg;
+@header_shadow 			:	10px 10px 30px 0px fadeout(@primary, 95%);
+;
+
+@header_humb_width 		:	20px;
+@header_humb_height 	:	16px;
+@header_humb_color 		:	@default;
+
+//== aside ==//
+@aside_size 			:	119px;
+@aside_bg 				:	@site_bg;
+@aside_gutter 			:	15px;
+
+@aside_nav_color 		:	@default;
+@aside_nav_color_active :	@success;
+
+@aside_lang_bg 			:	@info;
+@aside_lang_color 		:	@success;
+
+@aside_lang_color_active :	@white;
+@aside_lang_bg_active	:	@success;
+
+//===== end's navbar =====//
+
+//===== footer =====//
+@footer_color 				:	@default; 
+@footer_color_hover 		:	@primary; 
+@footer_bg 					:	@default;
+@footer_gutter 				:	1.02vw;
+//===== end's footer =====//
+
+//===== breadcrumb =====//
+@bread_color 				: 	@default;
+@bread_gutter 				: 	13px;
+@bread_color_active 		: 	@danger;
+//===== end's breadcrumb =====//
+
+//===== tabs =====//
+@tabs_panel_bg 		 		:	@warning;
+@tabs_panel_radius 		 	:	@site_br;
+@tabs_panel_border 		 	:	@black-d5;
+
+@tabs_color 				:	@black-8d;
+@tabs_bg 		 			:	fadeout(@white, 100%);
+@tabs_border 		 		:	fadeout(@primary, 100%);
+
+@tabs_hover_color 			: 	@primary;
+
+@tabs_active_color 			:	@primary;
+@tabs_active_border  		:	@primary;
+@tabs_active_bg 			:	@white;
+@tabs_active_shadow 		:	0px 3px 7px fadeout(@black, 90%);
+//===== end's tabs =====//
+
+//===== button =====//
+@btn_radius 				:	0;
+@btn_color 					:	@white;
+@btn_bg 					:	@primary;
+@btn_fs 					:	0.875rem;
+@btn_lh 					:	145%;
+
+@btn_hover_color 			:	fadeout(@white, 0%);
+@btn_hover_bg 				:	fadeout(@primary, 50%);
+
+@btn_focus_shadow 			:	inset 0px 4px 4px fadeout(@black, 75%);	
+//===== end's button =====//
+
+//===== button next =====//
+@next_radius 				:	@site_br;
+@next_width 				:	42px;
+@next_height 				:	22px;
+@next_color 				: 	@white;
+@next_bg 					:	@primary;
+
+@next_hover_bg 				:	@primary;
+//===== end's button next =====//
+
+//===== button icon =====//
+@icon_radius 				:	@site_br;
+@icon_width 				:	50px;
+@icon_height 				:	50px;
+@icon_bg 					:	@warning;
+@icon_border_width 			:	2px;
+@icon_border_color			:	@warning;
+@icon_color					:	@danger;
+
+@icon_hover_color			:	@primary;
+
+@icon_focus_shadow 			: 	0px 2px 4px fadeout(@black, 75%);
+//===== end's button icon =====//
+
+//===== button more =====//
+@more_width 				:	25px;
+@more_height 				:	25px;
+@more_color 				: 	@default;
+
+@more_menu_shadow 			: 	10px 10px 30px fadeout(@default, 90%);
+@more_menu_radius 			: 	@site_br;
+@more_menu_pos_left 		: 	10px;
+@more_menu_pos_right 		: 	~"calc(100% - (@{more_width} - 10px))";
+
+@more_hover_color			:	fadeout(@default, 50%);
+@more_open_color			:	fadeout(@default, 70%);
+//===== end's button more =====//
+
+//===== button view =====//
+@view_color					:	@default;
+@view_gutter				:	10px;
+
+@view_hover_color			:	fadeout(@default, 50%);
+@view_active_color			:	fadeout(@default, 70%);
+//===== end's button view =====//
+
+//===== input =====//	
+@input_bg					:	@white;
+@input_height				:	52px;
+@input_height_textarea		:	95px;
+@input_radius				:	@site_br;
+@input_border_color			:	@info;
+@input_border_width			:	2px;
+@input_color				:	@default;
+@input_plh_color			:	@danger;
+
+@input_focus_border_color	:	@default;
+
+@input_error_border_color	:	@custom;
+@input_error_color			:	@custom;
+
+@input_disabled_border_color:	@success;
+@input_disabled_bg			:	@warning;
+@input_disabled_color		:	fadeout(@input_color, 50%);
+//===== end's input =====//
+
+//===== checkbox =====//
+@check_fs					:	@site_fs;
+@check_lh					:	@site_lh;
+@check_size					:	26px;
+@check_color				:	@default;
+@check_border_width			:	2px;
+@check_border_color			:	@info;
+@check_bg					:	@white;
+@check_radius				:	@site_br;
+
+@check_focus_shadow 		: 	0px 2px 4px fadeout(@black, 75%);
+
+@check_active_border_color	:	@primary;
+@check_active_bg			:	@primary;
+//===== end's checkbox =====//	
+
+//===== radio panel =====//	
+@radio_panel_radius 				: 		@site_br;
+@radio_panel_border_color 			: 		@info;
+@radio_panel_border_width 			: 		2px;
+@radio_panel_bg 					: 		@white;
+
+@radio_panel_hover_shadow 			: 		10px 10px 30px fadeout(@default, 90%);
+@radio_panel_hover_border_color 	: 		@white;
+
+@radio_panel_checked_border_color 	: 		@primary;
+//===== end's radio panel =====//
+
+//===== qty =====//
+@qty_radius 						: 		@site_br;
+@qty_border_color 					: 		@info;
+@qty_border_width 					: 		2px;
+@qty_btn_width 						: 		52px;
+@qty_btn_height 					: 		52px;	
+//===== end's qty =====//	
+
+//===== modals =====//
+@modal_backdrop 					:	@default;
+@modal_backdrop_fade 				:	0.9;
+@modal_bg 							:	@white;
+@modal_border_rad 					:	@site_br;
+@modal_width 						:	665px;
+
+@modal_btn_width 					: 	32px;
+@modal_btn_color 					:	@default;
+@modal_btn_color_hover 				:	fadeout(@default, 50%);
+//===== end's modals =====//
+
+//===== table =====//
+@table_color 						:	@default;
+@table_border_color 				:	@warning;
+@table_padding_tb 					:	10px;
+@table_padding_lr					:	15px;
+
+@table_head_color 					:	fadeout(@default, 50%);
+@table_head_bg 						:	@info;
+@table_head_padding_tb 				:	5px;
+@table_head_padding_lr				:	15px;
+@table_head_border_color 			:	@warning;
+//===== end's table =====//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//===== slider slick =====//
+@slider_btn_width 			: 	40px;
+@slider_btn_padding 		: 	0px;
+@slider_btn_color 			: 	@default;
+@slider_btn_bg 				: 	@white;
+@slider_btn_border 			: 	0px;
+@slider_btn_border_color 	: 	@primary;
+@slider_btn_radius 			: 	0;
+
+@slider_btn_color_hover 	: 	@white;
+@slider_btn_bg_hover 		: 	@primary;
+@slider_btn_border_color_hover:	@primary;
+
+@slider_dots_bottom 		: 	1.5vw;
+@slider_dots_width 			: 	10px;
+@slider_dots_gutter 		: 	10px;
+@slider_dots_bg 			: 	@success;
+@slider_dots_radius 		: 	50%;
+
+@slider_dots_bg_active 		: 	@primary;
+//===== end's slider slick =====//

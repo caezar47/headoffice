@@ -1,0 +1,205 @@
+.btn__{
+	&item{
+		.btn-clearfix();
+		border-radius: @btn_radius;
+		font-weight: 700;
+		font-size: @btn_fs;
+		line-height: @btn_lh;
+		position: relative;	
+		display: inline-flex;
+		align-items: center; 
+		justify-content: center;	
+		background-color: @btn_bg; 
+		text-align: center;	
+		color: @btn_color;
+		padding: 10px 25px;
+		&.is--hover,
+		&:hover{	
+			color: @btn_hover_color;		
+			background-color: @btn_hover_bg; 
+		}
+		&.is--focus,
+		&:focus{
+			box-shadow: @btn_focus_shadow;
+		}
+		&.is--disabled,
+		&[disabled]{		
+			opacity: 0.1;
+			cursor: not-allowed;
+		}
+		svg{
+			width: 10px;
+			height: 16px;
+			margin-left: auto;
+		}
+		&.is--icon{
+			min-width: 175px;
+		}
+	}
+	//old
+	&next{
+		.btn-clearfix();
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: @next_width;
+		height: @next_height;
+		border-radius: @next_radius;
+		background-color: @next_bg;
+		color: @next_color;
+		//.icon-btn-next();
+		background-position: center;
+		svg{
+			width: 17px;
+			height: 12px;
+			display: block;
+		}
+		&:hover{
+			color: @white;
+			background-color: @next_hover_bg;
+			opacity: 0.5;
+		}
+	}
+	&icon{
+		.btn-clearfix();
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: @icon_width;
+		height: @icon_height;
+		background-color: @icon_bg;
+		border: @icon_border_width solid @icon_border_color;
+		border-radius: @icon_radius;
+		color: @icon_color;
+		&:hover{
+			color: @icon_hover_color;
+		}
+		&:focus{
+			box-shadow: @icon_focus_shadow;
+		}
+		&.is--outline{
+			background-color: @white;
+			border-color: @info;
+		}
+		svg{
+			width: 20px;
+			height: 20px;
+			display: block;
+		}		
+	}
+	&link{
+		&-back{
+			display: inline-flex;
+			text-transform: uppercase;
+			.heading6();
+			letter-spacing: 1px;
+			color: @default;
+			transition: @trs-site;	
+			font-weight: 600;		
+			svg{
+				display: block;
+				width: 17px;
+				height: 16px;
+			}
+			span{
+				margin-left: 10px;
+			}
+			&:hover{
+				color: fadeout(@default, 50%);
+			}
+		}
+	}
+	&more{
+		&{
+			display: block;
+			width: @more_width - 5;
+			height: @more_height - 5;
+			color: @more_color;
+			.media-breakpoint-up(@md; {
+				width: @more_width;
+				height: @more_height;				
+			});
+			&:hover{
+				color: @more_hover_color;
+			}
+			.open > &{
+				color: @more_open_color;
+			}
+		}
+		&-menu{
+			padding: 20px;
+			box-shadow: @more_menu_shadow;
+    		margin-top: 10px;
+    		left: @more_menu_pos_left;
+    		border-radius: @more_menu_radius;
+    		&.is--right{
+				left: inherit;
+	    		right: @more_menu_pos_right;
+    		}
+    		.btn__item{
+    			width: 100%;
+    			min-width: 242px;
+    		}
+    		& > li {
+    			margin-bottom: 10px;
+    			&:last-child{
+    				margin-bottom: 0;
+    			}
+    		}
+
+		}
+	}
+	&view{
+		&-list{
+			display: flex;
+			margin: 0 -@view_gutter;
+			padding: 0;
+			list-style: none;
+			font-weight: 700;
+		}
+		&-item{
+			padding: 0 @view_gutter;
+		}
+		&{
+			.btn-clearfix();
+			color: @view_color;
+			&:hover{
+				color: @view_hover_color;
+			}
+			.active &{
+				cursor: default;
+				color: @view_active_color;
+			}
+		}
+	}
+	&sort{
+		.btn-clearfix();
+		&.is--xs{
+			width: 10px;
+			height: 10px;
+			color: @danger;
+			svg{
+				display: block;
+			}
+		}
+	}
+}
+.link__{
+	&item{		
+		.btn-clearfix();
+		color: @success;
+		display: inline-flex;
+		align-items: center;
+		&.is--pdf{
+			svg{
+				width: 27px;
+				height: 31px;
+				margin-right: 15px;
+				order: -1;
+				color: @default;
+			}
+		}
+		&:hover{
+		}
+	}
+}

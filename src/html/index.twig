@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Главная"}  %}
+	</head>
+	<body>        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": '', 
+                },
+                {
+                    "name":"Команда", 
+                    "link": page.team, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": '', 
+                },
+                {
+                    "name":"Как мы рабоаем", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+            ],
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}
+        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/index.twig" with {
+                view:"about", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-index-about", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1  color--white", 
+                heading_level:"h2", 
+                heading:"HeadOffice это", 
+                note_mod:"is--page-index-about  is--page-default-lg  color--white  is--h4  fw--700", 
+                note_level:"p", 
+                note:"глобальный multifamily office c российскими корнями предоставляющий полный набор услуг для частных лиц и семей со сверхвысоким доходом (UHNW)",   
+                text_mod:"is--page-index-about  is--page-default-xl  color--white  is--h4", 
+                text_level:"div", 
+                text:"В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.",   
+                btn_view:'link',             
+                btn_name:'Подробнее',             
+                btn_link:page.about,             
+                btn_attr:'',             
+                btn_icon:'icon-next',            
+                btn_mod:'is--icon', 
+                img: [path.img,"/default/index-about-logo.svg "].join(""),
+            } %}
+            {% include "../block/page/index.twig" with {
+                view:"contacts", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-index-contacts", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1", 
+                heading_level:"h2", 
+                heading:"Контакты", 
+                note_mod:"is--page-index-contacts  color--success", 
+                note_level:"p", 
+                note: ['Напишите нам на почту <a href="mailto:',contacts.email,'">',contacts.email,'</a> или позвоните по общему телефону <a href="tel:',contacts.phone_tel,'">',contacts.phone,'</a>'].join(""),
+            } %}
+        </main>
+        
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html> 

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Как мы работаем"}  %}
+	</head>
+	<body>        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": '', 
+                },
+                {
+                    "name":"Команда", 
+                    "link": page.team, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": '', 
+                },
+                {
+                    "name":"Как мы рабоаем", 
+                    "link": page.works, 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+            ],
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/works.twig" with {
+                view:"header", 
+                content_prefix:prefix.section, 
+                content_mod:"", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1", 
+                heading_level:"h1", 
+                heading:"Как мы работаем", 
+                note_mod:"is--page-default  is--page-header-note", 
+                note_level:"div", 
+                note:"<p><b>Мы работаем по подписке. Даосизм абстрактен. Страховая сумма, конечно, не урегулирована. Взаимозачет гарантирует депозитный структурализм, хотя законодательством может быть установлено иное.</b></p><p>Освобождение требует субъективный субъект. Концепция, как бы это ни казалось парадоксальным, выводит аккредитив. Искусство, в согласии с традиционными представлениями, требует интеллект.  Регрессное требование подрывает штраф.</p>",   
+            } %}
+            {% include "../block/page/works.twig" with {
+                view:"contacts", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-works-contacts", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1  color--white",  
+                heading_level:"h2", 
+                heading:"Мы там, где наши клиенты", 
+                note_mod:"color--white  is--page-works-contacts", 
+                note_level:"div", 
+                note:"HeadOffice — система региональных представителей в ключевых локациях по всему миру для обеспечения безукоризненного сервиса", 
+            
+                bg: [path.img,"/default/index-about-bg.jpg"].join(""),   
+            } %}
+            {% include "../block/page/works.twig" with {
+                view:"case", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-works-case", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default-lg  is--h3",  
+                heading_level:"h2", 
+                heading:"Примеры кейсов", 
+                note_mod:"is--page-works-case",  
+                note_level:"div", 
+                note:"Асинхронное ритмическое поле взаимно. Можно предположить, что капиталистическое мировое общество символизирует сокращенный мнимотакт, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Open-air образует эпитет. Типическое просветляет коммунизм.",            
+
+                card_id:'works',
+                card_view:'works',
+                card_mod:'is--works',
+                card_list: [
+                    {
+                        "list": [
+                            {
+                                id: '1',
+                                name:"Подготовить ребенка к поступлению в Йельский Университет", 
+                                icon: "icon-works1",
+                                tabs_view:'base',
+                                tabs_prefix:prefix.tabs,
+                                tabs_mod:'is--step',
+                                tabs_group:'',
+                                tabs_count:'true',
+                                tabs_list:[
+                                    {
+                                        "id":"tabs1",
+                                        "step":"1",
+                                        "name":"",
+                                        "status":"active",
+                                        "type":'text',
+                                        "text":'<h4>Принят запрос</h4><p>В рамках нашей годовой подписки до недавнего времени считалось, что рента переворачивает умысел, как и предполагалось. Жизнь, в первом приближении, изоморфна времени. Длина вектора переворачивает естественный дедуктивный метод, отрицая очевидное.</p>',
+                                    },
+                                    {
+                                        "id":"tabs2",
+                                        "step":"2",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    
+                                    {
+                                        "id":"tabs3",
+                                        "step":"3",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    {
+                                        "id":"tabs4",
+                                        "step":"4",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    {
+                                        "id":"tabs5",
+                                        "step":"5",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    {
+                                        "id":"tabs6",
+                                        "step":"6",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                ],
+                            },
+                            {
+                                id: '2',
+                                name:"Улететь в Париж на частном самолете послезавтра", 
+                                icon: "icon-works2",
+                                tabs_view:'base',
+                                tabs_prefix:prefix.tabs,
+                                tabs_mod:'is--step',
+                                tabs_group:'',
+                                tabs_count:'true',
+                                tabs_list:[
+                                    {
+                                        "id":"tabs21",
+                                        "step":"1",
+                                        "name":"",
+                                        "status":"active",
+                                        "type":'text',
+                                        "text":'<h4>Принят запрос</h4><p>В рамках нашей годовой подписки до недавнего времени считалось, что рента переворачивает умысел, как и предполагалось. Жизнь, в первом приближении, изоморфна времени. Длина вектора переворачивает естественный дедуктивный метод, отрицая очевидное.</p>',
+                                    },
+                                    {
+                                        "id":"tabs22",
+                                        "step":"2",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    
+                                    {
+                                        "id":"tabs23",
+                                        "step":"3",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    {
+                                        "id":"tabs24",
+                                        "step":"4",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    {
+                                        "id":"tabs25",
+                                        "step":"5",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                ],
+                            },
+                            {
+                                id: '3',
+                                name:"Оптимизировать налоговое законодательство в Швейцарии", 
+                                icon: "icon-works3",
+                                tabs_view:'base',
+                                tabs_prefix:prefix.tabs,
+                                tabs_mod:'is--step',
+                                tabs_group:'',
+                                tabs_count:'true',
+                                tabs_list:[
+                                    {
+                                        "id":"tabs31",
+                                        "step":"1",
+                                        "name":"",
+                                        "status":"active",
+                                        "type":'text',
+                                        "text":'<h4>Принят запрос</h4><p>В рамках нашей годовой подписки до недавнего времени считалось, что рента переворачивает умысел, как и предполагалось. Жизнь, в первом приближении, изоморфна времени. Длина вектора переворачивает естественный дедуктивный метод, отрицая очевидное.</p>',
+                                    },
+                                    {
+                                        "id":"tabs32",
+                                        "step":"2",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    
+                                    {
+                                        "id":"tabs33",
+                                        "step":"3",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                ],
+                            },
+                            {
+                                id: '4',
+                                name:"Построить виллу в Майми", 
+                                icon: "icon-works4",
+                                tabs_view:'base',
+                                tabs_prefix:prefix.tabs,
+                                tabs_mod:'is--step',
+                                tabs_group:'',
+                                tabs_count:'true',
+                                tabs_list:[
+                                    {
+                                        "id":"tabs41",
+                                        "step":"1",
+                                        "name":"",
+                                        "status":"active",
+                                        "type":'text',
+                                        "text":'<h4>Принят запрос</h4><p>В рамках нашей годовой подписки до недавнего времени считалось, что рента переворачивает умысел, как и предполагалось. Жизнь, в первом приближении, изоморфна времени. Длина вектора переворачивает естественный дедуктивный метод, отрицая очевидное.</p>',
+                                    },
+                                    {
+                                        "id":"tabs42",
+                                        "step":"2",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                    
+                                    {
+                                        "id":"tabs43",
+                                        "step":"3",
+                                        "name":"",
+                                        "status":"",
+                                        "type":'text',
+                                        "text":'<h4>Lorem ipsum dolor</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                                    },
+                                ],
+                            },
+                        ]
+                    },
+                ]   
+            } %}
+            {#  {% include "../block/page/about.twig" with {
+                view:"history", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-about-history", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1", 
+                heading_level:"h2", 
+                heading:"История HeadOffice", 
+                note:"<p><b>До недавнего времени считалось, что рента переворачивает умысел, как и предполагалось.</b></p><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p>", 
+                img: [path.img,"/default/index-about-bg.jpg"].join(""),   
+            } %}
+            {% include "../block/page/about.twig" with {
+                view:"why", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-about-why", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default-lg  is--h1", 
+                heading_level:"h2", 
+                heading:"Почему HeadOffice?",
+                note_mod:"  is--h4  is--page-about-why", 
+                note_level:"div",  
+                note:"Бизнес-модель HeadOffice предполагает абсолютную гибкость: мы можем как полностью заменить family office клиента, так и, работая на субподряде у family office клиента, усиливать его своими ресурсами и инфраструктурой.", 
+                img: [path.img,"/default/index-about-bg.jpg"].join(""), 
+
+                card_view: 'adv',
+                card_mod: 'is--adv',
+                card_list: [
+                    {
+                        "heading":"Подготовить ребенка к поступлению в Йельский Университет", 
+                        "note":"устраняя проблемы взаимодействия с широким кругом специализированных подрядчиков и исключая коммерческий конфликт интересов", 
+                        "img": [path.img,"/default/adv-item1.svg"].join(""),
+                    },
+                    {
+                        "heading":"Стабильная профессиональная инфраструктура", 
+                        "note":"управления и высочайший уровень сервиса и команды, недоступные single family office", 
+                        "img": [path.img,"/default/adv-item2.svg"].join(""),
+                    },
+                    {
+                        "heading":"Приобретаем услуги в интересах заказчика ", 
+                        "note":"полностью берем на себя управление подрядчиком – от детального понимания потребности клиента до постановки задачи, контроля исполнения и приемки работ", 
+                        "img": [path.img,"/default/adv-item3.svg"].join(""),
+                    },
+                    {
+                        "heading":"Существенно снижаем расходы", 
+                        "note":"клиента на базе годовой подписки благодаря принципу sharing economy", 
+                        "img": [path.img,"/default/adv-item4.svg"].join(""),
+                    },
+                ],  
+                text: '<h3>Рента переворачивает умысел, как и предполагалось. </h3><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p>',
+            } %} #}
+        </main>
+        
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+        <script>
+            $("[data-tabs-next]").on("click", function(e) {
+                var $active = $(this).closest(".card__note").find(".tabs__pane.active");
+                var $next = $active.next();
+                console.log($active);
+                var $active_tabs = $(this).closest(".card__note").find(".tabs__nav.is--step .active");
+                var $next_tabs = $active_tabs.next();
+                var $step = $next_tabs.find("a").data("step");
+
+
+                if ($next.length) {
+                    $active.removeClass("active");
+                    $next.addClass("active");
+                    $active_tabs.removeClass("active");
+                    $active_tabs.addClass("visited");
+                    $next_tabs.addClass("active");
+                    $(this).closest(".card__note").find("[data-tabs-count]").text($step); 
+                }
+            });
+            $('.card__group.is--works').on('shown.bs.collapse', function () {
+                var all = $(this).find('.collapse.in .tabs__item.is--step').length
+                $(this).find('.collapse.in [data-tabs-count-all]').text(all);
+            });
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                var href = $(e.target).attr('href');
+                var $curr = $(this).closest(".card__note").find(".tabs__nav.is--step a[href='" + href + "']").parent();
+                var $currStep = $(this).closest(".card__note").find(".tabs__nav.is--step a[href='" + href + "']").data("step");
+
+                $(this).closest(".card__note").find('.tabs__item.is--step').removeClass("active");
+                $(this).closest(".card__note").find('.tabs__item.is--step').removeClass("visited");
+
+                $curr.addClass("active");
+                $curr.prevAll().addClass("visited");
+
+                $(this).closest(".card__note").find("[data-tabs-count]").text($currStep);
+            });
+
+        </script>
+	</body>
+</html> 

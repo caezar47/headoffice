@@ -1,0 +1,86 @@
+.page-header__{
+	&heading{
+		.btn__link-back + &{
+			padding-top: 15px;
+			.media-breakpoint-up(@md; {
+				padding-top: 3px;
+			});
+		}
+		&.is--page{
+			&-header{
+				&-note{
+					max-width: 817px;
+					p, div{
+						margin-bottom: 15px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+				}
+			}				
+			&-default{				
+				margin-bottom: 20px;
+				&-xl{
+					margin-bottom: 45px;					
+				}
+				&-lgx{
+					margin-bottom: 35px;					
+				}
+				&-lg{
+					margin-bottom: 25px;					
+				}
+				&-md{
+					
+				}
+				&-sm{
+					margin-bottom: 10px;						
+				}
+				&-xs{
+					
+				}
+			}
+			&-index{
+				&-contacts{
+					a{
+						color: inherit;
+					}
+				}
+			}
+			&-about{
+				&-mission{
+					line-height: 130%;
+				}
+			}
+			&-services{
+				&-team{
+					max-width: 850px;
+				}
+			}
+	    	&-works{
+	    		&-contacts{
+	    			font-size: 1.250rem;
+	    			line-height: 130%;
+	    		}
+	    		&-case{
+	    			max-width: 850px;
+	    			margin-bottom: 47px;
+	    		}
+	    	}
+		}
+		&.is--modal{
+			margin-bottom: 20px;
+			padding-right: 30px;
+			.media-breakpoint-up(@md; {
+				margin-bottom: 40px;
+				padding-right: 0;
+				&.is--page-basket-order{
+					margin-bottom: 13px;
+				}
+			});
+		}
+		&.is--uikit{
+			font-size: 2.571em;
+			line-height: 140%;
+		}
+	}
+}

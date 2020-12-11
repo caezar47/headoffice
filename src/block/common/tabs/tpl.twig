@@ -1,0 +1,47 @@
+{% if view == "base" %}
+<div class="{{prefix}}panel  {{group}}  {% if dropdown %}dropdown{% endif %}">
+	{% if dropdown %}
+		<a class="{{prefix}}dropdown" data-toggle="dropdown" href="#">
+			<span></span>
+		</a>
+	{% endif %}
+
+	{% if count == "true" %}
+		<div class="{{prefix}}count-group">
+			<p class="{{prefix}}count">
+				Шаг <span data-tabs-count>1</span>/<span  data-tabs-count-all></span>
+			</p>
+			<button class="{{prefix}}count-next" type="button" data-tabs-next>
+				{% include "../svg-sprite/svg.twig" with {icon:"icon-next-tab"} %}
+			</button>
+		</div>
+	{% endif %}
+			
+	<ul class="{{prefix}}nav  {{mod}}  {% if dropdown %}is--dropdown{% endif %}  {% if scroll %}nav-tabs{% endif %}">
+		{% for value in list %}
+		<li class="{{prefix}}item  {{mod}}  {{value.status}}" >
+			<a class="{{prefix}}link  {{mod}}" href="#{{value.id}}" data-toggle="tab" {% if value.step %}data-step="{{value.step}}"{% endif %}>{{value.name}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% for value in list %}
+<div class="{{prefix}}pane  {{value.status}}" id="{{value.id}}">
+	{% if value.type == "text" %}
+		<div class="text__block  {{card_mod}}">
+			{{value.text}} 
+		</div>
+	{% endif %}
+	{% if value.type == "card" %}
+		<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+		{% include "../card/card.twig" with {
+			view: value.view,
+			prefix:"card__", 
+			mod:  value.mod, 
+			list: value.list
+		} %}
+		</div>
+	{% endif %}
+</div>
+{% endfor %}
+{% endif %}

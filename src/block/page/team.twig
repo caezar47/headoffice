@@ -1,0 +1,140 @@
+{% if view == "header" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:note_mod,
+				level:note_level, 
+				heading:note
+			} %}
+		</div>
+	</section>
+{% endif %}
+{% if view == "head" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:note_mod,
+				level:note_level, 
+				heading:note
+			} %}
+			<div>				
+				{% include "../common/card/card.twig" with {
+					view: card_view,
+					prefix:"card__", 
+					mod:  card_mod, 
+					list: card_list
+				} %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "list" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				{% include "../common/card/card.twig" with {
+					view: card_view,
+					prefix:"card__", 
+					mod:  card_mod, 
+					list: card_list
+				} %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "card" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				<div>
+					<h1 class="{{card_prefix}}heading  {{card_mod}}">{{heading}}</h1>	
+					<p class="{{card_prefix}}position  {{card_mod}}">{{position}}</p>
+				</div>
+				<div>
+					<picture class="{{card_prefix}}preview  {{card_mod}}">
+						<img src="{{img}}" class="img-responsive" alt="{{heading}}">
+					</picture>
+				</div>
+				<div>	
+					<p class="{{card_prefix}}btn  {{card_mod}}">
+						{% include "../common/button/btn.twig" with {
+							view:"link",
+							prefix:"link__", 
+							mod:"is--pdf", 
+							icon:'icon-pdf', 
+							attr: '',
+							link:'', 
+							name:"Скачать PDF" 
+						} %}
+					</p>
+					<div class="{{card_prefix}}note  {{card_mod}}">{{note}}</div>
+					<div class="{{card_prefix}}desc  text__block  {{card_mod}}">
+						<h5>Навыки и экспертиза</h5>
+						<div class="row">
+							<div class="cols">
+								<ul>
+									<li>Стратегическое управление</li>
+									<li>Реструктуризация и кризисное управление</li>
+									<li>Проекты повышения эффективности</li>
+									<li>Корпоративные и личные финансы </li>
+								</ul>
+							</div>
+							<div class="cols">
+								<ul>
+									<li>Управление проектами </li>
+									<li>Операционный менеджмент</li>
+									<li>Сделки по слияниям, поглощениям и реализации активов </li>
+									<li>Управление персоналом</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="{{card_prefix}}desc  cols  text__block  {{card_mod}}">
+							<h5>Профессиональный опыт</h5>	
+							<ul>
+								<li>2017–2019 Family Office Forbes-10<br><span>Руководитель семейного офиса</span></li>
+								<li>2014–2017 Global Ports <br> <span>Генеральный директор, член совета директоров</span></li>
+								<li>2013–2014 Инвестиционная группа Meridian <br><span>Управляющий директор </span></li>
+								<li>2003–2013 «Уралкалий»<br> <span>Генеральный директор, член совета директоров </span></li>
+								<li>1998–2002 Группа ABB <br> <span>Генеральный директор СП </span></li>
+							</ul>
+						</div>	
+						<div class="{{card_prefix}}desc  cols  text__block  {{card_mod}}">	
+							<h5>Образование</h5>
+							<ul>
+								<li>Massachusetts Institute of Technology (MIT), США, онлайн-обучение  <br>Искусственный интеллект</li>
+								<li>University of London, Великобритания, MSc (Финансовый менеджмент) <br>Финансовый менеджмент</li>
+								<li>Kingston Business School, MBA</li>
+								<li>Уральский технический университет<br> Инженер-электрик</li>
+							</ul>
+						</div>		
+					</div>		
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}

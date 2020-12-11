@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"О нас"}  %}
+	</head>
+	<body>        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"Команда", 
+                    "link": page.team, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": '', 
+                },
+                {
+                    "name":"Как мы рабоаем", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+            ],
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}
+        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/about.twig" with {
+                view:"header", 
+                content_prefix:prefix.section, 
+                content_mod:"", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1", 
+                heading_level:"h1", 
+                heading:"О нас", 
+                note_mod:"is--page-default  is--h4  is--page-header-note", 
+                note_level:"div", 
+                note:"HeadOffice – результат партнёрства состоявшихся профессионалов из всех областей управления жизненными потребностями. У каждого из партнеров HeadOffice за плечами многолетний и разноплановый опыт управления бизнес-проектами. Мы верим в профессионализм и эффективность во всем, чем бы мы ни занимались. ",   
+            } %}
+            {% include "../block/page/about.twig" with {
+                view:"mission", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-about-mission", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default-sm  is--h2", 
+                heading_level:"h2", 
+                heading:"Миссия HeadOffice", 
+                note_mod:"is--page-default-lg  is--h4  is--page-about-mission", 
+                note_level:"div", 
+                note:"Наша цель — способствовать осознанному развитию человеческих и финансовых ресурсов семьи для поддержания полноты жизни", 
+                btn_view:'link',             
+                btn_name:'Наши услуга',             
+                btn_link:page.services,             
+                btn_attr:'',             
+                btn_icon:'icon-next',            
+                btn_mod:'is--icon', 
+                bg: [path.img,"/default/index-about-bg.jpg"].join(""),   
+            } %}
+            {% include "../block/page/about.twig" with {
+                view:"history", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-about-history", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1", 
+                heading_level:"h2", 
+                heading:"История HeadOffice", 
+                note:"<p><b>До недавнего времени считалось, что рента переворачивает умысел, как и предполагалось.</b></p><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p>", 
+                img: [path.img,"/default/index-about-bg.jpg"].join(""),   
+            } %}
+            {% include "../block/page/about.twig" with {
+                view:"why", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-about-why", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default-lg  is--h1", 
+                heading_level:"h2", 
+                heading:"Почему HeadOffice?",
+                note_mod:"  is--h4  is--page-about-why", 
+                note_level:"div",  
+                note:"Бизнес-модель HeadOffice предполагает абсолютную гибкость: мы можем как полностью заменить family office клиента, так и, работая на субподряде у family office клиента, усиливать его своими ресурсами и инфраструктурой.", 
+                img: [path.img,"/default/index-about-bg.jpg"].join(""), 
+
+                card_view: 'adv',
+                card_mod: 'is--adv',
+                card_list: [
+                    {
+                        "heading":"Представляем исключительно интересы клиента", 
+                        "note":"устраняя проблемы взаимодействия с широким кругом специализированных подрядчиков и исключая коммерческий конфликт интересов", 
+                        "img": [path.img,"/default/adv-item1.svg"].join(""),
+                    },
+                    {
+                        "heading":"Стабильная профессиональная инфраструктура", 
+                        "note":"управления и высочайший уровень сервиса и команды, недоступные single family office", 
+                        "img": [path.img,"/default/adv-item2.svg"].join(""),
+                    },
+                    {
+                        "heading":"Приобретаем услуги в интересах заказчика ", 
+                        "note":"полностью берем на себя управление подрядчиком – от детального понимания потребности клиента до постановки задачи, контроля исполнения и приемки работ", 
+                        "img": [path.img,"/default/adv-item3.svg"].join(""),
+                    },
+                    {
+                        "heading":"Существенно снижаем расходы", 
+                        "note":"клиента на базе годовой подписки благодаря принципу sharing economy", 
+                        "img": [path.img,"/default/adv-item4.svg"].join(""),
+                    },
+                ],  
+                text: '<h3>Рента переворачивает умысел, как и предполагалось. </h3><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p><p>В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</p>',
+            } %}
+        </main>
+        
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html> 

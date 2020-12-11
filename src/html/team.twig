@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Команда"}  %}
+	</head>
+	<body>        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": '', 
+                },
+                {
+                    "name":"Команда", 
+                    "link": page.team, 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": '', 
+                },
+                {
+                    "name":"Как мы рабоаем", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+            ],
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}
+        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/team.twig" with {
+                view:"header", 
+                content_prefix:prefix.section, 
+                content_mod:"", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1", 
+                heading_level:"h1", 
+                heading:"Команда", 
+                note_mod:"is--page-default  is--h4  is--page-header-note", 
+                note_level:"div", 
+                note:"HeadOffice – результат партнёрства состоявшихся профессионалов из всех областей управления жизненными потребностями. У каждого из партнеров HeadOffice за плечами многолетний и разноплановый опыт управления бизнес-проектами. Мы верим в профессионализм и эффективность во всем, чем бы мы ни занимались. ",   
+            } %}
+            {% include "../block/page/team.twig" with {
+                view:"head", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-team-head", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default-lg  is--h3", 
+                heading_level:"h2", 
+                heading:"Основатели компании", 
+                note_mod:"is--page-default-xl  is--page-header-note", 
+                note_level:"div", 
+                note:"Асинхронное ритмическое поле взаимно. Можно предположить, что капиталистическое мировое общество символизирует сокращенный мнимотакт, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Open-air образует эпитет. Типическое просветляет коммунизм.",   
+
+                card_view: 'team-full',
+                card_mod: 'is--team-full',
+                card_list: [
+                    {
+                        "name":"Владислав Баумгертнер", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "position":"Key account manager, региональный представитель", 
+                        "note":"Асинхронное ритмическое поле взаимно. Можно предположить, что капиталистическое мировое общество символизирует сокращенный мнимотакт, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Open-air образует эпитет. Типическое просветляет коммунизм.", 
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "position":"Key account manager, региональный представитель", 
+                        "note":"Асинхронное ритмическое поле взаимно. Можно предположить, что капиталистическое мировое общество символизирует сокращенный мнимотакт, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Open-air образует эпитет. Типическое просветляет коммунизм.", 
+                        "link": page.team_card, 
+                    },
+                ],
+            } %}
+            {% include "../block/page/team.twig" with {
+                view:"list", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-team-list", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"sr-only", 
+                heading_level:"h2", 
+                heading:"Члены команды",   
+
+                card_view: 'team-card',
+                card_mod: 'is--team-card',
+                card_list: [
+                    {
+                        "name":"Имя Фамилия", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Владислав Баумгертнер", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Владислав Баумгертнер", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Владислав Баумгертнер", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Владислав Баумгертнер", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Владислав Баумгертнер", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Владислав Баумгертнер", 
+                        "img": [path.img,"/default/team-item1.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Сергей Бучин", 
+                        "img": [path.img,"/default/team-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                ],
+            } %}
+        </main>
+        
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html> 

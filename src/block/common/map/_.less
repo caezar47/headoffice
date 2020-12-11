@@ -1,0 +1,26 @@
+.map__{
+	&block{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	&item{
+		cursor: pointer;
+		rect{
+			fill: @primary;
+			transition: @trs-site;
+		}
+		text{
+			fill: @primary;
+			font-size: 13px;
+			line-height: 140%;
+			transition: @trs-site;
+		}
+		&:hover{
+			text,
+			rect{
+				fill: @default;
+			}
+		}
+	}
+}

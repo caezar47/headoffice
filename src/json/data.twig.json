@@ -1,0 +1,61 @@
+{
+	"contacts":{
+		"name":"headoffice",
+		"domain":"headoffice.global",
+		"domain_link":"https://headoffice.global/",
+		"color":"#F24F00",
+		"agreement_page":"agreement",
+		"email":"info@headoffice.global",
+		"phone":"+35 799 960 809",  
+		"phone_tel":"+35799960809",   
+		"clock":"<p>Пн-Пт: 07:00-16:00</p><p>Сб-Вс: выходной</p>",  
+		"address":"ул. Красноармейская дом 1",
+		"inn":"5753990652",  
+		"ogrn":"1145700000269",  
+		"map_center_coord":"[52.97067, 36.084622]",
+		"map_zoom":"17",
+		"map_point_coord":"[52.97067, 36.084622]",
+		"map_point_heading":"Мы здесь!"
+	},
+	"soc":{
+		"vk":"https://vk.com/fedoperatorpartners",
+		"fb":"https://www.facebook.com/",
+		"ok":"https://ok.ru/group/",
+		"tw":"https://twitter.com/",
+		"inst":"https://www.instagram.com/fed_partners/"
+	},
+	"page":{
+		"index":"./",
+		"about":"./about.html",
+		"team":"./team.html",
+		"team_card":"./team-card.html",
+		"services":"./services.html",
+		"services_card":"./services-card.html",
+		"works":"./works.html",
+		"uikit":"./uikit.html"
+	},
+	"prefix":{
+		"section":"section__",
+		"header":"page-header__",
+		"form":"form__",
+		"tabs":"tabs__",
+		"btn":"btn__",
+		"link":"link__",
+		"breadcrumb":"breadcrumb__",
+		"card":"card__",
+		"btn-icon":"btn-icon__"
+	},	 
+	"path":{		                  
+		"css":"./css",
+		"img":"./img",
+		"js":"./js",
+		"favicon":"./favicon",
+		"docs":"./docs"
+	},                       
+	"url-path-css":"/css",
+	"url-path-img":"/img",
+	"url-path-js":"/js",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/favicon",
+	"url-path-docs":"/docs"
+}

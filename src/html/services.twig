@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Наши услуги"}  %}
+	</head>
+	<body>        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": '', 
+                },
+                {
+                    "name":"Команда", 
+                    "link": page.team, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"Как мы рабоаем", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+            ],
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}
+        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/services.twig" with {
+                view:"page", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-services", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default  is--h1", 
+                heading_level:"h1", 
+                heading:"Наши услуги", 
+                note_mod:"is--page-default", 
+                note_level:"div", 
+                note:"<p>Представляя интересы наших клиентов, мы помогаем в решении самых разнообразных вопросов.</p><p>Смотрите ниже информацию об основных направлениях наших услуг.</p>",  
+
+                tabs_view:'base',
+                tabs_prefix:prefix.tabs,
+                tabs_mod:'',
+                tabs_group:'',
+                tabs_list:[
+                    {
+                        "id":"tabs1",
+                        "name":"Все",
+                        "status":"active",
+                        "type":"card",
+                        "view":"services",
+                        "mod":"is--services",
+                        "list":[
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                            {
+                                "link":page.services_card,
+                                "name":"Навание услуги в две строки",
+                                "img": [path.img,"/default/services-lock.jpg "].join(""),
+                            },
+                        ] 
+                    },
+                    {
+                        "id":"tabs2",
+                        "name":"Семья",
+                        "status":"",
+                    },
+                    {
+                        "id":"tabs2",
+                        "name":"Личные нужды",
+                        "status":"",
+                    },
+                    {
+                        "id":"tabs2",
+                        "name":"Финансы",
+                        "status":"",
+                    },
+                ] 
+            } %}
+        </main>
+        
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html> 

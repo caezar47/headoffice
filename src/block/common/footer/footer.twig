@@ -1,0 +1,18 @@
+<footer class="{{prefix}}block">	
+	<div class="{{prefix}}container container">
+		<div class="{{prefix}}row  row">
+			<div class="{{prefix}}cols  cols  is--logotip">
+				<a href="{{page.index}}" class="{{prefix}}logotip">
+					{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
+				</a>
+			</div>
+
+			<div class="{{prefix}}cols  cols  is--right-md">
+				<a href="mailto:{{contacts.email}}" class="{{prefix}}contacts">{{contacts.email}}</a>
+			</div>
+			<div class="{{prefix}}cols  cols">
+				<a href="tel:{{contacts.phone_tel}}" class="{{prefix}}contacts">{{contacts.phone}}</a>
+			</div> 
+		</div>
+	</div>
+</footer>

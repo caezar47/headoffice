@@ -1,0 +1,59 @@
+{% if view == "about" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				<div>
+					{% include "../common/page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+					{% include "../common/page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:note_mod,
+						level:note_level, 
+						heading:note
+					} %}
+					{% include "../common/page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:text_mod,
+						level:text_level, 
+						heading:text
+					} %}
+					{% include "../common/button/btn.twig" with {
+						prefix:"btn__", 
+						view:btn_view,
+						mod:btn_mod,  
+						icon:btn_icon,
+						link:btn_link,
+						name:btn_name,
+					} %}
+				</div>
+				<picture class="{{content_prefix}}img  {{content_mod}}">
+					<img src="{{img}}" class="img-responsive" alt="">
+				</picture>
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "contacts" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:note_mod,
+				level:note_level, 
+				heading:note
+			} %}
+		</div>
+	</section>
+{% endif %}
