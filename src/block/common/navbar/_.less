@@ -10,6 +10,7 @@
 		transition: @trs-site;
 		.media-breakpoint-up(@xl; {
 			padding: 45px 0;
+			background-color: fadeout(@header_bg, 100%);
 		});
 	}
 	&header{
@@ -159,6 +160,7 @@
 				}
 				&.is--nav{
 					margin-left: auto;
+					background-color: @header_bg;
 				}
 			});
 		}

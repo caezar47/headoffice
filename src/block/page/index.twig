@@ -1,6 +1,13 @@
 {% if view == "header" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}line-group  {{content_mod}}">
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+            </div>
 			{% include "../common/page-header/elem.twig" with {
 				prefix:"page-header__", 
 				mod:heading_mod,
