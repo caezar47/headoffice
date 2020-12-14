@@ -57,19 +57,19 @@
 					<div class="navbar__aside-cols cols  is--nav">
 						<nav class="navbar__aside-nav">
 														<li class="navbar__aside-nav-item">
-								<a href="./about.html" class="navbar__aside-nav-link  ">О нас</a>
+								<a href="" class="navbar__aside-nav-link  ">О нас</a>
 							</li>
 														<li class="navbar__aside-nav-item">
-								<a href="./team.html" class="navbar__aside-nav-link  ">Команда</a>
+								<a href="" class="navbar__aside-nav-link  ">Команда</a>
 							</li>
 														<li class="navbar__aside-nav-item">
-								<a href="./services.html" class="navbar__aside-nav-link  ">Наши услуги</a>
+								<a href="" class="navbar__aside-nav-link  ">Наши услуги</a>
 							</li>
 														<li class="navbar__aside-nav-item">
-								<a href="./works.html" class="navbar__aside-nav-link  ">Как мы рабоаем</a>
+								<a href="" class="navbar__aside-nav-link  ">Как мы рабоаем</a>
 							</li>
 														<li class="navbar__aside-nav-item">
-								<a href="./works.html" class="navbar__aside-nav-link  ">Контакты</a>
+								<a href="" class="navbar__aside-nav-link  ">Контакты</a>
 							</li>
 													</nav> 	
 					</div>
@@ -87,31 +87,23 @@
 			</div>
 		</div>
 	</div>
-</header>        
+</header>      
+        
+        
         <main class="section__wrap">
-            	<section class="section__content  is--page-index-about" >
-		<div class="section__container container  is--page-index-about">
-			<div class="section__grid  grid__row  is--page-index-about">
-				<div>
-					<h2 class="page-header__heading  is--page-default  is--h1  color--white  " >HeadOffice это</h2>					<p class="page-header__heading  is--page-index-about  is--page-default-lg  color--white  is--h4  fw--700  " >глобальный multifamily office c российскими корнями предоставляющий полный набор услуг для частных лиц и семей со сверхвысоким доходом (UHNW)</p>					<div class="page-header__heading  is--page-index-about  is--page-default-xl  color--white  is--h4  " >В качестве интегрированной платформы, объединяющей профессиональных управляющих, экспертов и обширную сеть региональных представителей, мы предлагаем индивидуальные решения по всем аспектам жизненных потребностей, инвестиций и оперативного управления.</div>					
-
-<a href="./about.html" class="btn__item  is--icon">
-	<span>Подробнее</span>
-			<svg class="icon-svg icon-icon-next" role="img">
-	<use xlink:href="./img/svg/sprite.svg#icon-next"></use>
-</svg>	</a>  
-
-				</div>
-				<picture class="section__img  is--page-index-about">
-					<img src="./img/default/index-about-logo.svg " class="img-responsive" alt="">
-				</picture>
+            	<section class="section__content  is--page-index-header" >
+		<div class="section__container container  is--page-index-header">
+			<h1 class="page-header__heading  is--page-index-header  is--h2  " >Профессиональное управление качеством жизни</h1>			<div class="section__grid  grid__row  is--page-index-header">
+									<picture><img src="./img/default/index-header-item1.jpg " class="img-responsive" alt=""></picture>
+									<picture><img src="./img/default/index-header-item2.jpg " class="img-responsive" alt=""></picture>
+									<picture><img src="./img/default/index-header-item3.jpg " class="img-responsive" alt=""></picture>
+									<picture><img src="./img/default/index-header-item4.jpg " class="img-responsive" alt=""></picture>
+									<picture><img src="./img/default/index-header-item5.jpg " class="img-responsive" alt=""></picture>
+								
 			</div>
 		</div>
 	</section>
-            	<section class="section__content  is--page-index-contacts" >
-		<div class="section__container container  is--page-index-contacts">
-			<h2 class="page-header__heading  is--page-default  is--h1  " >Контакты</h2>			<p class="page-header__heading  is--page-index-contacts  color--success  " >Напишите нам на почту <a href="mailto:info@headoffice.global">info@headoffice.global</a> или позвоните по общему телефону <a href="tel:+35799960809">+35 799 960 809</a></p>		</div>
-	</section>
+            
         </main>
         
         <footer class="footer__block">	
@@ -465,5 +457,10 @@
 <script>
 svg4everybody();
 document.createElement("picture");
-</script> 	</body>
+</script>         <script>
+            setTimeout(function(){
+                $('.section__grid.is--page-index-header').addClass('is--animate');
+            }, 1000);
+        </script>
+	</body>
 </html> 

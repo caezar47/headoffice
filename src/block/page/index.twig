@@ -1,3 +1,21 @@
+{% if view == "header" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				{% for b in banner %}
+					<picture><img src="{{b.img}}" class="img-responsive" alt=""></picture>
+				{% endfor %}				
+			</div>
+		</div>
+	</section>
+{% endif %}
 {% if view == "about" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
