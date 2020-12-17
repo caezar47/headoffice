@@ -49,10 +49,12 @@
 			<div class="container">
 				<div class="navbar__aside-row row">
 					<div class="navbar__aside-cols cols  is--logotip">
-						<a data-aos="fade-right" href="./" class="navbar__header-logotip">
-							<svg class="icon-svg icon-logotip" role="img">
+						<a href="./" class="navbar__header-logotip">
+							<span data-aos="fade-logotip" data-aos-delay="300">
+								<svg class="icon-svg icon-logotip" role="img">
 	<use xlink:href="./img/svg/sprite.svg#logotip"></use>
-</svg>						</a>
+</svg>							</span>
+						</a>
 					</div>
 					<div class="navbar__aside-cols cols  is--nav" data-aos="fade-up" data-aos-duration="1500">
 						<nav class="navbar__aside-nav"  >
@@ -102,11 +104,11 @@
                 <div class="section__line-item  is--page-index-header"></div>
             </div>
 			<h1 class="page-header__heading  is--page-index-header  is--h2  " data-aos="fade-down" data-aos-delay="300">Профессиональное управление качеством жизни</h1>			<div class="section__grid  grid__row  is--page-index-header">
-									<picture><img src="./img/default/index-header-item1.jpg " class="img-responsive" alt=""></picture>
-									<picture><img src="./img/default/index-header-item2.jpg " class="img-responsive" alt=""></picture>
-									<picture><img src="./img/default/index-header-item3.jpg " class="img-responsive" alt=""></picture>
-									<picture><img src="./img/default/index-header-item4.jpg " class="img-responsive" alt=""></picture>
-									<picture><img src="./img/default/index-header-item5.jpg " class="img-responsive" alt=""></picture>
+									<picture ><img data-aos="fade-banner-down" data-aos-delay="300" src="./img/default/index-header-item1.jpg " class="img-responsive" alt=""></picture>
+									<picture ><img data-aos="fade-banner-up" data-aos-delay="600" src="./img/default/index-header-item2.jpg " class="img-responsive" alt=""></picture>
+									<picture ><img data-aos="fade-banner-up" data-aos-delay="900" src="./img/default/index-header-item3.jpg " class="img-responsive" alt=""></picture>
+									<picture ><img data-aos="fade-banner-down" data-aos-delay="1200" src="./img/default/index-header-item4.jpg " class="img-responsive" alt=""></picture>
+									<picture ><img data-aos="fade-banner-up" data-aos-delay="1500" src="./img/default/index-header-item5.jpg " class="img-responsive" alt=""></picture>
 								
 			</div>
 		</div>
@@ -466,12 +468,8 @@
 svg4everybody();
 document.createElement("picture");
 	AOS.init({
-		duration: 1000
+		duration: 1500
 	});
-</script>         <script>
-            setTimeout(function(){
-                $('.section__grid.is--page-index-header').addClass('is--animate');
-            }, 1000);
-        </script>
+</script>         
 	</body>
 </html> 

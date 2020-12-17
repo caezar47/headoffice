@@ -17,7 +17,7 @@
 			} %}
 			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 				{% for b in banner %}
-					<picture><img src="{{b.img}}" class="img-responsive" alt=""></picture>
+					<picture ><img {% if b.aos %}data-aos="{{b.aos}}" {% if b.delay %}data-aos-delay="{{b.delay}}"{% endif %}{% endif %} src="{{b.img}}" class="img-responsive" alt=""></picture>
 				{% endfor %}				
 			</div>
 		</div>

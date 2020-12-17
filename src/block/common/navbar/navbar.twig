@@ -24,8 +24,10 @@
 			<div class="container">
 				<div class="{{prefix}}aside-row row">
 					<div class="{{prefix}}aside-cols cols  is--logotip">
-						<a data-aos="fade-right" href="{{page.index}}" class="{{prefix}}header-logotip">
-							{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
+						<a href="{{page.index}}" class="{{prefix}}header-logotip">
+							<span data-aos="fade-logotip" data-aos-delay="300">
+								{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
+							</span>
 						</a>
 					</div>
 					<div class="{{prefix}}aside-cols cols  is--nav" data-aos="fade-up" data-aos-duration="1500">
