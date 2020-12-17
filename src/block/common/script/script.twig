@@ -15,4 +15,9 @@ document.createElement("picture");
 {% if wow == "view" %}
 new WOW().init();
 {% endif %}
+{% if aos %}
+	AOS.init({
+		duration: 1000
+	});
+{% endif %}
 </script> 

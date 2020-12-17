@@ -96,7 +96,7 @@
                 content_prefix:prefix.section, 
                 content_mod:"is--page-index-header", 
                 heading_group:"", 
-                heading_attr:"",
+                heading_attr:'data-aos="fade-down" data-aos-delay="300"',
                 heading_mod:"is--page-index-header  is--h2", 
                 heading_level:"h1", 
                 heading:"Профессиональное управление качеством жизни",
@@ -162,7 +162,9 @@
         } %}
 
         {% include "../block/common/modals/include.twig"%}
-    	{% include "../block/common/script/script.twig"%}
+    	{% include "../block/common/script/script.twig" with {
+            aos:"true",
+        }%}
         <script>
             setTimeout(function(){
                 $('.section__grid.is--page-index-header').addClass('is--animate');

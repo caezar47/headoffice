@@ -24,12 +24,12 @@
 			<div class="container">
 				<div class="{{prefix}}aside-row row">
 					<div class="{{prefix}}aside-cols cols  is--logotip">
-						<a href="{{page.index}}" class="{{prefix}}header-logotip">
+						<a data-aos="fade-right" href="{{page.index}}" class="{{prefix}}header-logotip">
 							{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
 						</a>
 					</div>
-					<div class="{{prefix}}aside-cols cols  is--nav">
-						<nav class="{{prefix}}aside-nav">
+					<div class="{{prefix}}aside-cols cols  is--nav" data-aos="fade-up" data-aos-duration="1500">
+						<nav class="{{prefix}}aside-nav"  >
 							{% for n in nav %}
 							<li class="{{prefix}}aside-nav-item">
 								<a href="{{n.link}}" class="{{prefix}}aside-nav-link  {{n.active}}">{{n.name}}</a>
@@ -37,7 +37,7 @@
 							{% endfor %}
 						</nav> 	
 					</div>
-					<div class="{{prefix}}aside-cols cols  is--lang">
+					<div class="{{prefix}}aside-cols cols  is--lang" data-aos="fade-up" data-aos-duration="1500">
 						<nav class="{{prefix}}aside-lang">
 							{% for l in lang %}
 							<li class="{{prefix}}aside-lang-item">
