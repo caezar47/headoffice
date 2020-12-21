@@ -9,6 +9,11 @@
 		@rules();
 	}
 }
+.media-breakpoint-between(@min; @max; @rules){
+	@media (min-width: @min) and (max-width: @max - 0.02){
+		@rules(); 
+	}
+}
 //===== media point =====//
 @media-point-xxs: ~"(max-width: 565px)";
 @media-point-xxs-l: ~"(max-width: 565px) and (orientation:landscape)";
@@ -42,7 +47,7 @@
 
 //===== heading =====//
 .heading1(){
-	font-size: 1.8rem;
+	font-size: 1.714rem;
 	line-height: 110%; 
 	font-weight: 800;	
 	.media-breakpoint-up(@md; {
@@ -50,8 +55,8 @@
 	});
 }
 .heading2(){
-	font-size: 1.6rem;
-	line-height: 111.1%; 
+	font-size: 1.5rem;
+	line-height: 110%; 
 	font-weight: 800;
 	.media-breakpoint-up(@md; {
 		font-size: 2.250rem;
@@ -61,17 +66,20 @@
 	font-size: 1.625rem;
 	line-height: 107.7%; 	
 }
-.heading4(){
-	font-size: 1.125rem;
-	line-height: 150%; 	
+.heading4(){ 	
+	font-size: 1.143rem;
+	line-height: @site_lh;
+	.media-breakpoint-up(@md; {
+		font-size: 1.25rem;
+	});	
 }
 .heading5(){
-	font-size: @site_fs;
-	line-height: @site_lh;
+	font-size: 1.125rem;
+	line-height: 150%;
 }
 .heading6(){
-	font-size: 0.857rem;
-	line-height: 140%;	
+	font-size: @site_fs;
+	line-height: @site_lh;	
 }
 
 //===== adaptiv fs and lh =====//

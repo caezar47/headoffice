@@ -1,14 +1,15 @@
 .navbar__{
 	&block{ 
-		position: fixed;
+		position: absolute;
 		z-index: 110;
 		top: 0;
 		left: 0;
 		width: 100%;
-		padding: 9px 0;
+		padding: 36px 0;
 		background-color: @header_bg;
 		transition: @trs-site;
 		.media-breakpoint-up(@xl; {
+			position: absolute;
 			padding: 45px 0;
 			background-color: fadeout(@header_bg, 100%);
 		});
@@ -34,6 +35,7 @@
 			padding-right: @container_gap;
 			&.is--hamburger{
 				height: @header_humb_height;
+				margin-bottom: 3px;
 			}
 		}
 		&-logotip{
@@ -42,8 +44,8 @@
 			&, &:focus, &:hover{
 				color: @default;
 			}
-			height: 42px;
-			width: 275px;
+			height: 20px;
+			width: 137px;
 			span{
 				display: block;
 				width: 100%;
@@ -72,8 +74,7 @@
 			&-line{
 				width: 100%;
 		    	display: block;
-				height: 2px;
-				border-radius: 2px;
+				height: 3px;
 				transition: @trs-site;
 				background-color: @header_humb_color;
 				transition: @trs-site;	
@@ -81,23 +82,27 @@
 					//background-color: @navbar_humb_color_active;
 				}				
 				&.is--left{
-					.navbar__header-hamburger.is--active &{			
-						transform: translate(-3px, 7px) rotate(-135deg);
+					.navbar__header-hamburger.is--active &{		
+						width: 75%;	
+						transform: translate(6px, 5.5px) rotate(-135deg);
 						transition: @trs-site 0.2s;
 					}
 				}	
 				&.is--center{
+					width: 50%;
 					transform-origin: 100% 0;
 					transition: @trs-site 0.2s;
-					margin: auto;
+					margin-left: auto;
 					.navbar__header-hamburger.is--active &{
 						transform: scale(0, 1);
 						transition: @trs-site;
 					}
 				}	
 				&.is--right{
-					.navbar__header-hamburger.is--active &{		
-						transform: translate(-3px,-7px) rotate(135deg);
+					margin-left: auto;
+					width: 75%;
+					.navbar__header-hamburger.is--active &{	
+						transform: translate(0px,-5px) rotate(135deg);
 						transition: @trs-site 0.2s;
 					}
 				}
@@ -135,8 +140,11 @@
 		&-inner{
 			height: 100%;
 			overflow: auto;
-			padding-top: 20px;	
-			padding-bottom: 20px;
+			padding-top: 25px;	
+			padding-bottom: 0px;
+			.container{
+				height: 100%;
+			} 
 			.media-breakpoint-up(@xl; {
 				overflow: hidden;
 				padding-top: 0;	
@@ -146,8 +154,7 @@
 		&-row{
 		    flex-wrap: nowrap;
 			flex-direction: column;
-			height: 100%;
-			margin-top: -30px;
+			min-height: 100%;
 			.media-breakpoint-up(@xl; {
 				margin-top: 0;
 				flex-direction: row;
@@ -156,10 +163,15 @@
 			});
 		}
 		&-cols{
-			margin-top: 30px;
 			&.is--logotip{
 				display: none;
 			}
+			.media-breakpoint-down(@xl; {
+				&.is--lang{
+					margin-top: auto;
+					margin-bottom: 40px;
+				}
+			});
 			.media-breakpoint-up(@xl; {
 				margin-top: 0px;
 				&.is--logotip{
@@ -174,18 +186,30 @@
 		&-lang{
 			&{
 				display: flex;
-				margin: 0;
-				padding: 0;
+				justify-content: center;
+				margin: 40px 0 0;
+				padding: 42px 0 0;
 				list-style: none;
 				font-weight: 800;
-				font-size: 0.688rem;
-				line-height: 140%;
+				font-size: 0.786em;
+				border-top: 1px solid @blue-cc;
+				.media-breakpoint-up(@xl; {
+					margin: 0;
+					padding: 0;
+					font-size: 0.688rem;
+					justify-content: initial;
+					border: none;
+				});
 			}
 			&-item{}
 			&-link{
+				display: block;
 				color: @aside_lang_color;
 				background-color: @aside_lang_bg;
-				padding: 5px 9px;
+				padding: 4px 9px;
+				.media-breakpoint-up(@md; {
+					padding: 2px 9px;
+				});
 				&:hover{
 					color: @default;
 				}
@@ -198,20 +222,20 @@
 		&-nav{
 			&{
 				font-weight: 800;
-				font-size: 0.688rem;
-				line-height: 140%;
 				list-style: none;
-				margin: -20px -@aside_gutter 0;
+				margin: -41px -@aside_gutter 0;
 				padding: 0;
 				display: flex;
 				flex-direction: column;
+				align-items: center;
 				.media-breakpoint-up(@xl; {
 					align-items: center;
 					flex-direction: row;
+					font-size: 0.688rem;
 				});
 			}
 			&-item{
-				margin-top: 20px;
+				margin-top: 41px;
 				padding: 0 @aside_gutter;
 			}
 			&-link{

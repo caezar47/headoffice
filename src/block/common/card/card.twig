@@ -33,6 +33,28 @@
 	</div>
 	{% endfor %}
 {% endif %}
+{% if view == "team-slider" %}
+	{% for value in list %}
+	<div>	
+		<div class="{{prefix}}item  {{mod}}">
+			<picture class="{{prefix}}preview  {{mod}}">
+				<source media="(max-width: 575px)" srcset="{{value.img_xs}}">
+				<img src="{{value.img}}" class="img-responsive" alt="">
+			</picture>
+			<div class="{{prefix}}group  {{mod}}">
+				<div class="{{prefix}}note  {{mod}}">{{value.note}}</div>
+				<div>				
+					<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
+					<p class="{{prefix}}position  {{mod}}">{{value.position}}</p>
+					<picture class="{{prefix}}preview  {{mod}}-sign">
+						<img src="{{value.sign}}" class="img-responsive" alt="">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+{% endif %}
 {% if view == "team-card" %}
 	{% for value in list %}	
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}">

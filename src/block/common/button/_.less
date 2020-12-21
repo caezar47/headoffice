@@ -3,8 +3,8 @@
 		.btn-clearfix();
 		border-radius: @btn_radius;
 		font-weight: 700;
-		font-size: @btn_fs;
-		line-height: @btn_lh;
+		font-size: 0.857rem;
+		line-height: 140%;
 		position: relative;	
 		display: inline-flex;
 		align-items: center; 
@@ -12,7 +12,7 @@
 		background-color: @btn_bg; 
 		text-align: center;	
 		color: @btn_color;
-		padding: 10px 25px;
+		padding: 9px 15px;
 		&.is--hover,
 		&:hover{	
 			color: @btn_hover_color;		
@@ -27,14 +27,24 @@
 			opacity: 0.1;
 			cursor: not-allowed;
 		}
+		&.is--icon{
+		}
 		svg{
 			width: 10px;
 			height: 16px;
-			margin-left: auto;
+			margin-left: 18px;
 		}
-		&.is--icon{
-			min-width: 175px;
-		}
+		.media-breakpoint-up(@md; {
+			font-size: @btn_fs;
+			line-height: @btn_lh;
+			padding: 10px 25px;
+			&.is--icon{
+				min-width: 175px;
+			}
+			svg{
+				margin-left: auto;
+			}
+		});
 	}
 	//old
 	&next{

@@ -63,13 +63,16 @@
 }
 .grid__{
 	&row{
-		display: grid;
-		grid-gap: @container_gap*2;
-		&.is--gap{
-			&-sm{
-				grid-gap: @container_gap - 10;
-			}
-		}	
+		display: flex;
+		@supports (display: grid){
+			display: grid;
+			grid-gap: @container_gap*2;
+			&.is--gap{
+				&-sm{
+					grid-gap: @container_gap - 10;
+				}
+			}	
+		}
 	}
 	&cols{
 		&.is--mla{

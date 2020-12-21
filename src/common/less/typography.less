@@ -1,7 +1,10 @@
 html {
-	font-size: @site_fs;
-	line-height: @site_lh;
 	font-family: @site_ff;	
+	font-size: @site_fs_xs;
+	line-height: @site_lh;
+	.media-breakpoint-up(@md; {
+		font-size: @site_fs;
+	});
 }
 h1, h2, h3, h4, h5, h6{
 	margin: 0;

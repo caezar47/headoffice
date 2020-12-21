@@ -25,28 +25,28 @@
 				<div class="{{prefix}}aside-row row">
 					<div class="{{prefix}}aside-cols cols  is--logotip">
 						<a href="{{page.index}}" class="{{prefix}}header-logotip">
-							<span data-aos="fade-logotip" data-aos-delay="300">
+							<span {{logo_aos}}>
 								{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
 							</span>
 						</a>
 					</div>
-					<div class="{{prefix}}aside-cols cols  is--nav" data-aos="fade-up" data-aos-duration="1500">
-						<nav class="{{prefix}}aside-nav"  >
+					<div class="{{prefix}}aside-cols cols  is--nav" {{nav_aos}}>
+						<ul class="{{prefix}}aside-nav"  >
 							{% for n in nav %}
 							<li class="{{prefix}}aside-nav-item">
 								<a href="{{n.link}}" class="{{prefix}}aside-nav-link  {{n.active}}">{{n.name}}</a>
 							</li>
 							{% endfor %}
-						</nav> 	
+						</ul> 	
 					</div>
-					<div class="{{prefix}}aside-cols cols  is--lang" data-aos="fade-up" data-aos-duration="1500">
-						<nav class="{{prefix}}aside-lang">
+					<div class="{{prefix}}aside-cols cols  is--lang" {{lang_aos}}>
+						<ul class="{{prefix}}aside-lang">
 							{% for l in lang %}
 							<li class="{{prefix}}aside-lang-item">
 								<a href="{{l.link}}" class="{{prefix}}aside-lang-link  {{l.active}}">{{l.name}}</a>
 							</li>
 							{% endfor %}
-						</nav> 	
+						</ul> 	
 					</div>					
 				</div>
 			</div>
