@@ -10,7 +10,8 @@
 		transition: @trs-site;
 		.media-breakpoint-up(@xl; {
 			position: absolute;
-			padding: 45px 0;
+			//padding: 45px 0;
+			padding: 28px 0;
 			background-color: fadeout(@header_bg, 100%);
 		});
 	}
@@ -232,6 +233,7 @@
 				flex-direction: column;
 				align-items: center;
 				.media-breakpoint-up(@xl; {
+					margin-top: 0;
 					align-items: center;
 					flex-direction: row;
 					font-size: 0.688rem;
@@ -239,7 +241,11 @@
 			}
 			&-item{
 				margin-top: 41px;
-				padding: 0 @aside_gutter;
+				padding: 0px @aside_gutter;
+				.media-breakpoint-up(@xl; {
+					margin-top: 0px;
+					padding: 20px @aside_gutter;
+				});
 			}
 			&-link{
 				color: @aside_nav_color;

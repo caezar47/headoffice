@@ -42,13 +42,25 @@
 				<img src="{{value.img}}" class="img-responsive" alt="">
 			</picture>
 			<div class="{{prefix}}group  {{mod}}">
+				<p class="{{prefix}}heading  {{mod}}">{{value.heading}}</p>
 				<div class="{{prefix}}note  {{mod}}">{{value.note}}</div>
 				<div>				
-					<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
+					<p class="{{prefix}}heading  {{mod}}-name">{{value.name}}</p>
 					<p class="{{prefix}}position  {{mod}}">{{value.position}}</p>
 					<picture class="{{prefix}}preview  {{mod}}-sign">
 						<img src="{{value.sign}}" class="img-responsive" alt="">
 					</picture>
+					<p class="{{prefix}}btn  {{mod}}">
+						{% include "../button/btn.twig" with {
+							view:"link",
+							prefix:"btn__", 
+							mod:"is--icon", 
+							icon:'icon-next', 
+							attr: '',
+							link:value.link, 
+							name:"Наша команда" 
+						} %}
+					</p>
 				</div>
 			</div>
 		</div>

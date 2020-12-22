@@ -23,7 +23,7 @@
                     "active": '', 
                 },
                 {
-                    "name":"Как мы рабоаем", 
+                    "name":"Как мы работаем", 
                     "link": '', 
                     "active": '', 
                 },
@@ -68,7 +68,7 @@
                     "active": '', 
                 },
                 {
-                    "name":"Как мы рабоаем", 
+                    "name":"Как мы работаем", 
                     "link": page.works, 
                     "active": '', 
                 },
@@ -152,22 +152,25 @@
                 card_mod: 'is--team-slider',
                 card_list: [
                     {
+                        "link":page.team, 
+                        "heading":"Сервис, который&nbsp;мы создали для себя, но развиваем как бизнес", 
                         "note":"<p>В своей жизни я так и не смог найти сервис, который взял бы на себя решение всех моих повседневных проблем «под ключ». Большинство подрядчиков, с которыми приходилось работать, либо узко специализированы, либо недостаточно профессиональны. К тому же, зачастую они преследовали не мои, а свои собственные коммерческие интересы. </p><p>Мы создали HeadOffice таким, каким должен быть настоящий семейный офис: высокопрофессиональным, со знанием местной специфики и возможностью предоставлять услуги по всему миру, и при этом оптимальным по стоимости. </p>", 
                         "name": "Владислав Баумгертнер",
                         "position": "Партнер, основатель HeadOffice",
                         "img": [path.img,"/default/index-silder-item1.jpg"].join(""),
                         "img_xs": [path.img,"/default/index-silder-item1-xs.jpg"].join(""),
                         "sign": [path.img,"/default/index-silder-item1-sign.jpg"].join(""),
-                    },
-                    
+                    },                     
                     {
+                        "link":page.team, 
+                        "heading":"Сервис, который&nbsp;мы создали для себя, но развиваем как бизнес", 
                         "note":"<p>Профессиональный семейный офис – это в том числе вопрос огромного личного и профессионального доверия, которое не приходит одномоментно, однако является результатом многолетней совместной работы и безупречной личной репутации.</p><p>В HeadOffice работает команда единомышленников, собравшихся вместе для того, чтобы сделать безукоризненный по качеству и функционалу продукт, к которому шли всю свою карьеру. У нас нет случайных людей: все сотрудники HeadOffice имеют длительную историю совместных профессиональных отношений.</p><p>Доверие клиентов к HeadOffice также является и результатом безупречной организации нашей работы: эффективной системы управления, тщательного процедур по подбору и контролю сотрудников, налаженных бизнес-процедур и выстроенной инфраструктуры.</p>", 
                         "name": "Сергей Бучин",
                         "position": "Партнер, основатель HeadOffice",
                         "img": [path.img,"/default/index-silder-item2.jpg"].join(""),
                         "img_xs": [path.img,"/default/index-silder-item2-xs.jpg"].join(""),
                         "sign": [path.img,"/default/index-silder-item1-sign.jpg"].join(""),
-                    },
+                    }, 
                 ],   
                 btn_view:'link',             
                 btn_name:'Подробнее',             
@@ -177,19 +180,20 @@
                 btn_mod:'is--icon', 
                 img: [path.img,"/default/index-about-logo.svg "].join(""),
             } %}
-            {# {% include "../block/page/index.twig" with {
+
+            {% include "../block/page/index.twig" with {
                 view:"contacts", 
                 content_prefix:prefix.section, 
                 content_mod:"is--page-index-contacts", 
                 heading_group:"", 
                 heading_attr:"",
-                heading_mod:"is--page-default  is--h1", 
+                heading_mod:"is--page-index-contacts  is--h1", 
                 heading_level:"h2", 
                 heading:"Контакты", 
-                note_mod:"is--page-index-contacts  color--success", 
+                note_mod:"is--page-index-contacts-note", 
                 note_level:"p", 
                 note: ['Напишите нам на почту <a href="mailto:',contacts.email,'">',contacts.email,'</a> или позвоните по общему телефону <a href="tel:',contacts.phone_tel,'">',contacts.phone,'</a>'].join(""),
-            } %} #}
+            } %}
         </main>
         
         {% include "../block/common/footer/footer.twig" with {
@@ -200,13 +204,5 @@
     	{% include "../block/common/script/script.twig" with {
             aos:"true",
         }%}
-        {# 
-
-                     #}
-        {#<script>
-            setTimeout(function(){
-                $('.section__grid.is--page-index-header').addClass('is--animate');
-            }, 1000);
-        </script>#}
 	</body>
 </html> 

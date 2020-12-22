@@ -26,6 +26,9 @@
 		    	}
 		    	&-contacts{
 					background-color: @danger;
+				    .media-breakpoint-up(@md; {
+				    	display: none;
+				    });
 		    	}
 	    	}	    	
 	    	&-about{
@@ -69,6 +72,10 @@
 	    			padding-top: 45px;
 	    			padding-bottom: 52px;
 	    		}
+		    	&-contacts{
+		    		padding-top: 35px;	
+	    			padding-bottom: 45px;
+		    	}
 	    	}
 	    	&-about{
 	    		&-mission{
@@ -122,10 +129,6 @@
 		    			padding-top: 115px;
 			    		padding-bottom: 95px;		    		
 		    		}
-			    	&-contacts{
-			    		padding-top: 110px;	
-			    		padding-bottom: 90px;		    		
-			    	}
 		    	}
 		    	&-about{
 		    		&-mission{
