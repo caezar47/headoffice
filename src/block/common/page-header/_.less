@@ -19,24 +19,21 @@
 				}
 			}				
 			&-default{				
-				margin-bottom: 20px;
-				&-xl{
-					margin-bottom: 45px;					
+				&-header{
+					margin-bottom: 20px;
 				}
-				&-lgx{
-					margin-bottom: 35px;					
-				}
-				&-lg{
-					margin-bottom: 25px;					
-				}
-				&-md{
-					
-				}
-				&-sm{
-					margin-bottom: 10px;						
-				}
-				&-xs{
-					
+				&-note{
+					line-height: 144%;
+					max-width: 817px;
+					.media-breakpoint-up(@md; {
+						line-height: @site_lh;
+					});
+					p, div{
+						margin-bottom: 15px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
 				}
 			}
 			&-index{
@@ -59,6 +56,12 @@
 				}
 			}
 			&-about{
+				&-header{
+					margin-bottom: 25px;
+					&-note{
+						line-height: 144%;
+					}
+				}
 				&-mission{
 					line-height: 130%;
 				}
