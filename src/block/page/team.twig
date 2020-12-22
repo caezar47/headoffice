@@ -1,45 +1,54 @@
 {% if view == "header" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:heading_mod,
-				attr:heading_attr, 
-				level:heading_level, 
-				heading:heading
-			} %}
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:note_mod,
-				level:note_level, 
-				heading:note
-			} %}
+			<div class="{{content_prefix}}line-group  {{content_mod}}">
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+            </div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
+				} %}
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:note_mod,
+					level:note_level, 
+					heading:note
+				} %}
+			</div>
 		</div>
 	</section>
 {% endif %}
 {% if view == "head" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:heading_mod,
-				attr:heading_attr, 
-				level:heading_level, 
-				heading:heading
-			} %}
-			{# {% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:note_mod,
-				level:note_level, 
-				heading:note
-			} %} #}
-			<div>				
-				{% include "../common/card/card.twig" with {
-					view: card_view,
-					prefix:"card__", 
-					mod:  card_mod, 
-					list: card_list
+			<div class="{{content_prefix}}line-group  is--page-line-right  {{content_mod}}"></div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
 				} %}
+				{# {% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:note_mod,
+					level:note_level, 
+					heading:note
+				} %} #}
+				<div class="{{content_prefix}}slick  {{content_mod}}" data-slick-team-full>				
+					{% include "../common/card/card.twig" with {
+						view: card_view,
+						prefix:"card__", 
+						mod:  card_mod, 
+						list: card_list
+					} %}
+				</div>
 			</div>
 		</div>
 	</section>
@@ -47,20 +56,23 @@
 {% if view == "list" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:heading_mod,
-				attr:heading_attr, 
-				level:heading_level, 
-				heading:heading
-			} %}
-			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
-				{% include "../common/card/card.twig" with {
-					view: card_view,
-					prefix:"card__", 
-					mod:  card_mod, 
-					list: card_list
+			<div class="{{content_prefix}}line-group  is--page-line-right  {{content_mod}}"></div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
 				} %}
+				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+					{% include "../common/card/card.twig" with {
+						view: card_view,
+						prefix:"card__", 
+						mod:  card_mod, 
+						list: card_list
+					} %}
+				</div>
 			</div>
 		</div>
 	</section>

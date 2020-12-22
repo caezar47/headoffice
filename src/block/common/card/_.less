@@ -42,36 +42,67 @@
 			}
 			&-full{
 				background-color: @site_bg;
-				display: grid;
-				grid-gap: 0 30px;
-				margin-bottom: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				@supports (display: grid){
+					display: grid;
+					grid-gap: 0 30px;
+				}
 				& > *:nth-child(2){
 					align-self: center;
-					padding: 25px;
+					padding: 25px 25px 30px;
 				}
 				.media-breakpoint-up(@sm; {
-					grid-template-columns: 5fr 7fr;
+					flex-wrap: nowrap;
+					& > *:nth-child(1){
+						flex: 0 0 35%;						
+					}
+					& > *:nth-child(2){
+						flex: 1 1 65%;
+					} 
 					&:nth-child(2n+2){
-						grid-template-columns: 7fr 5fr;
+						& > *:nth-child(1){
+							order: 1;
+						}
+					}
+					@supports (display: grid){
+						grid-template-columns: 5fr 7fr;
+						&:nth-child(2n+2){
+							grid-template-columns: 7fr 5fr;
+						}
 					}
 					&:nth-child(2n+2) > *:nth-child(2){
 						grid-column: 1;
 						grid-row: 1;
 					}
 				});
-				.media-breakpoint-up(@lg; {
-					grid-template-columns: 3.9fr 8.1fr;
+				.media-breakpoint-up(@md; {
+					margin-bottom: 20px;
+				});
+				.media-breakpoint-up(@lg; { 
+					& > *:nth-child(1){
+						flex: 0 0 31.5%;						
+					}
+					& > *:nth-child(2){
+						flex: 1 1 68.5%;
+					}   				
 					& > *:nth-child(2){
 						padding: 25px 95px 35px;
 					}
-					&:nth-child(2n+2){
-						grid-template-columns: 8.1fr 3.9fr;
-					}
+					@supports (display: grid){
+						grid-template-columns: 3.9fr 8.1fr;
+						&:nth-child(2n+2){
+							grid-template-columns: 8.1fr 3.9fr;
+						}
+		    		}
 				});
 			}
 			&-card{
 				position: relative;
-				height: 350px;			
+				height: 190px;
+				.media-breakpoint-up(@md; {
+					height: 350px;
+				});	
 			}
 		}
 		&.is--services{
@@ -133,15 +164,17 @@
 				}
 			}
 			&-full{
-				width: 100%;
-				height: 100%;
-				min-height: 485px;	
-				img{
+				.media-breakpoint-up(@md; {					
 					width: 100%;
 					height: 100%;
-					object-position: center;
-					object-fit: cover;
-				}			
+					min-height: 485px;	
+					img{
+						width: 100%;
+						height: 100%;
+						object-position: center;
+						object-fit: cover;
+					}	
+				});		
 			}
 		}
 		&.is--team-card,
@@ -198,20 +231,30 @@
 				}
 			}
 			&-full{
-				font-weight: 800;
-				font-size: 1.75rem;
+				font-weight: 700;
+				margin-bottom: 10px;
+				font-size: 1.429rem;
 				line-height: 110%;
-				margin-bottom: 20px;				
+				.media-breakpoint-up(@md; {
+					margin-bottom: 20px;
+					font-size: 1.75rem;
+					line-height: 100%;	
+					font-weight: 800;	
+				});				
 			}
 			&-card{
 				position: absolute;
 				bottom: 0;
 				left: 0;
-				padding: 15px;
+				font-size: 0.857rem;
+				padding: 12px 7px;
+				line-height: 100%;
 				font-weight: 800;
-				color: @white;	
-				overflow: hidden;
-				height: 75px;		
+				color: @white;
+				.media-breakpoint-up(@md; {
+					font-size: @site_fs;
+					padding: 15px;
+				});		
 			}
 			&-item{
 				margin-bottom: 20px;
@@ -268,9 +311,12 @@
 			}
 			&-full{
 				.heading5();
+				color: @success;
 				line-height: 120%;
-				margin-bottom: 18px;
+				margin-bottom: 16px;
 				.media-breakpoint-up(@md; {
+					margin-bottom: 18px;
+					color: @default;
 					line-height: 110%;
 				});
 			}
@@ -295,7 +341,7 @@
 				});
 			}
 			&-full{
-				margin-top: 35px;
+				margin-top: 23px;
 				.media-breakpoint-up(@md; {
 					margin-top: 50px;
 					.btn__item{
@@ -339,7 +385,7 @@
 			}
 			&-full{
 				color: @success;
-				line-height: 120%;
+				line-height: 122%;
 				.media-breakpoint-up(@md; {
 					line-height: @site_lh;
 				});

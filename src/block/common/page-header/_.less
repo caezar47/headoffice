@@ -20,7 +20,10 @@
 			}				
 			&-default{				
 				&-header{
-					margin-bottom: 20px;
+					margin-bottom: 25px;
+					.media-breakpoint-up(@md; {
+						margin-bottom: 20px;
+					});
 				}
 				&-note{
 					line-height: 144%;
@@ -77,7 +80,10 @@
 			}
 			&-team{
 		    	&-head{
-		    		margin-bottom: 40px;
+					margin-bottom: 25px;
+					.media-breakpoint-up(@md; {
+		    			margin-bottom: 40px;
+					});
 		    	}
 			}
 			&-services{

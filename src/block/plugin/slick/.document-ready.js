@@ -1,8 +1,9 @@
 var prevArrow = '<button type="button" class="slick-btn  is--prev"><span class="sr-only">Предыдущий слайд</span></button>';
 var nextArrow = '<button type="button" class="slick-btn  is--next"><span class="sr-only">Следующий слайд</span></button>';
 
-var team  	= $('[data-slick-team]');
-var adv 	= $('[data-slick-adv]');
+var team  		= $('[data-slick-team]');
+var team_full  	= $('[data-slick-team-full]');
+var adv 		= $('[data-slick-adv]');
 
 team.slick({
 	slidesToShow: 1,
@@ -31,8 +32,19 @@ adv.slick({
 	prevArrow: prevArrow,
 	nextArrow: nextArrow,
 });
+team_full.slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: false,
+	fade: true, 	
+	infinite: false,
+	prevArrow: prevArrow,
+	nextArrow: nextArrow,
+	autoplay: false,
+});
 if($(document).width() > 767) {
 	adv.slick('unslick');
+	team_full.slick('unslick');
 }
 
 
