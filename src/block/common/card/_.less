@@ -176,6 +176,9 @@
 					}	
 				});		
 			}
+    		&-item{
+    			margin-bottom: 5px;
+    		}
 		}
 		&.is--team-card,
 		&.is--services{
@@ -257,7 +260,10 @@
 				});		
 			}
 			&-item{
-				margin-bottom: 20px;
+				margin-bottom: 22px;
+				.media-breakpoint-up(@md; {
+					margin-bottom: 20px;
+				});
 			}
 		}
 		&.is--services{
@@ -321,10 +327,13 @@
 				});
 			}
 			&-item{
+				font-size: 16px;
+				line-height: 144%;
 				font-weight: 700;
 				color: @success;
 				.media-breakpoint-up(@lg; {
 					margin-bottom: 25px;
+					line-height: 130%;
 				});
 			}
 		}
@@ -354,6 +363,9 @@
 			}
 			&-item{
 				margin-bottom: 25px;
+				.media-breakpoint-up(@md; {
+					margin-bottom: 42px;
+				});
 			}
 		}
 	}
@@ -392,12 +404,16 @@
 			}
 			&-item{
 				max-width: 630px;
-				line-height: 140%;
-				margin-bottom: 50px;
+				line-height: 143%;
+				margin-bottom: 27px;
 				& > p,
 				& > div{
 					margin-bottom: 20px;
 				}
+				.media-breakpoint-up(@md; {
+					line-height: 140%;
+					margin-bottom: 30px;
+				});
 			}
 		}
 		&.is--services{
@@ -428,7 +444,7 @@
 	&desc{	 
 		&.is--team{
 			&-item{
-				margin-bottom: 33px;
+				margin-bottom: 30px;
 				&.cols,
 				.cols{
 					.media-breakpoint-up(@md; {
@@ -441,15 +457,21 @@
 				.cols{
 					ul{
 						li{
-							margin-bottom: 17px;
+							margin-bottom: 20px;
+							&:last-child{
+								margin-bottom: 0;
+							}
 						}
 					}
 				}
 				ul{
+					line-height: 120%;
 					li{
 						span{
 							font-size: 0.875rem;
-							line-height: 100%;
+						    line-height: 100%;
+						    display: block;
+						    margin-top: 8px;
 						}
 					}
 				}

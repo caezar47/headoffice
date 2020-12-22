@@ -84,8 +84,11 @@
 	});	
 }
 .heading6(){
-	font-size: @site_fs;
-	line-height: @site_lh;	
+	font-size: @site_fs_xs;
+	line-height: @site_lh;
+	.media-breakpoint-up(@md; {
+		font-size: @site_fs;
+	});	
 }
 
 //===== adaptiv fs and lh =====//

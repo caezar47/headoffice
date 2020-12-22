@@ -202,11 +202,16 @@
 		align-items: center;
 		&.is--pdf{
 			svg{
-				width: 27px;
-				height: 31px;
-				margin-right: 15px;
+				width: 21px;
+				height: 24px;
+				margin-right: 10px;
 				order: -1;
 				color: @default;
+				.media-breakpoint-up(@md; {
+					width: 27px;
+					height: 31px;
+					margin-right: 15px;
+				});
 			}
 		}
 		&:hover{
