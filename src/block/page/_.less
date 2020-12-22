@@ -64,6 +64,11 @@
 		padding-bottom: 20px;
 		flex: 1 1 100%;
 	    &.is--page{
+	    	&-default{
+	    		&-header{
+					padding-top: 0px;
+	    		}
+	    	}
 	    	&-index{
 	    		&-header{
 	    			padding-top: 0;
@@ -127,6 +132,7 @@
 		    &.is--page{
 		    	&-default{
 		    		&-header{
+		    			padding-top: 20px;
 						padding-bottom: 50px;
 		    		}
 		    	}
@@ -160,7 +166,7 @@
 		    	&-team{
 			    	&-head{
 		    			padding-top: 67px;
-		    			padding-bottom: 70px;
+		    			padding-bottom: 55px;
 			    	}
 			    	&-list{
 		    			padding-top: 80px;
@@ -362,6 +368,9 @@
 	    				    max-width: 135px;
 	    				    margin: 0 auto;
 		    			}
+		    		}
+	    			@supports (display: grid){
+		    			grid-gap: 38px 30px;
 		    		}
 		    		.media-breakpoint-up(@md; {
 		    			& > * {

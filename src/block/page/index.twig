@@ -38,8 +38,11 @@
 			<div class="{{content_prefix}}inner  is--page-index">
 				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 					<div>
-						<div class="text__block  {{content_mod}}">
+						<div class="text__block  {{content_mod}}  hidden--md">
 							{{note}}
+						</div>
+						<div class="text__block  {{content_mod}}  visible--md">
+							{{note2}}
 						</div>
 						{% include "../common/button/btn.twig" with {
 							prefix:"btn__", 

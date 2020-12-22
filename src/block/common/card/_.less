@@ -62,8 +62,7 @@
 				.media-breakpoint-up(@lg; {
 					grid-template-columns: 3.9fr 8.1fr;
 					& > *:nth-child(2){
-						align-self: center;
-						padding: 25px 95px;
+						padding: 25px 95px 35px;
 					}
 					&:nth-child(2n+2){
 						grid-template-columns: 8.1fr 3.9fr;
@@ -184,7 +183,7 @@
 				&{
 					color: @primary;
 					.heading1();
-					margin-bottom: 23px;
+					margin-bottom: 25px;
 					.media-breakpoint-up(@md; {
 						display: none;
 					});
@@ -202,7 +201,7 @@
 				font-weight: 800;
 				font-size: 1.75rem;
 				line-height: 110%;
-				margin-bottom: 15px;				
+				margin-bottom: 20px;				
 			}
 			&-card{
 				position: absolute;
@@ -268,8 +267,12 @@
 				});
 			}
 			&-full{
-				.heading4();
-				margin-bottom: 25px;
+				.heading5();
+				line-height: 120%;
+				margin-bottom: 18px;
+				.media-breakpoint-up(@md; {
+					line-height: 110%;
+				});
 			}
 			&-item{
 				font-weight: 700;
@@ -294,7 +297,13 @@
 			&-full{
 				margin-top: 35px;
 				.media-breakpoint-up(@md; {
-					margin-top: 65px;
+					margin-top: 50px;
+					.btn__item{
+						padding-left: 35px;
+						svg{
+							margin-left: 30px;
+						}
+					}
 				});
 			}
 			&-item{
@@ -327,6 +336,13 @@
 						margin-bottom: 0;
 					}
 				}
+			}
+			&-full{
+				color: @success;
+				line-height: 120%;
+				.media-breakpoint-up(@md; {
+					line-height: @site_lh;
+				});
 			}
 			&-item{
 				max-width: 630px;
