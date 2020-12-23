@@ -87,8 +87,33 @@
 		    	}
 			}
 			&-services{
+				&{
+					margin-bottom: 20px;
+					.media-breakpoint-down(@md; {
+						font-size: 2rem;
+						line-height: 115%;
+					});					
+				}
+				&-card{
+					margin-bottom: 7px;
+				}
 				&-team{
-					max-width: 850px;
+					margin-bottom: 17px;
+					font-size: 1.429rem;
+					line-height: 110%;
+					&-note{
+						max-width: 850px;
+						margin-bottom: 20px;
+						line-height: 144%;
+					}
+					.media-breakpoint-up(@md; {
+						margin-bottom: 25px;
+						font-size: 1.625rem;
+						&-note{
+							line-height: @site_lh;
+							margin-bottom: 30px;
+						}
+					});	
 				}
 			}
 	    	&-works{

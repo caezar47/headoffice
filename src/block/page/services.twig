@@ -1,70 +1,82 @@
 {% if view == "page" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:heading_mod,
-				attr:heading_attr, 
-				level:heading_level, 
-				heading:heading
-			} %}
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:note_mod,
-				level:note_level, 
-				heading:note
-			} %}
+			<div class="{{content_prefix}}line-group  {{content_mod}}  is--page-line-right">
+            </div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
+				} %}
+				<div class="text__block  {{content_mod}}  hidden--md">
+					{{note}}
+				</div>
+				<div class="text__block  {{content_mod}}  visible--md">
+					{{note2}}
+				</div>
 
-			{% include "../common/tabs/tpl.twig" with {
-				view:tabs_view, 
-				prefix:tabs_prefix, 
-				mod:tabs_mod,
-				group:tabs_group,
-				list: tabs_list,				
-			} %}
+				{% include "../common/tabs/tpl.twig" with {
+					view:tabs_view, 
+					prefix:tabs_prefix, 
+					mod:tabs_mod,
+					group:tabs_group,
+					list: tabs_list,				
+				} %}
+			</div>
 		</div>
 	</section>
 {% endif %}
 {% if view == "card" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
-			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
-				<h1 class="{{card_prefix}}heading  {{card_mod}}">{{heading}}</h1>
-				<picture class="{{card_prefix}}preview  {{card_mod}}">
-					<img src="{{img}}" class="img-responsive" alt="{{heading}}">
-				</picture>
-				<div>
-					<div class="{{card_prefix}}note  {{card_mod}}">{{note}}</div>
-					<div class="{{card_prefix}}desc  text__block  {{card_mod}}">
-						<h5>Основные моменты</h5>
-						<div class="row">
-							<div class="cols">
-								<ul>
-									<li>Бенчмарки по комиссиям и услугам банков и инвестиционных<br> управляющих</li>
-									<li>Аудит существующего инвестиционного портфеля клиента, условий управляющих и предоставление независимого второго мнения</li>
-									<li>Составление долгосрочных прогнозов денежного потока клиента</li>
-								</ul>
+			<div class="{{content_prefix}}line-group  {{content_mod}}  is--page-line-right">
+            </div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+					<h1 class="{{card_prefix}}heading  {{card_mod}}">{{heading}}</h1>
+					<div>
+						<div class="{{card_prefix}}note  {{card_mod}}  visible--md  is--xs">{{note2}}</div>
+						<picture class="{{card_prefix}}preview  {{card_mod}}">
+							<img src="{{img}}" class="img-responsive" alt="{{heading}}">
+						</picture>
+					</div>
+					<div>
+						<div class="{{card_prefix}}note  {{card_mod}}  hidden--md">{{note}}</div>
+						<div class="{{card_prefix}}note  {{card_mod}}  visible--md">{{note3}}</div>
+						<div class="{{card_prefix}}desc  text__block  {{card_mod}}">
+							<h6>Основные моменты</h6>
+							<div class="row">
+								<div class="cols">
+									<ul>
+										<li>Предоставление независимого второго мнения</li>
+										<li>Аудит существующего инвестиционного портфеля клиента и условий управляющих</li>
+										<li>Составление долгосрочных прогнозов денежного потока клиента</li>
+									</ul>
+								</div>
+								<div class="cols">
+									<ul>
+										<li>Разработка индивидуальной инвестиционной стратегии</li>
+										<li>Бенчмаркинг по комиссиям и услугам банков и инвестиционных<br> управляющих </li>
+										<li>Проведение переговоров с инвестиционными управляющими и юридическое оформление<br> инвестиций</li>
+									</ul>
+								</div>
 							</div>
-							<div class="cols">
-								<ul>
-									<li>Определение профиля инвестиций по уровню ликвидности, доходности, риска</li>
-									<li>Анализ рынка инвестиционных управляющих и подбор оптимальных управляющих под инвестиционный профиль клиента</li>
-									<li>Проведение переговоров с инвестиционными управляющими и юридическое оформление инвестиций</li>
-								</ul>
-							</div>
+						</div>	
+					</div>
+					<div>
+						<h2 class="page-header__heading  {{team_heading_mod}}">{{team_heading}}</h2>
+						<p class="page-header__heading  {{team_note_mod}}">{{team_note}}</p>
+						<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-team">
+							{% include "../common/card/card.twig" with {
+								view: team_view,
+								prefix:"card__", 
+								mod:  team_mod, 
+								list: team_list
+							} %}
 						</div>
-					</div>	
-				</div>
-				<div>
-					<h2 class="page-header__heading  {{team_heading_mod}}">{{team_heading}}</h2>
-					<p class="page-header__heading  {{team_note_mod}}">{{team_note}}</p>
-					<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-team">
-						{% include "../common/card/card.twig" with {
-							view: team_view,
-							prefix:"card__", 
-							mod:  team_mod, 
-							list: team_list
-						} %}
 					</div>
 				</div>
 			</div>
