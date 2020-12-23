@@ -116,6 +116,42 @@
 					margin-bottom: 23px;
 				});
 			}
+			&-works{	
+				&-header{
+					line-height: 144%;
+					max-width: 800px;
+					p, div{
+						margin-bottom: 15px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+					b{
+	    				font-size: 16px;
+						line-height: 144%;
+					}
+					.media-breakpoint-up(@md; {
+						line-height: @site_lh;
+						b{
+							line-height: inherit;
+						}
+						p, div{
+							margin-bottom: 10px;
+							&:last-child{
+								margin-bottom: 0;
+							}
+						}
+					});
+	    		}			
+    			&-case{
+    				.media-breakpoint-up(@md; {
+    					line-height: 134%;
+    					p, div{
+    						margin-bottom: 10px;
+    					}
+    				});
+    			}
+			}
 		}
 	}
 }
