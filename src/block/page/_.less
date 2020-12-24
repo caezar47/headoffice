@@ -248,6 +248,10 @@
 		    &.is--page{
 		    	&-contacts{
    					padding-bottom: @header_size;
+   					height: 100vh;
+   					@supports (display: grid){
+   						height: auto;
+   					}
 		    	}
 		    }
 		});
@@ -420,6 +424,7 @@
 		&.is--page{
 	    	&-index{
 		    	&-header{
+		    		flex-wrap: nowrap;
 	    			@supports (display: grid){
 			    		grid-gap: 0px;
 			    		grid-template-columns: 1.06fr 0.94fr;
@@ -523,15 +528,16 @@
 	    				}
 	    			}
 	    			.media-breakpoint-up(@md; {
+		    			flex-wrap: nowrap;
 			    		& > *{
 		    				&:nth-child(1){
-		    					flex: 0 0 43%;
+		    					flex: 1 1 43%;
 		    					margin-left: 0;
 		    					margin-right: 0;
 		    					padding-left: 45px;
 		    				}	
 		    				&:nth-child(2){
-		    					flex: 0 0 57%;
+		    					flex: 1 1 57%;
 		    					order: -1;
 		    					padding-right: 45px;
 		    				}				    			
@@ -554,7 +560,9 @@
 	    				}
 	    			});
 	    			.media-breakpoint-up(@xl; {
-		    			grid-gap: 90px;
+	    				@supports (display: grid){
+	    					grid-gap: 90px;
+	    				}
 	    			});		
 	    		}
 	    		&-why{
@@ -570,14 +578,15 @@
 		    			}
     				});
 	    			.media-breakpoint-up(@lg; {
+		    			flex-wrap: nowrap;
     					& > *{
 		    				&:nth-child(1){
 		    					padding-right: 15px;
-		    					flex: 0 0 68.5%;
+		    					flex: 1 1 68.5%;
 		    				}
 		    				&:nth-child(2){
 		    					padding-left: 15px;
-		    					flex: 0 0 31.5%;
+		    					flex: 1 1 31.5%;
 		    				}
 		    			}
 	    				@supports (display: grid){
@@ -872,7 +881,7 @@
 	    				display: flex;
 	    				flex-wrap: wrap;
 	    				& > *{
-	    					flex: 0 0 48%;
+	    					flex: 0 0 47%;
 	    					&:nth-child(4n+1),
 	    					&:nth-child(4n+2){
 	    						padding-bottom: 15px

@@ -248,6 +248,10 @@
 		    &.is--page{
 		    	&-contacts{
    					padding-bottom: @header_size;
+   					height: 100vh;
+   					@supports (display: grid){
+   						height: auto;
+   					}
 		    	}
 		    }
 		});
@@ -420,6 +424,7 @@
 		&.is--page{
 	    	&-index{
 		    	&-header{
+		    		flex-wrap: nowrap;
 	    			@supports (display: grid){
 			    		grid-gap: 0px;
 			    		grid-template-columns: 1.06fr 0.94fr;
@@ -523,15 +528,16 @@
 	    				}
 	    			}
 	    			.media-breakpoint-up(@md; {
+		    			flex-wrap: nowrap;
 			    		& > *{
 		    				&:nth-child(1){
-		    					flex: 0 0 43%;
+		    					flex: 1 1 43%;
 		    					margin-left: 0;
 		    					margin-right: 0;
 		    					padding-left: 45px;
 		    				}	
 		    				&:nth-child(2){
-		    					flex: 0 0 57%;
+		    					flex: 1 1 57%;
 		    					order: -1;
 		    					padding-right: 45px;
 		    				}				    			
@@ -554,7 +560,9 @@
 	    				}
 	    			});
 	    			.media-breakpoint-up(@xl; {
-		    			grid-gap: 90px;
+	    				@supports (display: grid){
+	    					grid-gap: 90px;
+	    				}
 	    			});		
 	    		}
 	    		&-why{
@@ -570,14 +578,15 @@
 		    			}
     				});
 	    			.media-breakpoint-up(@lg; {
+		    			flex-wrap: nowrap;
     					& > *{
 		    				&:nth-child(1){
 		    					padding-right: 15px;
-		    					flex: 0 0 68.5%;
+		    					flex: 1 1 68.5%;
 		    				}
 		    				&:nth-child(2){
 		    					padding-left: 15px;
-		    					flex: 0 0 31.5%;
+		    					flex: 1 1 31.5%;
 		    				}
 		    			}
 	    				@supports (display: grid){
@@ -872,7 +881,7 @@
 	    				display: flex;
 	    				flex-wrap: wrap;
 	    				& > *{
-	    					flex: 0 0 48%;
+	    					flex: 0 0 47%;
 	    					&:nth-child(4n+1),
 	    					&:nth-child(4n+2){
 	    						padding-bottom: 15px
@@ -1211,6 +1220,40 @@
 		}
 		&:hover{
 		}
+	}
+}
+.color-card__{
+	&view{
+		width: 100px;
+		height: 100px;
+		margin-bottom: 10px;
+		border: 1px solid;
+		border-radius: @b_rad; 
+	}
+	&name{ 
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 4;
+	}
+}
+.color--{
+	&white 			{color: @white!important}
+	&black 			{color: @black!important}
+	&default 		{color: @default!important}
+	&primary 		{color: @primary!important}
+	&success 		{color: @success!important}
+	&info 			{color: @info!important}
+	&warning 		{color: @warning!important}
+	&danger 		{color: @danger!important}
+
+	&bg-{
+		&white 		{background-color: @white}
+		&black 		{background-color: @black}
+		&default 	{background-color: @default}
+		&primary 	{background-color: @primary}	
+		&success 	{background-color: @success}	
+		&info 		{background-color: @info}
+		&warning 	{background-color: @warning}
+		&danger 	{background-color: @danger}
 	}
 }
 .card__{
@@ -1746,40 +1789,6 @@
 				});
 			}
 		}
-	}
-}
-.color-card__{
-	&view{
-		width: 100px;
-		height: 100px;
-		margin-bottom: 10px;
-		border: 1px solid;
-		border-radius: @b_rad; 
-	}
-	&name{ 
-		font-size: @b-fs - 4;
-		line-height: @b-lh - 4;
-	}
-}
-.color--{
-	&white 			{color: @white!important}
-	&black 			{color: @black!important}
-	&default 		{color: @default!important}
-	&primary 		{color: @primary!important}
-	&success 		{color: @success!important}
-	&info 			{color: @info!important}
-	&warning 		{color: @warning!important}
-	&danger 		{color: @danger!important}
-
-	&bg-{
-		&white 		{background-color: @white}
-		&black 		{background-color: @black}
-		&default 	{background-color: @default}
-		&primary 	{background-color: @primary}	
-		&success 	{background-color: @success}	
-		&info 		{background-color: @info}
-		&warning 	{background-color: @warning}
-		&danger 	{background-color: @danger}
 	}
 }
 .cookies__{
@@ -3109,7 +3118,7 @@
 				&.is--left{
 					.navbar__header-hamburger.is--active &{		
 						width: 75%;	
-						transform: translate(6px, 5.5px) rotate(-135deg);
+						transform: translate(6px, 5px) rotate(-135deg);
 						transition: @trs-site 0.2s;
 					}
 				}	
@@ -3166,7 +3175,7 @@
 			height: 100%;
 			overflow: auto;
 			padding-top: 25px;	
-			padding-bottom: 0px;
+			padding-bottom: 40px;
 			.container{
 				height: 100%;
 			} 
@@ -3193,8 +3202,9 @@
 			}
 			.media-breakpoint-down(@xl; {
 				&.is--lang{
-					margin-top: auto;
+					//margin-top: auto;
 					margin-bottom: 40px;
+					//margin-bottom: 80px;
 				}
 			});
 			.media-breakpoint-up(@xl; {
