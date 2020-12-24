@@ -15,10 +15,21 @@ document.createElement("picture");
 {% if wow == "view" %}
 new WOW().init();
 {% endif %}
+{% if cookies %}
+setTimeout(function(){
+	$('.cookies__block').addClass('is--active');
+	var btn = $('.cookies__block .btn__item');
+	btn.on('click', function(){
+		$(this).closest('.cookies__block').removeClass('is--active');
+	});
+}, 5000);
+{% endif %}
+
 {% if aos %}
 	AOS.init({
 		duration: 1500,
 		disable: 'mobile'
 	});
 {% endif %}
+
 </script> 

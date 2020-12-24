@@ -7,6 +7,12 @@
 		width: 100%;
 		padding: 36px 0;
 		background-color: @header_bg;
+		.is--page-contacts &{
+			background: none;
+		}
+		.is--open-navbar .is--page-contacts &{
+			background-color: @header_bg;
+		}
 		transition: @trs-site;
 		.media-breakpoint-up(@xl; {
 			position: absolute;
@@ -184,6 +190,9 @@
 				&.is--nav{
 					margin-left: auto;
 					background-color: @header_bg;
+					.is--page-contacts &{
+						background: none;
+					}
 				}
 			});
 		}

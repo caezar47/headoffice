@@ -1,4 +1,4 @@
-var card = $('[data-services-card]');
+/*var card = $('[data-services-card]');
 var result = $('#services-result ul');
 card.on('change', function(){
 	if($(this).prop('checked') == true){
@@ -10,4 +10,4 @@ card.on('change', function(){
   			$('#services-result').removeClass('is--visible');
   		}
 	}
-});
+});*/

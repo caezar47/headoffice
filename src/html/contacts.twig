@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Контакты"}  %}
+	</head>
+	<body class="is--page-contacts">        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": '', 
+                },
+                {
+                    "name":"Команда", 
+                    "link": page.team, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": '', 
+                },
+                {
+                    "name":"Как мы работаем", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.contacts, 
+                    "active": 'is--active', 
+                },
+            ],
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/contacts.twig" with {
+                view:"page", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-contacts", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-contacts  is--h1", 
+                heading_level:"h1", 
+                heading:"Контакты", 
+                slider_list: [
+                    {
+                        "img": [path.img,"/default/contacts-bg-item1.jpg"].join(""),
+                        "img_xs": [path.img,"/default/contacts-bg-item1-xs.jpg"].join(""),
+                        "active": "active"
+                    },
+                    {
+                        "img": [path.img,"/default/contacts-bg-item2.jpg"].join(""),
+                        "img_xs": [path.img,"/default/contacts-bg-item2-xs.jpg"].join(""),
+                        "active": ""
+                    },
+                ], 
+            } %}    
+        </main>
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+        {# {% include "../block/common/modals/include.twig"%} #}
+        {% include "../block/common/script/script.twig" with {
+            cookies:"true",
+        }%}
+	</body>
+</html>

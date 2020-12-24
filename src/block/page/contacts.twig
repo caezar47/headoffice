@@ -1,0 +1,37 @@
+{% if view == "page" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" >
+		<div id="carousel-example-generic" class="{{content_prefix}}slick  {{content_mod}}  carousel slide  carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				{% for s in slider_list %}
+				<picture class="item {{s.active}}">
+					<source media="(max-width: 575px)" srcset="{{s.img_xs}}">
+					<img src="{{s.img}}" alt="">
+				</picture>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}line-group  {{content_mod}}">
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+            </div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
+				} %}
+				<div class="text__block  {{content_mod}}">
+					<p><a href="mailto:{{contacts.email}}">{{contacts.email}}</a></p>
+					<p><a href="tel:{{contacts.phone_tel}}">{{contacts.phone}}</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}

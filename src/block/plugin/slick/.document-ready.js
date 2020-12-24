@@ -11,8 +11,8 @@ team.slick({
 	dots: false,
 	fade: true, 	
 	infinite: true, 
-	autoplay: true,
-	autoplaySpeed: 4000,
+	//autoplay: true,
+	//autoplaySpeed: 4000,
 	prevArrow: prevArrow,
 	nextArrow: nextArrow,
   	responsive: [	

@@ -74,7 +74,7 @@
                 note_level:"div", 
                 note:"<p>Мы видим свое призвание в максимально эффективном управлении жизненными потребностями клиентов, основанном на нашей инновационной бизнес-модели и профессиональной экспертизе команды HeadOffice.</p>", 
                 btn_view:'link',             
-                btn_name:'Наши услуга',             
+                btn_name:'Наши услуги',             
                 btn_link:page.services,             
                 btn_attr:'',             
                 btn_icon:'icon-next',            
@@ -139,7 +139,9 @@
             prefix:"footer__",
         } %}
 
-        {% include "../block/common/modals/include.twig"%}
-    	{% include "../block/common/script/script.twig"%}
+        {# {% include "../block/common/modals/include.twig"%} #}
+        {% include "../block/common/script/script.twig" with {
+            cookies:"true",
+        }%}
 	</body>
 </html> 

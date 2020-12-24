@@ -56,6 +56,9 @@
 	    			background-color: @white;
 	    		}
 	    	}
+	    	&-contacts{
+	    		position: relative;
+	    	}
 	    }
 	}
 	&container{
@@ -142,6 +145,12 @@
 	    			padding-bottom: 50px;
 	    		}
 	    	}
+	    	&-contacts{
+	    		z-index: 2;
+	    		display: flex;
+	    		align-items: center;
+				padding-bottom: @header_size_xs;
+	    	}
 	    }
 	    .media-breakpoint-up(@md; {
 	    	&.is--page{
@@ -166,7 +175,7 @@
 	    });
 		.media-breakpoint-up(@lg; {
 			padding-top: 20px;
-			padding-bottom: 20px; 			
+			padding-bottom: 20px; 	
 		    &.is--page{
 		    	&-default{
 		    		&-header{
@@ -180,8 +189,8 @@
 			    		padding-bottom: 40px;
 			    	}
 			    	&-about{
-			    		padding-top: 160px;	
-			    		padding-bottom: 155px;		    		
+			    		padding-top: 158px;	
+			    		padding-bottom: 152px;		    		
 			    	}
 		    		&-team{
 		    			padding-top: 115px;
@@ -235,6 +244,13 @@
 		    	}
 		    }
 		});
+		.media-breakpoint-up(@xl; {
+		    &.is--page{
+		    	&-contacts{
+   					padding-bottom: @header_size;
+		    	}
+		    }
+		});
 	}
 	&line{
 		&-group{
@@ -275,6 +291,7 @@
 				    	}
 				    	&-default{				    		
 					    	&-header{
+			    				top: -@header_size;	
 					    		grid-template-columns: 12fr 2fr;
 					    	}
 				    	}
@@ -295,6 +312,7 @@
 					    		height: 233px;
 					    	}
 					    	&-card{
+		    					top: -@header_size;	
 		    					grid-template-columns: 8.71fr 2.16fr 1.83fr;
 		    					& > *:nth-child(1){
 		    						margin-top: 140px;
@@ -304,7 +322,13 @@
 		    					}
 					    	}
 					    }
-				    	&-works{
+				    	&-services{
+		    				top: -@header_size;	
+					    }
+				    	&-works{				    		
+					    	&-header{
+			    				top: -@header_size;	
+					    	}
 				    		&-case{
 	    						grid-template-columns: 8.2fr 3.8fr;
 				    		}
@@ -314,36 +338,24 @@
 				    			border-right: 1px solid fadeout(@black-d5, 28%);
 				    		}
 				    	}
+				    	&-contacts{
+	    					top: -@header_size;	
+				    		border-left-color: fadeout(#B5C0D3, 60%);
+    						grid-template-columns: repeat(6, 1fr);
+				    	}
 				    }
 				}
-			});
-			.media-breakpoint-up(@xl; {
-				&.is--page{
-			    	&-default{				    		
-				    	&-header{
-		    				top: -@header_size;	
-				    	}
-			    	}
-			    	&-team{
-				    	&-card{
-		    				top: -@header_size;	
-		    			}
-				    }
-			    	&-services{
-	    				top: -@header_size;	
-				    }
-			    	&-works{				    		
-				    	&-header{
-		    				top: -@header_size;	
-				    	}
-			    	}
-			    }
-			});		
+			});	
 		}
 		&-item{
 			.media-breakpoint-up(@md; {
 				@supports (display: grid){
 					border-right: 1px solid fadeout(@black-d5, 28%);
+					&.is--page{
+				    	&-contacts{
+				    		border-right-color: fadeout(#B5C0D3, 60%);
+				    	}
+					}
 				}
 			});
 		}
@@ -432,7 +444,7 @@
 		    		}
 		    		.media-breakpoint-up(@sm; {
 		    			@supports (display: grid){
-				    		grid-gap: 1px;
+				    		//grid-gap: 1px;
 				    		grid-template-columns: 1.3fr 1.13fr 0.88fr 0.97fr 0.73fr;
 		    			}
 			    		& > * {
@@ -824,17 +836,26 @@
     					margin: 0 -15px;
     				}
 	    			.media-breakpoint-up(@md; {
-	    				grid-template-columns: 8.2fr 3.8fr;
+		    			& > *{
+			    			&:nth-child(1){
+			    				padding-right: 30px;
+			    				flex: 0 0 65%;
+			    			}
+			    			&:nth-child(2){
+			    				flex: 0 0 32%;
+			    			}
+			    		}
 	    				& > *:nth-child(2){
 	    					order: inherit;
 	    					margin: 0;
 	    				}
+	    				@supports (display: grid){
+		    				grid-template-columns: 8.2fr 3.8fr;
+	    				}
 	    			});
 	    			.media-breakpoint-up(@xl; {
 	    				@supports (display: grid){
-		    				& > *:nth-child(1){padding-right: 30px;}
 		    				grid-gap: 1px;
-		    				grid-template-columns: 8.2fr 3.8fr;
 	    				}
 	    			});
 	    		}
@@ -877,6 +898,23 @@
 		    			}
 	    			});
 	    		}
+	    	}
+	    	&-contacts{
+	    		position: absolute;
+	    		z-index: 1;
+	    		top: -@header_size_xs;
+	    		left: 0;
+	    		bottom: 0;
+	    		right: 0;
+				img{
+					width: 100%;
+					height: 100%;
+					object-position: center;
+					object-fit: cover;
+				}
+				.media-breakpoint-up(@xl; {
+					top: -@header_size;	
+				});		
 	    	}
 	    }
 	}
