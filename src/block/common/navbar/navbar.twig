@@ -39,6 +39,7 @@
 							{% endfor %}
 						</ul> 	
 					</div>
+					{% if lang %}
 					<div class="{{prefix}}aside-cols cols  is--lang" {{lang_aos}}>
 						<ul class="{{prefix}}aside-lang">
 							{% for l in lang %}
@@ -48,6 +49,7 @@
 							{% endfor %}
 						</ul> 	
 					</div>					
+					{% endif %}
 				</div>
 			</div>
 		</div>

@@ -13,7 +13,7 @@
                     "active": '', 
                 },
                 {
-                    "name":"Команда", 
+                    "name":"Наша команда", 
                     "link": page.team, 
                     "active": '', 
                 },
@@ -33,6 +33,7 @@
                     "active": '', 
                 },
             ],
+            lang: '',
             lang: [
                 {
                     "name":"Ру", 
@@ -75,7 +76,7 @@
                 bg: [path.img,"/default/index-about-bg.jpg"].join(""),
                 map: [path.img,"/default/map-xs.svg"].join(""),     
             } %}
-            {% include "../block/page/works.twig" with {
+            {# {% include "../block/page/works.twig" with {
                 view:"case", 
                 content_prefix:prefix.section, 
                 content_mod:"is--page-works-case", 
@@ -286,7 +287,7 @@
                         ]
                     },
                 ]   
-            } %}
+            } %} #}
             {#  {% include "../block/page/about.twig" with {
                 view:"history", 
                 content_prefix:prefix.section, 

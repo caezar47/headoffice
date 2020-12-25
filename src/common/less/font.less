@@ -5,9 +5,14 @@
 	@style: normal
 	){
 	@font-face{			
-		font-family: "@{family}";			
-		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
-				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
+		font-family: "@{family}";	
+    	src: url('@{url-path-fonts}/@{src-name}.eot');		
+		src: 
+			url('@{url-path-fonts}/@{src-name}.eot?#iefix') format('embedded-opentype'),
+			url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+			url('@{url-path-fonts}/@{src-name}.woff') format('woff'),
+			url('@{url-path-fonts}/@{src-name}.ttf') format('truetype'),
+			url('@{url-path-fonts}/@{src-name}.svg#@{src-name}') format('svg');
 		font-weight: @weight;
 		font-style: @style;		
 	}
