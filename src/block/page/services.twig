@@ -38,45 +38,50 @@
 				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 					<h1 class="{{card_prefix}}heading  {{card_mod}}">{{heading}}</h1>
 					<div>
+						{% if note2 %}
 						<div class="{{card_prefix}}note  {{card_mod}}  visible--md  is--xs">{{note2}}</div>
+						{% endif %}
 						<picture class="{{card_prefix}}preview  {{card_mod}}">
 							<img src="{{img}}" class="img-responsive" alt="{{heading}}">
 						</picture>
 					</div>
 					<div>
 						<div class="{{card_prefix}}note  {{card_mod}}  hidden--md">{{note}}</div>
+						{% if note3 %}
 						<div class="{{card_prefix}}note  {{card_mod}}  visible--md">{{note3}}</div>
-						<div class="{{card_prefix}}desc  text__block  {{card_mod}}">
-							<h6>Основные моменты</h6>
-							<div class="row">
-								<div class="cols">
-									<ul>
-										<li>Предоставление независимого второго мнения</li>
-										<li>Аудит существующего инвестиционного портфеля клиента и условий управляющих</li>
-										<li>Составление долгосрочных прогнозов денежного потока клиента</li>
-									</ul>
-								</div>
-								<div class="cols">
-									<ul>
-										<li>Разработка индивидуальной инвестиционной стратегии</li>
-										<li>Бенчмаркинг по комиссиям и услугам банков и инвестиционных<br> управляющих </li>
-										<li>Проведение переговоров с инвестиционными управляющими и юридическое оформление<br> инвестиций</li>
-									</ul>
-								</div>
-							</div>
-						</div>	
+						{% endif %}
+						{% if desc %}
+							{% for d in desc %}
+								<div class="{{card_prefix}}desc  text__block  {{card_mod}}">
+									<h6>{{d.heading}}</h6>
+									{% if d.ul %}
+									<div class="row">
+										{% for ul in d.ul %}
+										<div class="cols">
+											<ul>
+												{% for li in ul.li %}
+												<li>{{li.name}}</li>
+												{% endfor %}
+											</ul>
+										</div>
+										{% endfor %}
+									</div>
+									{% endif %}
+								</div>	
+							{% endfor %}
+						{% endif %}	
 					</div>
-					<div>
-						<h2 class="page-header__heading  {{team_heading_mod}}">{{team_heading}}</h2>
-						<p class="page-header__heading  {{team_note_mod}}">{{team_note}}</p>
-						<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-team">
-							{% include "../common/card/card.twig" with {
-								view: team_view,
-								prefix:"card__", 
-								mod:  team_mod, 
-								list: team_list
-							} %}
-						</div>
+				</div>
+				<div>
+					<h2 class="page-header__heading  {{team_heading_mod}}">{{team_heading}}</h2>
+					<p class="page-header__heading  {{team_note_mod}}">{{team_note}}</p>
+					<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-team">
+						{% include "../common/card/card.twig" with {
+							view: team_view,
+							prefix:"card__", 
+							mod:  team_mod, 
+							list: team_list
+						} %}
 					</div>
 				</div>
 			</div>

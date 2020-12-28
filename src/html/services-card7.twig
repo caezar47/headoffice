@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Lifestyle и организация путешествий"}  %}
+	</head>
+	<body>        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наша команда", 
+                    "link": page.team, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": '', 
+                },
+                {
+                    "name":"Как мы работаем", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.contacts,  
+                    "active": '', 
+                },
+            ],
+            lang: '',
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}
+        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/services.twig" with {
+                view:"card", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-services-card", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-services-card  is--h1", 
+                heading_level:"h1", 
+                heading:"Lifestyle и организация путешествий",   
+                card_prefix: prefix.card,   
+                card_mod: "is--services-item", 
+                img: [path.img,"/default/services-item7-card.png"].join(""),
+                note:"<p><b>Комплексный подход к организации досуга и развлечений.</b></p><p>Задача HeadOffice – определить подрядчика под каждый запрос клиента, связанный с организацией его досуга, и предложить оптимальные условия. Наши специалисты помогут спланировать путешествие, организовать получение виз, аренду транспорта и работу службы приема и размещения. Мы предоставляем нашим клиентам наилучшие условия и никогда не берем комиссию от подрядчиков.</p>", 
+                note2:"<p><b>Взаимодействие с банками, ведение и обслуживание счетов</b></p>", 
+                note3:"<p>HeadOffice предоставляет всем своим клиентам услуги профессионального казначейства и берет на себя всю рутинную работу по взаимодействию с банками.</p>",                 
+
+                desc: [
+                    {
+                        heading:"Основные моменты", 
+                        ul:[
+                            {
+                                "li":[
+                                    {"name": 'Персонализация всех деталей путешествия'},
+                                    {"name": 'Аренда яхт и частных бортов'},
+                                    {"name": 'Бронирование отелей, вилл и авиаперелетов'},
+                                    {"name": 'Организация доступа на любые светские мероприятия – концерты, скачки, ралли'},
+                                ]
+                            },
+                            {
+                                "li":[
+                                    {"name": 'Аренда автомобиля, подбор водителей для встречи в аэропорту'},
+                                    {"name": 'Планирование и бронь экскурсий'},
+                                    {"name": 'Организация частных мероприятий'},
+                                    {"name": 'Подбор профильного персонала (тренеров, массажистов, стилистов и визажистов)'},
+                                ]
+                            },
+                        ]
+                    },
+                ],
+
+                team_heading:'Команда по Lifestyle и организации путешествий',
+                team_heading_mod:'fw--800  is--page-services-team',
+                team_note:'Наша команда состоит из профессионалов, имеющих огромный опыт в решении вопросов, связанных с финансами. Ниже вы можете ознакомиться с их профилями',
+                team_note_mod:'is--page-services-team-note',
+
+                team_view: 'team-card',
+                team_mod: 'is--team-card',
+                team_list: [
+                    {
+                        "name":"Мария Деюнкер", 
+                        "img": [path.img,"/default/team-all-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Виктория Ступина", 
+                        "img": [path.img,"/default/team-all-item10.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Шамиль Вафин", 
+                        "img": [path.img,"/default/team-all-item11.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                ],
+            } %}
+        </main>
+        
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+        {% include "../block/common/cookies/tpl.twig" with {
+            prefix:"cookies__",
+        } %}
+
+        {# {% include "../block/common/modals/include.twig"%} #}
+        {% include "../block/common/script/script.twig" with {
+            cookies:"true",
+        }%}
+	</body>
+</html> 

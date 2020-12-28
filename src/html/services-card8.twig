@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Образование и развитие"}  %}
+	</head>
+	<body>        
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__", 
+            nav: [
+                {
+                    "name":"О нас", 
+                    "link": page.about, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наша команда", 
+                    "link": page.team, 
+                    "active": '', 
+                },
+                {
+                    "name":"Наши услуги", 
+                    "link": page.services, 
+                    "active": '', 
+                },
+                {
+                    "name":"Как мы работаем", 
+                    "link": page.works, 
+                    "active": '', 
+                },
+                {
+                    "name":"Контакты", 
+                    "link": page.contacts,  
+                    "active": '', 
+                },
+            ],
+            lang: '',
+            lang: [
+                {
+                    "name":"Ру", 
+                    "link": '', 
+                    "active": 'is--active', 
+                },
+                {
+                    "name":"En", 
+                    "link": '', 
+                    "active": '', 
+                }
+            ],
+        } %}
+        
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/services.twig" with {
+                view:"card", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-services-card", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-services-card  is--h1", 
+                heading_level:"h1", 
+                heading:"Образование и развитие",   
+                card_prefix: prefix.card,   
+                card_mod: "is--services-item", 
+                img: [path.img,"/default/services-item8-card.png"].join(""),
+                note:"<p><b>Всестороннее развитие детей, помощь в подборе образовательных учреждений.</b></p><p>HeadOffice занимается комплексным сопровождением развития и образования детей. Разрабатывая программу развития, мы всегда идём от ребёнка, его характера, предпочтений, текущего уровня знаний и навыков, среды вокруг ребенка, ситуации в семье, желаемых целей и возможностей.  Наша цель – полностью раскрыть потенциал и повысить мотивацию ребенка, а также способствовать его гармоничному развитию.</p>", 
+                note2:"<p><b>Всестороннее развитие детей, помощь в подборе образовательных учреждений.</b></p>", 
+                note3:"<p>HeadOffice занимается комплексным сопровождением развития и образования детей. Разрабатывая программу развития, мы всегда идём от ребёнка, его характера, предпочтений, текущего уровня знаний и навыков, среды вокруг ребенка, ситуации в семье, желаемых целей и возможностей.  Наша цель – полностью раскрыть потенциал и повысить мотивацию ребенка, а также способствовать его гармоничному развитию.</p>",                 
+
+                desc: [
+                    {
+                        heading:"Основные моменты", 
+                        ul:[
+                            {
+                                "li":[
+                                    {"name": 'Составление психологического портрета ребёнка'},
+                                    {"name": 'Определение текущего уровня развития ребенка'},
+                                    {"name": 'Анализ совместимости ребёнка со средой, способами и методами коммуникации с ним в семье и школе'},
+                                    {"name": 'Анализ процесса обучения, предоставление обратной связи'},
+                                ]
+                            },
+                            {
+                                "li":[
+                                    {"name": 'Формирование долгосрочных целей в области образования и развития '},
+                                    {"name": 'Подбор школы и учреждений дополнительного образования в соответствии с траекторией развития ребенка'},
+                                    {"name": 'Подготовка к поступлению, сдаче тестов, подбор репетиторов и консультантов'},
+                                ]
+                            },
+                        ]
+                    },
+                ],
+
+                team_heading:'Команда по образованию и развитию',
+                team_heading_mod:'fw--800  is--page-services-team',
+                team_note:'Наша команда состоит из профессионалов, имеющих огромный опыт в решении вопросов, связанных с финансами. Ниже вы можете ознакомиться с их профилями',
+                team_note_mod:'is--page-services-team-note',
+
+                team_view: 'team-card',
+                team_mod: 'is--team-card',
+                team_list: [
+                    {
+                        "name":"Мария Деюнкер", 
+                        "img": [path.img,"/default/team-all-item2.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Виктория Ступина", 
+                        "img": [path.img,"/default/team-all-item10.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                    {
+                        "name":"Шамиль Вафин", 
+                        "img": [path.img,"/default/team-all-item11.jpg"].join(""),
+                        "link": page.team_card, 
+                    },
+                ],
+            } %}
+        </main>
+        
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+        {% include "../block/common/cookies/tpl.twig" with {
+            prefix:"cookies__",
+        } %}
+
+        {# {% include "../block/common/modals/include.twig"%} #}
+        {% include "../block/common/script/script.twig" with {
+            cookies:"true",
+        }%}
+	</body>
+</html> 
