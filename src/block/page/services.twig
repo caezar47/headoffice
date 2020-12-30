@@ -32,7 +32,9 @@
 {% if view == "card" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
-			<div class="{{content_prefix}}line-group  {{content_mod}}  is--page-line-right">
+			<div class="{{content_prefix}}line-group  {{content_mod}}">
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
+                <div class="{{content_prefix}}line-item  {{content_mod}}"></div>				
             </div>
 			<div class="{{content_prefix}}inner  is--page-index">
 				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
@@ -52,19 +54,23 @@
 						{% endif %}
 						{% if desc %}
 							{% for d in desc %}
-								<div class="{{card_prefix}}desc  text__block  {{card_mod}}">
-									<h6>{{d.heading}}</h6>
+								<div class="{{card_prefix}}desc  panel  text__block">
+									<h6>
+										<a data-toggle="collapse" href="#{{d.id}}" aria-expanded="false">{{d.heading}}</a>
+									</h6>
 									{% if d.ul %}
-									<div class="row">
-										{% for ul in d.ul %}
-										<div class="cols">
-											<ul>
-												{% for li in ul.li %}
-												<li>{{li.name}}</li>
-												{% endfor %}
-											</ul>
+									<div id="{{d.id}}" class="collapse">
+										<div class="row">
+											{% for ul in d.ul %}
+											<div class="cols">
+												<ul>
+													{% for li in ul.li %}
+													<li>{{li.name}}</li>
+													{% endfor %}
+												</ul>
+											</div>
+											{% endfor %}
 										</div>
-										{% endfor %}
 									</div>
 									{% endif %}
 								</div>	
@@ -73,8 +79,9 @@
 					</div>
 				</div>
 				<div>
-					<h2 class="page-header__heading  {{team_heading_mod}}">{{team_heading}}</h2>
-					<p class="page-header__heading  {{team_note_mod}}">{{team_note}}</p>
+					<h2 class="page-header__heading  {{team_heading_mod}}">Команда</h2>
+					{# <h2 class="page-header__heading  {{team_heading_mod}}">{{team_heading}}</h2>
+					<p class="page-header__heading  {{team_note_mod}}">{{team_note}}</p> #}
 					<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-team">
 						{% include "../common/card/card.twig" with {
 							view: team_view,

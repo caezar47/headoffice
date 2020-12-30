@@ -51,6 +51,41 @@
 	line-height: 110%; 
 	font-weight: 800;	
 	.media-breakpoint-up(@md; {
+		font-size: 2rem;
+	});
+}
+.heading2(){
+	font-size: 1.5rem;
+	line-height: 110%; 
+	font-weight: 800;
+	.media-breakpoint-up(@md; {
+		font-size: 1.625rem;
+	});	
+}
+.heading3(){
+	font-size: 1rem;
+	line-height: 110%; 
+	font-weight: 700;
+		
+}
+.heading4(){ 	
+	font-size: 1.125rem;
+	line-height: @site_lh;
+	font-weight: 500;
+}
+.heading5(){	
+	font-size: @site_fs;
+	line-height: @site_lh;
+}
+.heading6(){
+	font-size: @site_fs_xs;
+	line-height: 130%;
+}
+/*.heading1(){
+	font-size: 1.714rem;
+	line-height: 110%; 
+	font-weight: 800;	
+	.media-breakpoint-up(@md; {
 		font-size: 2.625rem;
 	});
 }
@@ -89,7 +124,7 @@
 	.media-breakpoint-up(@md; {
 		font-size: @site_fs;
 	});	
-}
+}*/
 
 //===== adaptiv fs and lh =====//
 .calcFontSize(@f-min, @f-max, @v-min, @v-max){

@@ -30,13 +30,12 @@
 					});
 				}
 				&-note{
-					line-height: 144%;
 					max-width: 817px;
-					.media-breakpoint-up(@md; {
+					/*.media-breakpoint-up(@md; {
 						line-height: @site_lh;
-					});
+					});*/
 					p, div{
-						margin-bottom: 15px;
+						margin-bottom: 20px;
 						&:last-child{
 							margin-bottom: 0;
 						}
@@ -46,7 +45,7 @@
 			&-index{
 				&-header{
 					max-width: 850px;
-					margin-bottom: 35px;
+					margin-bottom: 37px;
 				}
 				&-about{
 
@@ -75,14 +74,15 @@
 				&-history{
 					margin-bottom: 27px;
 					.media-breakpoint-up(@md; {
-						font-weight: 500;
-						font-size: 2.375rem;
+						margin-bottom: 36px;
+						//font-weight: 500;
+						//font-size: 2.375rem;
 					});
 				}
 				&-why{
 					margin-bottom: 15px;
 					.media-breakpoint-up(@md; {
-						margin-bottom: 25px;
+						margin-bottom: 19px;
 					});
 				}
 			}
@@ -96,10 +96,11 @@
 			}
 			&-services{
 				&{
-					margin-bottom: 20px;
+					margin-bottom: 27px;
 					.media-breakpoint-down(@md; {
 						font-size: 2rem;
 						line-height: 115%;
+						margin-bottom: 20px;
 					});					
 				}
 				&-card{
@@ -107,21 +108,21 @@
 				}
 				&-team{
 					margin-bottom: 17px;
-					font-size: 1.429rem;
-					line-height: 110%;
-					&-note{
+					//font-size: 1.429rem;
+					//line-height: 110%;
+					/*&-note{
 						max-width: 850px;
 						margin-bottom: 20px;
 						line-height: 144%;
 						color: @success;
-					}
+					}*/
 					.media-breakpoint-up(@md; {
-						margin-bottom: 25px;
-						font-size: 1.625rem;
-						&-note{
+						margin-bottom: 30px;
+						//font-size: 1.625rem;
+						/*&-note{
 							line-height: @site_lh;
 							margin-bottom: 30px;
-						}
+						}*/
 					});	
 				}
 			}
@@ -129,7 +130,7 @@
 	    		&-header{
 	    			margin-bottom: 25px;
 	    			.media-breakpoint-up(@md; {
-	    				margin-bottom: 20px;
+	    				margin-bottom: 28px;
 	    			});
 
 	    		}
@@ -138,8 +139,7 @@
 	    			&-note{
 	    				font-size: @site_fs_xs;
 	    				.media-breakpoint-up(@md; {
-		    				font-size: 1.250rem;
-		    				line-height: 130%;
+	    					font-size: inherit;
 	    				});
 	    			}
 	    		}

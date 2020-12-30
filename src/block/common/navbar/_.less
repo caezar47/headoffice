@@ -17,7 +17,7 @@
 		.media-breakpoint-up(@xl; {
 			position: absolute;
 			//padding: 45px 0;
-			padding: 28px 0;
+			padding: 29px 0;
 			background-color: fadeout(@header_bg, 100%);
 		});
 	}
@@ -245,10 +245,12 @@
 				flex-direction: column;
 				align-items: center;
 				.media-breakpoint-up(@xl; {
+					font-weight: 500;
+					font-size: @site_fs_xs;
+					line-height: 140%;
 					margin-top: 0;
 					align-items: center;
 					flex-direction: row;
-					font-size: 0.688rem;
 				});
 			}
 			&-item{

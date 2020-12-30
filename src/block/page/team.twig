@@ -109,48 +109,32 @@
 								name:"Скачать PDF" 
 							} %}
 						</p>
-						<div class="{{card_prefix}}desc  text__block  {{card_mod}}">
-							<h6>Навыки и экспертиза</h6>
-							<div class="row">
-								<div class="cols">
-									<ul>
-										<li>Стратегическое управление</li>
-										<li>Реструктуризация и&nbsp;кризисное управление</li>
-										<li>Проекты повышения эффективности</li>
-										<li>Корпоративные и&nbsp;личные финансы</li>
-									</ul>
-								</div>
-								<div class="cols">
-									<ul>
-										<li>Управление проектами</li>
-										<li>Операционный менеджмент</li>
-										<li>Сделки по&nbsp;слияниям, поглощениям и&nbsp;реализации активов</li>
-										<li>Управление персоналом</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="{{card_prefix}}desc  cols  text__block  {{card_mod}}">
-								<h6>Профессиональный опыт</h6>	
-								<ul>
-									<li>2017–2019 Family Office Forbes-10<br><span>Руководитель семейного офиса</span></li>
-									<li>2014–2017 Global Ports <br><span>Генеральный директор, член совета директоров</span></li>
-									<li>2013–2014 Инвестиционная группа Meridian <br><span>Управляющий директор </span></li>
-									<li>2003–2013 «Уралкалий»<br> <span>Генеральный директор, член совета директоров </span></li>
-									<li>1998–2002 Группа ABB <br> <span>Генеральный директор&nbsp;СП</span></li>
-								</ul>
-							</div>
-							<div class="{{card_prefix}}desc  cols  text__block  {{card_mod}}">	
-								<h6>Образование</h6>
-								<ul>
-									<li>Massachusetts Institute of Technology (MIT), США, онлайн-обучение  <br><span>Искусственный интеллект</span></li>
-									<li>University of London, Великобритания, MSc<br><span>Финансовый менеджмент</span></li>
-									<li>Kingston Business School, MBA</li>
-									<li>Уральский технический университет <br><span>Инженер-электрик</span></li>
-								</ul>
-							</div>		
-						</div>		
+
+						{% if desc %}
+							{% for d in desc %}
+								<div class="{{card_prefix}}desc  panel  text__block">
+									<h6>
+										<a data-toggle="collapse" href="#{{d.id}}" aria-expanded="false">{{d.heading}}</a>
+									</h6>
+									{% if d.ul %}
+									<div id="{{d.id}}" class="collapse">
+										<div class="row">
+											{% for ul in d.ul %}
+											<div class="cols">
+												<ul>
+													{% for li in ul.li %}
+													<li>{{li.name}}</li>
+													{% endfor %}
+												</ul>
+											</div>
+											{% endfor %}
+										</div>
+									</div>
+									{% endif %}
+								</div>	
+							{% endfor %}
+						{% endif %}	
+
 					</div>
 				</div>
 			</div>

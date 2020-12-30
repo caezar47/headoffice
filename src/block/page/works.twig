@@ -1,5 +1,6 @@
 {% if view == "header" %}
-	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+	<section class="{{content_prefix}}content  {{content_mod}}">
+		{% if bg %}<div class="{{content_prefix}}bg  {{content_mod}}" style="background-image: url({{bg}})"></div>{% endif %}
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<div class="{{content_prefix}}line-group  {{content_mod}}  is--page-line-right">
             </div>

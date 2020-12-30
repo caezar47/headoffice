@@ -2,13 +2,14 @@
 	&item{
 		.btn-clearfix();
 		border-radius: @btn_radius;
-		font-weight: 700;
-		font-size: 0.857rem;
-		line-height: 140%;
+		font-weight: 500;
+		font-size: @btn_fs;
+		line-height: @btn_lh;
 		position: relative;	
 		display: inline-flex;
 		align-items: center; 
-		justify-content: center;	
+		justify-content: center;
+		border-radius: @btn_radius;	
 		background-color: @btn_bg; 
 		text-align: center;	
 		color: @btn_color;
@@ -31,13 +32,11 @@
 		}
 		svg{
 			width: 10px;
-			height: 16px;
+			height: 15px;
 			margin-left: 18px;
 		}
 		.media-breakpoint-up(@md; {
-			font-size: @btn_fs;
-			line-height: @btn_lh;
-			padding: 10px 25px;
+			padding: 10px 24px 10px 18px;
 			&.is--icon{
 				min-width: 175px;
 			}
@@ -197,7 +196,8 @@
 .link__{
 	&item{		
 		.btn-clearfix();
-		color: @success;
+		.heading6();
+		color: @default;
 		display: inline-flex;
 		align-items: center;
 		&.is--pdf{
@@ -215,6 +215,7 @@
 			}
 		}
 		&:hover{
+			color: @default;
 		}
 	}
 }

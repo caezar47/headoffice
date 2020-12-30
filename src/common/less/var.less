@@ -46,22 +46,24 @@
 @gray4 						:	#ADB5BD;
 @red 						:	#EB5757;
 //= default
-@white 						:	#fff;
-@white-f4 					:	#F4F6F9;
 @white-e5 					:	#E5E5E5;
-@black 						: 	#000;
-@black-25 					: 	#000025;
-@black-d5 					: 	#D5DCE9;
 @black-8d 					: 	#8D8D9E;
-@green 						: 	#4AB969;
 @blue-dark 					: 	#474763;
 @blue-cc 					: 	#CCD9F1;
 @gray 						:	#E8ECF1;
+//
+@white 						:	#fff;
+@white-f4 					:	#F4F6F9;
+@black 						: 	#000;
+@black-d5 					: 	#D5DCE9;
+@black-25 					: 	#000025;
+@black-35 					: 	#353C57;
+@green 						: 	#4AB969;
 
 @primary 					:	@green;
 @default 					:	@black-25;
 @warning 					:	@white-e5;
-@success 					:	@blue-dark;
+@success 					:	@black-25;
 @info 						:	@gray;
 @danger 					:	@white-f4;
 @custom 					: 	@black-d5;
@@ -82,7 +84,7 @@
 
 @normalidad-300 			:	normalidad-300; 
 @normalidad 				:	normalidad-400; 
-@normalidad-600 			:	normalidad-600; 
+@normalidad-500 			:	normalidad-500; 
 @normalidad-700 			:	normalidad-700; 
 @normalidad-800 			:	normalidad-800; 
 
@@ -127,7 +129,7 @@
 
 //== header ==//
 @header_size_xs 		:	92px;
-@header_size 			:	119px;
+@header_size 			:	117px;
 @header_bg 				:	@site_bg;
 @header_shadow 			:	10px 10px 30px 0px fadeout(@primary, 95%);
 ;
@@ -139,10 +141,10 @@
 //== aside ==//
 @aside_size 			:	220px;
 @aside_bg 				:	@site_bg;
-@aside_gutter 			:	15px;
+@aside_gutter 			:	20px;
 
 @aside_nav_color 		:	@default;
-@aside_nav_color_active :	@success;
+@aside_nav_color_active :	fadeout(@default, 30%);
 
 @aside_lang_bg 			:	@info;
 @aside_lang_color 		:	@success;
@@ -153,8 +155,8 @@
 //===== end's navbar =====//
 
 //===== footer =====//
-@footer_color 				:	@default; 
-@footer_color_hover 		:	@primary; 
+@footer_color 				:	@danger; 
+@footer_color_hover 		:	@danger; 
 @footer_bg 					:	@default;
 @footer_gutter 				:	1.02vw;
 //===== end's footer =====//
@@ -183,11 +185,11 @@
 //===== end's tabs =====//
 
 //===== button =====//
-@btn_radius 				:	0;
+@btn_radius 				:	1px;
 @btn_color 					:	@white;
 @btn_bg 					:	@primary;
-@btn_fs 					:	0.875rem;
-@btn_lh 					:	145%;
+@btn_fs 					:	@site_fs_xs;
+@btn_lh 					:	140%;
 
 @btn_hover_color 			:	fadeout(@white, 0%);
 @btn_hover_bg 				:	fadeout(@primary, 50%);
