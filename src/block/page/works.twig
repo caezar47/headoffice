@@ -38,16 +38,7 @@
 				} %}
 			</div>
 		</div>
-		<div class="{{content_prefix}}img  {{content_mod}}  hidden--md">
-			{% include "../common/map/tpl.twig" with {
-				prefix:"map__",
-				list: list
-			} %}
-		</div>
-		<div class="{{content_prefix}}img  {{content_mod}}  visible--md">
-			<img src="{{map}}" class="img-responsive" alt="">
-		</div>
-		{# <div class="container" style="position: relative"> #}
+		<div class="{{content_prefix}}container container  {{content_mod}}-section  hidden--xl">
 			<div class="{{content_prefix}}section  {{content_mod}}">
 				{% for v in list %}
 				<div id="{{v.id}}" class="collapse card__item  is--works-map">
@@ -68,8 +59,18 @@
 					</div>
 				</div>
 				{% endfor %}
-			{# </div> #}
+			</div>
 		</div>
+		<div class="{{content_prefix}}img  {{content_mod}}  hidden--xl">
+			{% include "../common/map/tpl.twig" with {
+				prefix:"map__",
+				list: list
+			} %}
+		</div>
+		<div class="{{content_prefix}}img  {{content_mod}}  visible--xl">
+			<img src="{{map}}" class="img-responsive" alt="">
+		</div>
+		{# <div class="container" style="position: relative"> #}
 	</section>
 {% endif %}
 {% if view == "case" %}

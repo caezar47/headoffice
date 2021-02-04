@@ -82,10 +82,21 @@ p{
 			display: none;
 		});
 	}
+	&xl{
+		.media-breakpoint-down(@xl; {
+			display: none;
+		});
+
+	}
 }
 .visible--{
 	&md{
 		.media-breakpoint-up(@md; {
+			display: none;
+		});
+	}
+	&xl{
+		.media-breakpoint-up(@xl; {
 			display: none;
 		});
 	}
