@@ -20,9 +20,9 @@
 	</section>
 {% endif %}
 {% if view == "contacts" %}
-	<section class="{{content_prefix}}content  {{content_mod}}">
-		<div class="{{content_prefix}}container container  {{content_mod}}">
-			<div class="{{content_prefix}}inner  {{content_mod}}">
+	<section class="{{content_prefix}}content  {{content_mod}}  panel" id="contacts-map">
+		<div class="{{content_prefix}}inner  {{content_mod}}">
+			<div class="{{content_prefix}}container container  {{content_mod}}">
 				{% include "../common/page-header/elem.twig" with {
 					prefix:"page-header__", 
 					mod:heading_mod,
@@ -41,10 +41,34 @@
 		<div class="{{content_prefix}}img  {{content_mod}}  hidden--md">
 			{% include "../common/map/tpl.twig" with {
 				prefix:"map__",
+				list: list
 			} %}
 		</div>
 		<div class="{{content_prefix}}img  {{content_mod}}  visible--md">
 			<img src="{{map}}" class="img-responsive" alt="">
+		</div>
+		{# <div class="container" style="position: relative"> #}
+			<div class="{{content_prefix}}section  {{content_mod}}">
+				{% for v in list %}
+				<div id="{{v.id}}" class="collapse card__item  is--works-map">
+					<div class="card__group  is--works-map">
+						<h4 class="card__heading  is--works-map">
+							{{v.city}}{% if v.country %},<br> {{v.country}}{% endif %}
+						</h4>
+						<div class="card__wrap  is--works-map">
+							<div class="card__row  is--works-map">
+								{% include "../common/card/card.twig" with {
+									view: card_view,
+									prefix:"card__", 
+									mod:  card_mod, 
+									list: v.team
+								} %}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			{# </div> #}
 		</div>
 	</section>
 {% endif %}

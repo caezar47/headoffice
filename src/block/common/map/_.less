@@ -5,6 +5,7 @@
 		height: auto;
 		min-height: 40vw;
 		max-height: 748px;
+		max-height: 679px;
 		@supports (display: grid){
 			min-height: auto;
 		}
@@ -13,18 +14,29 @@
 		cursor: pointer;
 		rect{
 			fill: @primary;
-			transition: @trs-site;
+			//transition:transform 0s, @trs-site;
 		}
 		text{
 			fill: @primary;
-			font-size: 13px;
+			font-size: 11px;
 			line-height: 140%;
 			transition: @trs-site;
 		}
 		&:hover{
 			text,
 			rect{
-				fill: @default;
+				//fill: @default;
+			}
+		}
+		[aria-expanded="true"] &{			
+			text{
+				font-size: 14px;
+			}
+			rect{
+				/*transform:
+					//translate(140px, 105px)
+  					scale(1.7, 1.7)
+ 					translate(-395px, -180px);*/
 			}
 		}
 	}
