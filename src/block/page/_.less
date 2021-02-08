@@ -249,7 +249,7 @@
 		    		padding-bottom: 70px;
 		    		&-card{
 						padding-top: 25px;
-		    			padding-bottom: 170px;
+		    			padding-bottom: 120px;
 		    		}
 		    	}
 		    	&-works{
@@ -347,12 +347,15 @@
 					    	}
 					    	&-card{
 		    					top: -@header_size;	
-		    					grid-template-columns: 8.71fr 2.16fr 1.83fr;
+		    					//grid-template-columns: 8.71fr 2.16fr 1.83fr;
+		    					grid-template-columns: 1.83fr  2.16fr 4.71fr 4fr;
 		    					& > *:nth-child(1){
 		    						margin-top: 140px;
+		    						grid-column: span 2;
 		    					}
 		    					& > *:nth-child(2){
-		    						height: 233px;
+		    						//height: 233px;
+		    						height: 140px;
 		    					}
 					    	}
 					    }
@@ -814,23 +817,24 @@
 		    					flex: 0 0 60%;
 		    				}
 		    				&:nth-child(1){
-		    					order: -2;
+		    					order: 2;
 		    				}
 		    				&:nth-child(2){
 		    					order: 1;
 			    				flex: 0 0 34%;
 		    				}
 		    				&:nth-child(3){
-		    					order: -1;
+		    					order: 3;
 		    				}
 		    			}
 						@supports (display: grid){
-			    			grid-template-columns: 8.71fr 2.16fr 1.83fr;
+			    			grid-template-columns: 1.83fr  2.16fr 8.71fr;
 			    			grid-gap: 0px 1px;
 			    			& > *{
-			    				order: initial!important;
-			    				&:nth-child(2n+1){
-			    					//padding-right: 70px;
+			    				//order: initial!important;
+			    				&:nth-child(1),
+			    				&:nth-child(3){
+			    					padding-left: 50px;
 			    				}
 			    				&:nth-child(2){
 			    					grid-column: span 2;
@@ -951,13 +955,22 @@
 			    				margin: 0!important;
 			    			}
 			    		}
-			    		.media-breakpoint-up(@md; {
+			    		.media-breakpoint-up(@sm; {
 			    			& > *{
 			    				flex: 0 0 29.5%;
 			    			}
 							@supports (display: grid){
 				    			grid-gap: 30px;
-				    			grid-template-columns: repeat(3, 1fr);
+				    			grid-template-columns: repeat(4, 1fr);
+				    		}
+			    		});
+			    		.media-breakpoint-up(@xl; {
+			    			& > *{
+			    				flex: 0 0 29.5%;
+			    			}
+							@supports (display: grid){
+				    			grid-gap: 30px;
+				    			grid-template-columns: repeat(5, 1fr);
 				    		}
 			    		});
 			    		.media-breakpoint-up(@xl; {
@@ -965,7 +978,7 @@
 			    				flex: 0 0 22.3%;
 			    			}
 							@supports (display: grid){
-				    			grid-template-columns: repeat(4, 1fr);
+				    			grid-template-columns: repeat(6, 1fr);
 				    		}
 			    		});
 		    		}

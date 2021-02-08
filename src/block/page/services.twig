@@ -55,6 +55,26 @@
 						{% if desc %}
 							{% for d in desc %}
 								<div class="{{card_prefix}}desc  panel  text__block">
+									<h6>{{d.heading}}</h6>
+									{% if d.ul %}
+										<div class="row">
+											{% for ul in d.ul %}
+											<div class="cols">
+												<ul>
+													{% for li in ul.li %}
+													<li>{{li.name}}</li>
+													{% endfor %}
+												</ul>
+											</div>
+											{% endfor %}
+										</div>
+									{% endif %}
+								</div>	
+							{% endfor %}
+						{% endif %}	
+						{# {% if desc %}
+							{% for d in desc %}
+								<div class="{{card_prefix}}desc  panel  text__block">
 									<h6>
 										<a data-toggle="collapse" href="#{{d.id}}" aria-expanded="false">{{d.heading}}</a>
 									</h6>
@@ -75,7 +95,7 @@
 									{% endif %}
 								</div>	
 							{% endfor %}
-						{% endif %}	
+						{% endif %}	 #}
 					</div>
 				</div>
 				<div>

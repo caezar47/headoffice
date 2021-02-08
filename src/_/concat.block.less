@@ -249,7 +249,7 @@
 		    		padding-bottom: 70px;
 		    		&-card{
 						padding-top: 25px;
-		    			padding-bottom: 170px;
+		    			padding-bottom: 120px;
 		    		}
 		    	}
 		    	&-works{
@@ -347,12 +347,15 @@
 					    	}
 					    	&-card{
 		    					top: -@header_size;	
-		    					grid-template-columns: 8.71fr 2.16fr 1.83fr;
+		    					//grid-template-columns: 8.71fr 2.16fr 1.83fr;
+		    					grid-template-columns: 1.83fr  2.16fr 4.71fr 4fr;
 		    					& > *:nth-child(1){
 		    						margin-top: 140px;
+		    						grid-column: span 2;
 		    					}
 		    					& > *:nth-child(2){
-		    						height: 233px;
+		    						//height: 233px;
+		    						height: 140px;
 		    					}
 					    	}
 					    }
@@ -814,23 +817,24 @@
 		    					flex: 0 0 60%;
 		    				}
 		    				&:nth-child(1){
-		    					order: -2;
+		    					order: 2;
 		    				}
 		    				&:nth-child(2){
 		    					order: 1;
 			    				flex: 0 0 34%;
 		    				}
 		    				&:nth-child(3){
-		    					order: -1;
+		    					order: 3;
 		    				}
 		    			}
 						@supports (display: grid){
-			    			grid-template-columns: 8.71fr 2.16fr 1.83fr;
+			    			grid-template-columns: 1.83fr  2.16fr 8.71fr;
 			    			grid-gap: 0px 1px;
 			    			& > *{
-			    				order: initial!important;
-			    				&:nth-child(2n+1){
-			    					//padding-right: 70px;
+			    				//order: initial!important;
+			    				&:nth-child(1),
+			    				&:nth-child(3){
+			    					padding-left: 50px;
 			    				}
 			    				&:nth-child(2){
 			    					grid-column: span 2;
@@ -951,13 +955,22 @@
 			    				margin: 0!important;
 			    			}
 			    		}
-			    		.media-breakpoint-up(@md; {
+			    		.media-breakpoint-up(@sm; {
 			    			& > *{
 			    				flex: 0 0 29.5%;
 			    			}
 							@supports (display: grid){
 				    			grid-gap: 30px;
-				    			grid-template-columns: repeat(3, 1fr);
+				    			grid-template-columns: repeat(4, 1fr);
+				    		}
+			    		});
+			    		.media-breakpoint-up(@xl; {
+			    			& > *{
+			    				flex: 0 0 29.5%;
+			    			}
+							@supports (display: grid){
+				    			grid-gap: 30px;
+				    			grid-template-columns: repeat(5, 1fr);
 				    		}
 			    		});
 			    		.media-breakpoint-up(@xl; {
@@ -965,7 +978,7 @@
 			    				flex: 0 0 22.3%;
 			    			}
 							@supports (display: grid){
-				    			grid-template-columns: repeat(4, 1fr);
+				    			grid-template-columns: repeat(6, 1fr);
 				    		}
 			    		});
 		    		}
@@ -1529,9 +1542,13 @@
 				.media-breakpoint-up(@md; {
 					height: 350px;
 				});	
+				.is--page-services-card-team &{
+					height: 225px;
+				}
 			}
 		}
 		&.is--services{
+			overflow: hidden;
 			position: relative;
 			height: 290px;
     		.media-breakpoint-up(@xl; {
@@ -1598,6 +1615,9 @@
 				.media-breakpoint-up(@md; {
 					padding: 15px;
 					.is--works-map &{
+						padding: 10px;
+					}
+					.is--page-services-card-team &{
 						padding: 10px;
 					}
 				});	
@@ -1690,7 +1710,14 @@
 				background-image: linear-gradient(180deg, rgba(15, 26, 52, 0) 40.23%, rgba(15, 26, 52, 0.74) 100%);
 			}
 		}
-		&.is--services{			
+		&.is--services{	
+			&{
+				transition: all .4s ease;
+				.card__item:hover &{
+					transition: all .7s ease-in-out;
+					transform: scale(1.2, 1.2);
+				}
+			}		
 			&-item{
 				margin-bottom: 20px;
 	    		.media-breakpoint-up(@xl; {
@@ -1748,12 +1775,16 @@
 				//font-weight: 800;	
 				.is--works-map &{
 					.text14();
+				}	
+				.is--page-services-card-team &{
+					.text14();
 				}
 			}
 			&-item{
-				margin-bottom: 22px;
+				.heading2();
+				margin-bottom: 20px;
 				.media-breakpoint-up(@md; {
-					margin-bottom: 15px;
+					margin-bottom: 10px;
 				});
 			}
 		}
@@ -1810,7 +1841,11 @@
 			&-card{
 				.text14();
 				font-weight: 500;
-				padding-top: 5px;
+				padding-top: 5px;				
+				.is--page-services-card-team &{
+					line-height: 110%;
+					opacity: 0.6;
+				}
 			}
 			&-slider{
 				font-size: 0.857rem;
@@ -1835,7 +1870,7 @@
 				//font-weight: 700;
 				//color: @success;
 				.media-breakpoint-up(@lg; {
-					margin-bottom: 25px;
+					margin-bottom: 28px;
 					//line-height: 130%;
 					line-height: initial;
 				});
@@ -1986,8 +2021,8 @@
 			font-size: 16px;
 			padding-bottom: 10px;
 			margin-bottom: 17px;
-			border-bottom: 1px solid fadeout(@custom, 30%);
 			a{
+				border-bottom: 1px solid fadeout(@custom, 30%);
 				color: inherit;
 				display: block;
 				background-position: top right 29px;
@@ -2031,10 +2066,10 @@
 			.cols{
 				flex: 0 0 50%;
 				margin-bottom: 0;
-				ul{
-					li{
-						margin-bottom: 20px;
-					}
+			}
+			ul{
+				li{
+					margin-bottom: 20px;
 				}
 			}
 		});
@@ -2236,8 +2271,8 @@
 		padding-top: 38px;
 		padding-bottom: 30px;
 		.media-breakpoint-up(@xl; {
-			padding-top: 80px;
-			padding-bottom: 80px;			
+			padding-top: 90px;
+			padding-bottom: 70px;			
 		});
 		a{
 			color: @footer_color;
@@ -3808,7 +3843,7 @@
 						color: @success;
 					}*/
 					.media-breakpoint-up(@md; {
-						margin-bottom: 30px;
+						margin-bottom: 40px;
 						//font-size: 1.625rem;
 						/*&-note{
 							line-height: @site_lh;
@@ -4200,6 +4235,17 @@
 					max-width: 830px;
 					margin-bottom: 60px;
 				});
+				p, div{
+					margin-bottom: 0px;
+				}
+				ol,
+				ul{
+					padding-top: 10px;
+					margin-bottom: 10px;
+					li{
+						margin-bottom: 9px;
+					}
+				}
 			}
 			&-works{	
 				&-header{
@@ -4403,7 +4449,7 @@ body[data-aos-easing="ease"] [data-aos] {
         }
         &:nth-child(1),
         &:nth-child(10){
-            transition-delay: 0.3s;
+            transition-delay: 0.2s;
         }
         &:nth-child(4){
             transition-delay: @duration + 0.2s;
@@ -4418,10 +4464,12 @@ body[data-aos-easing="ease"] [data-aos] {
              transition-delay: @duration*2 + 0.4s + 0.2s;
         }
         &:nth-child(2),
-        &:nth-child(3),
+        &:nth-child(3){
+             transition-delay: @duration*3 + 0.4s + 0.2s + 0.1s;
+        }
         &:nth-child(8),
         &:nth-child(9){
-             transition-delay: @duration*3 + 0.4s + 0.2s + 0.1s;
+             transition-delay: @duration*3 + 0.4s + 0.2s + 0.25s;
         }
     }
 }

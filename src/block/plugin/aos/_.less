@@ -144,7 +144,7 @@ body[data-aos-easing="ease"] [data-aos] {
         }
         &:nth-child(1),
         &:nth-child(10){
-            transition-delay: 0.3s;
+            transition-delay: 0.2s;
         }
         &:nth-child(4){
             transition-delay: @duration + 0.2s;
@@ -159,10 +159,12 @@ body[data-aos-easing="ease"] [data-aos] {
              transition-delay: @duration*2 + 0.4s + 0.2s;
         }
         &:nth-child(2),
-        &:nth-child(3),
+        &:nth-child(3){
+             transition-delay: @duration*3 + 0.4s + 0.2s + 0.1s;
+        }
         &:nth-child(8),
         &:nth-child(9){
-             transition-delay: @duration*3 + 0.4s + 0.2s + 0.1s;
+             transition-delay: @duration*3 + 0.4s + 0.2s + 0.25s;
         }
     }
 }
