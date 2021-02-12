@@ -8,7 +8,7 @@
                 <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
                 <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
             </div>
-			<div class="{{content_prefix}}inner  is--page-index">
+			<div class="{{content_prefix}}inner  is--page-index  {{content_mod}}">
 				{% include "../common/page-header/elem.twig" with {
 					prefix:"page-header__", 
 					mod:heading_mod,
@@ -54,7 +54,7 @@
 							name:btn_name,
 						} %}
 					</div>
-					<picture data-aos="fade-logo-h" data-aos-offset="-200" data-aos-once="true" class="{{content_prefix}}img  {{content_mod}}">
+					<picture class="{{content_prefix}}img  {{content_mod}}  fade-logo-h">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -66,6 +66,19 @@
 						<span></span>
 						<span></span>
 						<img src="{{img}}" class="img-responsive" alt="">
+					</picture>
+					{# <picture data-aos="fade-logo-h" data-aos-offset="-200" data-aos-once="true" class="{{content_prefix}}img  {{content_mod}}">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<img src #}="{{img}}" class="img-responsive" alt="">
 					</picture>
 				</div>
 			</div>

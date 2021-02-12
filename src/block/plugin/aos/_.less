@@ -122,6 +122,58 @@ body[data-aos-easing="ease"] [data-aos] {
         transform: translate3d(0px,0px,0);
     }
 }
+.fade-logo-h{
+    @duration: 0.8s;
+    opacity: 1;
+    transform: translate3d(0,0%,0);
+    span{  
+        transition-duration: @duration;       
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6),
+        &:nth-child(8){
+            transform: translate3d(0,-105%,0);
+        } 
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7),
+        &:nth-child(9),
+        &:nth-child(10){
+            transform: translate3d(0,105%,0);
+        }
+        &:nth-child(1),
+        &:nth-child(10){
+            transition-delay: 0.2s;
+        }
+        &:nth-child(4){
+            transition-delay: @duration + 0.2s;
+        }
+        &:nth-child(5){
+            transition-delay: @duration + 0.4s;
+        }
+        &:nth-child(6){
+             transition-delay: @duration*2 + 0.4s + 0.0s;
+        }
+        &:nth-child(7){
+             transition-delay: @duration*2 + 0.4s + 0.2s;
+        }
+        &:nth-child(2),
+        &:nth-child(3){
+             transition-delay: @duration*3 + 0.4s + 0.2s + 0.1s;
+        }
+        &:nth-child(8),
+        &:nth-child(9){
+             transition-delay: @duration*3 + 0.4s + 0.2s + 0.25s;
+        }
+    }
+}
+.fade-logo-h.animate{
+    span{
+        transform: translate3d(0,0%,0);
+    }
+}
+/*
 [data-aos="fade-logo-h"] {
     @duration: 0.8s;
     opacity: 1;
@@ -173,3 +225,4 @@ body[data-aos-easing="ease"] [data-aos] {
         transform: translate3d(0,0%,0);
     }
 }
+*/

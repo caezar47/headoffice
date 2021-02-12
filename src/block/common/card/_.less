@@ -106,6 +106,7 @@
 				});	
 				.is--page-services-card-team &{
 					height: 225px;
+					overflow: hidden;
 				}
 			}
 		}
@@ -403,10 +404,21 @@
 			&-card{
 				.text14();
 				font-weight: 500;
-				padding-top: 5px;				
+				padding-top: 5px;	
 				.is--page-services-card-team &{
+					transition: @trs-site;
 					line-height: 110%;
 					opacity: 0.6;
+					//visibility: hidden;
+					overflow: hidden;
+    				max-height: 0;
+    				transition: max-height 0.15s ease-out;
+				}		
+				.is--page-services-card-team .card__item:hover &{
+					//visibility: visible;
+					//opacity: 0.6;
+				    max-height: 300px;
+				    transition: max-height 0.65s ease-in;
 				}
 			}
 			&-slider{

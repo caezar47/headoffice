@@ -83,8 +83,7 @@
 	    	&-index{
 	    		&-header{
 	    			padding-top: 0;
-	    			padding-bottom: 45px;
-	    			overflow: hidden;
+	    			padding-bottom: 0px;
 	    		}
 		    	&-about{
 					padding-top: 65px;
@@ -199,7 +198,7 @@
 		    	&-index{
 		    		&-header{
 		    			padding-top: 30px;
-			    		padding-bottom: 45px;
+			    		//padding-bottom: 45px;
 			    	}
 			    	&-about{
 			    		padding-top: 158px;	
@@ -454,6 +453,10 @@
 	    	&-index{
 	    		position: relative;
 	    		z-index: 2;
+	    		&-header{
+	    			overflow: hidden;
+	    			padding-bottom: 45px;
+	    		}
 	    	}
 	    	&-about{
 	    		&-mission{
@@ -1087,6 +1090,7 @@
 		    		span{
 		    			display: none;
 		    		}
+		    		&.fade-logo-h,
 		    		&[data-aos]{
 		    			background-color: @default; 
 			    		img{
