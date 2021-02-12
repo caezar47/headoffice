@@ -299,6 +299,7 @@
 				@supports (display: grid){
 					display: grid;
 					position: absolute;
+					overflow: hidden;
 					z-index: 1;
 					top: 0;
 					left: @container_gap;
@@ -309,7 +310,8 @@
 				    &.is--page{
 				    	&-index{
 				    		&-header{
-					    		grid-template-columns: 1.25fr .84fr 0.83fr 1.26fr .83fr;
+					    		//grid-template-columns: 1.25fr .84fr 0.83fr 1.26fr .83fr;
+					    		grid-template-columns: 25% 16.8% 16.5% 25% 16.7%;
 				    			.media-breakpoint-up(@xl; {
 				    				top: -@header_size;
 				    			});
@@ -392,6 +394,7 @@
 			.media-breakpoint-up(@md; {
 				@supports (display: grid){
 					border-right: 1px solid fadeout(@custom, 30%);
+					min-height: 5000px;
 					/*&.is--page{
 				    	&-contacts{
 				    		border-right-color: fadeout(#B5C0D3, 60%);
