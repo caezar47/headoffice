@@ -161,8 +161,10 @@
 				height: 100%;
 				overflow: auto;
 				padding-right: 30px;
-				.scrollbar(@w: 2px; @r: 0px;);
+
+				.scrollbar(@w: 2px; @r: 0px;  @t: @site_bg; @s: fadeout(@black-35, 70%));
 				margin-right: 5px;
+				//@black-35
 			}
 		}
 	}

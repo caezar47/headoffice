@@ -522,13 +522,14 @@
 		&.is--page{
 			&-works{
 	    		&-contacts{
-	    			background-color: @white;
+	    			background-color: @site_bg; 
 	    			.media-breakpoint-up(@xl; {
 	    				position: relative;
 	    				z-index: 2;
     					max-width: 815px;
     					height: 485px;
 					    padding-top: 50px;
+					    border-right: 1px solid fadeout(@custom, 30%);
 						opacity: 0;
 						visibility: hidden;
 						margin-left: -404px;
