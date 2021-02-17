@@ -508,7 +508,15 @@
 	    			});
 	    		}
 	    	}
-	    }
+
+    		&-contacts{
+    			.media-breakpoint-up(@sm; {
+				    margin-left: 1px;
+				    background: linear-gradient(to left, #f6f6f8 0%, #f6f6f8 100%);
+				    padding: 20px 0;
+				});
+    		}
+    	}
 	}
 	&section{
 		&.is--page{
@@ -815,6 +823,8 @@
 		    				}
 		    				&:nth-child(1){
 		    					order: 2;
+			    				background-color: @site_bg;
+			    				margin-right: 1px;
 		    				}
 		    				&:nth-child(2){
 		    					order: 1;
@@ -822,6 +832,8 @@
 		    				}
 		    				&:nth-child(3){
 		    					order: 3;
+			    				background-color: @site_bg;
+			    				margin-right: 1px;
 		    				}
 		    			}
 						@supports (display: grid){

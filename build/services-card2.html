@@ -90,8 +90,17 @@
 					<h1 class="card__heading  is--services-item">Инвестиции</h1>
 					<div>
 												<div class="card__note  is--services-item  visible--md  is--xs"><p><b>Разработка инвестиционной стратегии, управление инвестиционным портфелем.</b></p></div>
-												<picture class="card__preview  is--services-item">
-							<img src="./img/default/services-item2-card.png" class="img-responsive" alt="Инвестиции">
+												<picture class="card__preview  is--services-item" data-aos="fade-services-card" data-aos-once="true">
+							<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Инвестиции">
+							<div>
+								<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Инвестиции">
+							</div>
+							<div>
+								<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Инвестиции">
+							</div>
+							<div>
+								<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Инвестиции">
+							</div>
 						</picture>
 					</div>
 					<div>
@@ -207,6 +216,10 @@ setTimeout(function(){
 	});
 }, 5000);
 
+	AOS.init({
+		duration: 1500,
+		disable: 'mobile'
+	});
 /*
 jQuery.fn.extend({
   onAppearanceAddClass: function(class_to_add) {

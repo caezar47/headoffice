@@ -1,7 +1,8 @@
 .navbar__{
 	&block{ 
 		position: absolute;
-		z-index: 110;
+		z-index: 2;
+		//z-index: 110;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -15,7 +16,7 @@
 		}
 		transition: @trs-site;
 		.media-breakpoint-up(@xl; {
-			position: absolute;
+			//position: absolute;
 			//padding: 45px 0;
 			padding: 29px 0;
 			background-color: fadeout(@header_bg, 100%);
@@ -187,6 +188,9 @@
 				margin-top: 0px;
 				&.is--logotip{
 					display: block;
+					.is--page-contacts &{
+						background: linear-gradient(to left,#f5f5f7 0,#f6f6f8 100%);
+					}
 				}
 				&.is--nav{
 					margin-right: 17px;
@@ -194,7 +198,7 @@
 					//margin-left: auto;
 					background-color: @header_bg;
 					.is--page-contacts &{
-						background: none;
+						background: linear-gradient(to left, #f1f1f3 0%, #f6f6f8 100%);
 					}
 				}
 			});
