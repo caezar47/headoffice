@@ -90,7 +90,7 @@
 					<h1 class="card__heading  is--services-item">Юридические услуги</h1>
 					<div>
 												<div class="card__note  is--services-item  visible--md  is--xs"><p><b>Юридические услуги и консультации, участие в переговорах и сопровождение сделок</b></p></div>
-												<picture class="card__preview  is--services-item" data-aos="fade-services-card" data-aos-once="true">
+												<picture class="card__preview  is--services-item" data-aos="fade-services-card" data-aos-once="true" >
 							<img src="./img/default/services-item4-card.png" class="img-responsive" alt="Юридические услуги">
 							<div>
 								<img src="./img/default/services-item4-card.png" class="img-responsive" alt="Юридические услуги">
@@ -341,13 +341,6 @@ $('.fade-logo-h').onAppearanceAddClass('animate');
 */
 // Получаем нужный элемент
 var el = $('.fade-logo-h');
-/*$(window).scroll(function(){
-    if ( $(this).scrollTop() > el.offset().top - 300 ) {
-        el.addClass('animate');
-    }
-});*/
-var element = document.querySelector('.fade-logo-h');
-
 var Visible = function (target) {
   // Все позиции элемента
   var targetPosition = {
@@ -371,13 +364,16 @@ var Visible = function (target) {
     target.classList.add('animate');
   }
 };
+$(document).ready(function(){
+  var element = document.querySelector('.fade-logo-h');
+  if(element)
+      Visible (element);
 
-// Запускаем функцию при прокрутке страницы
-window.addEventListener('scroll', function() {
-  Visible (element);
+  window.addEventListener('scroll', function() {
+      if(element)
+          Visible (element);
+  });
 });
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-Visible (element);
-
-</script> 	</body>
+</script> 
+	</body>
 </html> 

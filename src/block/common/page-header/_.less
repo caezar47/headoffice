@@ -31,9 +31,10 @@
 				}
 				&-note{
 					max-width: 817px;
-					/*.media-breakpoint-up(@md; {
-						line-height: @site_lh;
-					});*/
+					line-height: 145%;
+					.media-breakpoint-up(@md; {
+						line-height: inherit;
+					});
 					p, div{
 						margin-bottom: 20px;
 						&:last-child{
@@ -98,18 +99,19 @@
 			}
 			&-services{
 				&{
-					margin-bottom: 27px;
+					margin-bottom: 25px;
 					.media-breakpoint-down(@md; {
-						font-size: 2rem;
+						//font-size: 2rem;
+						font-size: 1.714rem;
 						line-height: 115%;
-						margin-bottom: 20px;
+						max-width: 250px;
 					});					
 				}
 				&-card{
 					margin-bottom: 7px;
 				}
 				&-team{
-					margin-bottom: 17px;
+					margin-bottom: 22px;
 					//font-size: 1.429rem;
 					//line-height: 110%;
 					/*&-note{

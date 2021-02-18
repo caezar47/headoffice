@@ -122,38 +122,42 @@ body[data-aos-easing="ease"] [data-aos] {
         transform: translate3d(0px,0px,0);
     }
 }
-[data-aos="fade-services-card"] {
-    //opacity: 1!important;
-    transition-delay: 0.8s;  
-    & > div{
-        transition-duration: 1.3s; 
-        transition-delay: 0.8s; 
-        transition-timing-function: ease;
-        //transition-property: opacity, transform;
-        &:nth-of-type(1){
-            transform: translate3d(0,-100%,0);
-        }
-        &:nth-of-type(2){
-            transform: translate3d(0,100%,0);
-        }
-        &:nth-of-type(3){
-            transform: translate3d(0,-100%,0);
-        }
-    }
-    &.aos-animate{
+
+.media-breakpoint-up(@md; {
+    [data-aos="fade-services-card"] {
+        //opacity: 1!important;
+        transition-delay: 0.8s;  
         & > div{
+            transition-duration: 1.3s; 
+            transition-delay: 0.8s; 
+            transition-timing-function: ease;
+            //transition-property: opacity, transform;
             &:nth-of-type(1){
-                transform: translate3d(0,0%,0);
+                transform: translate3d(0,-100%,0);
             }
             &:nth-of-type(2){
-                transform: translate3d(0,0%,0);
+                transform: translate3d(0,100%,0);
             }
             &:nth-of-type(3){
-                transform: translate3d(0,0%,0);
+                transform: translate3d(0,-100%,0);
+            }
+        }
+        &.aos-animate{
+            & > div{
+                &:nth-of-type(1){
+                    transform: translate3d(0,0%,0);
+                }
+                &:nth-of-type(2){
+                    transform: translate3d(0,0%,0);
+                }
+                &:nth-of-type(3){
+                    transform: translate3d(0,0%,0);
+                }
             }
         }
     }
-}
+
+});
 .fade-logo-h{
     @duration: 0.8s;
     opacity: 1;

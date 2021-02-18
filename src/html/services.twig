@@ -60,8 +60,63 @@
                 heading:"Нашим клиентам", 
                 note_mod:"is--page-services-note", 
                 note_level:"div", 
-                note:'<p>В рамках годовой подписки&nbsp;HeadOffice предоставляет Клиентам управленческую команду и&nbsp;инфраструктуру для решения задач любого уровня сложности&nbsp;в областях, связанных с управлением капиталом, недвижимостью, жизненными&nbsp;потребностями, а также с обслуживанием интересов семьи.</p><br><p>Основные принципы нашей работы:</p><ul><li>отсутствие коммерческого конфликта интересов;</li><li>системный подход и&nbsp;контроль за процессом исполнения задач;</li><li>профессионализм и&nbsp;личная ответственность за результат.</li></ul>',  
-                note2:"<p>Представляя интересы наших клиентов, мы помогаем в решении самых разнообразных вопросов. Смотрите ниже информацию об основных направлениях наших услуг.</p>",  
+                note:'<p>В рамках годовой подписки&nbsp;HeadOffice предоставляет Клиентам управленческую команду и&nbsp;инфраструктуру для&nbsp;решения задач любого уровня сложности&nbsp;в областях, связанных с управлением капиталом, недвижимостью, жизненными&nbsp;потребностями, а также с обслуживанием интересов семьи.</p><br><p>Основные принципы нашей работы:</p><ul><li>отсутствие коммерческого конфликта интересов;</li><li>системный подход и&nbsp;контроль за процессом исполнения задач;</li><li>профессионализм и&nbsp;личная ответственность за результат.</li></ul>',  
+                note2:"<p>Представляя интересы наших клиентов, мы помогаем в решении самых разнообразных вопросов. Смотрите ниже информацию об основных направлениях наших услуг.</p>",
+
+                card_view:"services",
+                card_mod:"is--services",
+                card_list:[
+                    {
+                        "link":page.services_card,
+                        "name":"Управление объектами недвижимости",
+                        "img": [path.img,"/default/services-item1.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card2,
+                        "name":"Инвестиции",
+                        "img": [path.img,"/default/services-item2.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card3,
+                        "name":"Решения для бизнеса",
+                        "img": [path.img,"/default/services-item3.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card4,
+                        "name":"Юридические услуги",
+                        "img": [path.img,"/default/services-item4.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card5,
+                        "name":"Казначейство",
+                        "img": [path.img,"/default/services-item5.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card6,
+                        "name":"Вопросы налогообложения",
+                        "img": [path.img,"/default/services-item6.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card7,
+                        "name":"Lifestyle и организация путешествий",
+                        "img": [path.img,"/default/services-item7.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card8,
+                        "name":"Образование и развитие",
+                        "img": [path.img,"/default/services-item8.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card9,
+                        "name":"Здоровье и медицина",
+                        "img": [path.img,"/default/services-item9.jpg "].join(""),
+                    },
+                    {
+                        "link":page.services_card10,
+                        "name":"Арт-консалтинг",
+                        "img": [path.img,"/default/services-item10.jpg "].join(""),
+                    },
+                ],   
 
                 tabs_view:'base',
                 tabs_prefix:prefix.tabs,
@@ -71,8 +126,7 @@
                     {
                         "id":"tabs1",
                         "name":"Все",
-                        "status":"active",
-                        "type":"card",
+                        "status":"active","type":"card",
                         "view":"services",
                         "mod":"is--services",
                         "list":[
@@ -127,6 +181,7 @@
                                 "img": [path.img,"/default/services-item10.jpg "].join(""),
                             },
                         ] 
+                        
                     },
                     {
                         "id":"tabs2",

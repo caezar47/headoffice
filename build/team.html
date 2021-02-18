@@ -87,15 +87,16 @@
                 <div class="section__line-item  is--page-default-header"></div>
             </div>
 			<div class="section__inner  is--page-index">
-				<h1 class="page-header__heading  is--page-default-header  is--h1  " >Наша команда</h1>				<div class="page-header__heading  is--page-default-note  " ><p>Команда HeadOffice&nbsp;— это признанные эксперты во&nbsp;всех ключевых областях управления жизненными потребностями с&nbsp;длительной совместной историей профессиональных отношений. </p><p>HeadOffice&nbsp;— это руководители направлений, региональные представители и&nbsp;персональные менеджеры, целью работы которых является обеспечение максимального комфорта клиентов, эффективное представительство их&nbsp;интересов и&nbsp;обеспечение профессиональной инфраструктуры поддержки образа жизни и&nbsp;бизнеса клиентов.</p></div>			</div>
+				<h1 class="page-header__heading  is--page-default-header  is--h1  " >Наша команда</h1>				<div class="page-header__heading  is--page-default-note  " ><p>Команда HeadOffice – признанные эксперты во всех ключевых областях управления жизненными потребностями с длительной совместной историей профессиональных отношений.</p><p>Цель работы каждого члена команды – максимальный уровень удовлетворенности наших клиентов, эффективное представительство их интересов  и предоставление профессиональной инфраструктуры для поддержания комфортного образа жизни.</p></div>			</div>
 		</div>
 	</section>
             	<section class="section__content  is--page-team-head" >
 		<div class="section__container container  is--page-team-head">
 			<div class="section__line-group  is--page-line-right  is--page-team-head"></div>
 			<div class="section__inner  is--page-index">
-				<h2 class="page-header__heading  is--page-team-head  is--h2  " >Основатели компании</h2>				
-				<div class="section__slick  is--page-team-head" data-slick-team-full>				
+				
+				
+				<div class="section__slick  is--page-team-head">				
 							
 	<div class="card__item  is--team-full">
 		<picture class="card__preview  is--team-full">
@@ -105,7 +106,7 @@
 		<div>
 			<p class="card__heading  is--team-full">Владислав Баумгертнер</p>
 			<p class="card__position  is--team-full">Партнер, основатель</p>
-			<div class="card__note  is--team-full">Владислав – один из самых успешных и узнаваемых топ-менеджеров в России с более чем 20-летним опытом руководства крупнейшими российскими и международными компаниями. Начав свою управленческую карьеру в швейцарском технологическом концерне ABB, он затем десять лет возглавлял «Уралкалий», который является мировым лидером на рынке калийных удобрений. </div>
+			<div class="card__note  is--team-full">Владислав – успешный топ-менеджер в России с более чем 20-летним опытом руководства крупнейшими российскими и международными компаниями. Начав свою управленческую карьеру  в швейцарском технологическом концерне ABB, он затем десять лет возглавлял «Уралкалий», мирового лидера на рынке калийных удобрений.</div>
 			<div class="card__btn  is--team-full">
 				
 
@@ -408,13 +409,6 @@ $('.fade-logo-h').onAppearanceAddClass('animate');
 */
 // Получаем нужный элемент
 var el = $('.fade-logo-h');
-/*$(window).scroll(function(){
-    if ( $(this).scrollTop() > el.offset().top - 300 ) {
-        el.addClass('animate');
-    }
-});*/
-var element = document.querySelector('.fade-logo-h');
-
 var Visible = function (target) {
   // Все позиции элемента
   var targetPosition = {
@@ -438,13 +432,16 @@ var Visible = function (target) {
     target.classList.add('animate');
   }
 };
+$(document).ready(function(){
+  var element = document.querySelector('.fade-logo-h');
+  if(element)
+      Visible (element);
 
-// Запускаем функцию при прокрутке страницы
-window.addEventListener('scroll', function() {
-  Visible (element);
+  window.addEventListener('scroll', function() {
+      if(element)
+          Visible (element);
+  });
 });
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-Visible (element);
-
-</script> 	</body>
+</script> 
+	</body>
 </html> 
