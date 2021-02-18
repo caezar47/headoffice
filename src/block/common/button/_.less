@@ -13,7 +13,7 @@
 		background-color: @btn_bg; 
 		text-align: center;	
 		color: @btn_color;
-		padding: 9px 15px;
+		padding: 9px 20px 9px 15px;
 		&.is--hover,
 		&:hover{	
 			color: @btn_hover_color;		
@@ -33,9 +33,10 @@
 		svg{
 			width: 10px;
 			height: 15px;
-			margin-left: 18px;
+			margin-left: 30px;
 		}
 		.media-breakpoint-up(@md; {
+			font-size: @btn_fs + 0.02rem;
 			padding: 10px 24px 10px 18px;
 			&.is--icon{
 				min-width: 175px;

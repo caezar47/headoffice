@@ -44,10 +44,13 @@
 			}
 			&-index{
 				&-header{
-					max-width: 850px;
-					margin-bottom: 37px;
+					margin-bottom: 25px;
 					background-color: @site_bg;
-					margin-left: 1px;
+					.media-breakpoint-up(@md; {
+						margin-bottom: 37px;
+						max-width: 850px;
+						margin-left: 1px;
+					});
 				}
 				&-about{
 
@@ -74,7 +77,7 @@
 					line-height: 130%;
 				}
 				&-history{
-					margin-bottom: 27px;
+					margin-bottom: 20px;
 					.media-breakpoint-up(@md; {
 						margin-bottom: 36px;
 						//font-weight: 500;
@@ -82,10 +85,7 @@
 					});
 				}
 				&-why{
-					margin-bottom: 15px;
-					.media-breakpoint-up(@md; {
-						margin-bottom: 19px;
-					});
+					margin-bottom: 20px;
 				}
 			}
 			&-team{

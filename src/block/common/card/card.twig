@@ -39,20 +39,20 @@
 	<div>	
 		<div class="{{prefix}}item  {{mod}}">
 			<picture class="{{prefix}}preview  {{mod}}">
-				<source media="(max-width: 575px)" srcset="{{value.img_xs}}">
+				{# <source media="(max-width: 575px)" srcset="{{value.img_xs}}"> #}
 				<img src="{{value.img}}" class="img-responsive" alt="">
 			</picture>
 			<div class="{{prefix}}group  {{mod}}">
-				<p class="{{prefix}}heading  {{mod}}">{{value.heading}}</p>
-				<div class="{{prefix}}note  {{mod}}  hidden--md">{{value.note}}</div>
-				<div class="{{prefix}}note  {{mod}}  visible--md">{{value.note2}}</div>
+				{# <p class="{{prefix}}heading  {{mod}}">{{value.heading}}</p> #}
+				<div class="{{prefix}}note  {{mod}}">{{value.note}}</div>
+				{# <div class="{{prefix}}note  {{mod}}  visible--md">{{value.note2}}</div> #}
 				<div>				
 					<p class="{{prefix}}heading  {{mod}}-name">{{value.name}}</p>
 					<p class="{{prefix}}position  {{mod}}">{{value.position}}</p>
 					<picture class="{{prefix}}preview  {{mod}}-sign">
 						<img src="{{value.sign}}" class="img-responsive" alt="">
 					</picture>
-					<p class="{{prefix}}btn  {{mod}}">
+					{# <p class="{{prefix}}btn  {{mod}}">
 						{% include "../button/btn.twig" with {
 							view:"link",
 							prefix:"btn__", 
@@ -62,7 +62,7 @@
 							link:value.link, 
 							name:"Наша команда" 
 						} %}
-					</p>
+					</p> #}
 				</div>
 			</div>
 		</div>

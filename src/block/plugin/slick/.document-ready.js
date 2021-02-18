@@ -35,6 +35,7 @@ team.slick({
 	    {
 			breakpoint: 768,
 			settings: {
+				//adaptiveHeight: true
 			}
 	    }
 	]
@@ -47,6 +48,15 @@ adv.slick({
 	infinite: false,
 	prevArrow: prevArrow,
 	nextArrow: nextArrow,
+	responsive: [	
+	    {
+			breakpoint: 768,
+			settings: {
+				dots: true,
+				//adaptiveHeight: true,
+			}
+	    }
+	]
 });
 team_full.slick({
 	slidesToShow: 1,

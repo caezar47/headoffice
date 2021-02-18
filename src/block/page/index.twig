@@ -39,12 +39,12 @@
 			<div class="{{content_prefix}}inner  is--page-index">
 				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 					<div>
-						<div class="text__block  {{content_mod}}  hidden--md">
+						<div class="text__block  {{content_mod}}">
 							{{note}}
 						</div>
-						<div class="text__block  {{content_mod}}  visible--md">
+						{# <div class="text__block  {{content_mod}}  visible--md">
 							{{note2}}
-						</div>
+						</div> #}
 						{% include "../common/button/btn.twig" with {
 							prefix:"btn__", 
 							view:btn_view,
@@ -78,8 +78,8 @@
 						<span></span>
 						<span></span>
 						<span></span>
-						<img src #}="{{img}}" class="img-responsive" alt="">
-					</picture>
+						<img src ="{{img}}" class="img-responsive" alt="">
+					</picture>#}
 				</div>
 			</div>
 		</div>

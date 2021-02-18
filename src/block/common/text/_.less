@@ -41,11 +41,12 @@
 		&.is--page{
 			&-index{
 				&-about{
-					margin-bottom: 27px;
+					margin-bottom: 28px;
 					color: @white;
+					line-height: 145%;
 					& > p,
 					& > div{
-						margin-bottom: 18px;
+						margin-bottom: 20px;
 					}
 					h2{
 						.heading1();
@@ -59,11 +60,8 @@
 					}
 					.media-breakpoint-up(@md; {
 						//font-size: 1.25rem;
-						//line-height: 134%;
+						line-height: 140%;
 						margin-bottom: 100px;
-						p, div{
-							margin-bottom: 20px;
-						}
 					});
 				}
 			}
@@ -71,40 +69,34 @@
 				&-mission{
 					.heading4();
 					font-weight: 500;
-					margin-bottom: 40px;
+					margin-bottom: 25px;
 					color: @success;
 					.media-breakpoint-up(@md; {
 						margin-bottom: 58px;
 					});				
 				}
 				&-history{
-					/*color: @success;
+					line-height: 145%;
 					.media-breakpoint-up(@md; {
-						line-height: 164%;
-					});*/
-					& > p,
-					& > div{
-						margin-bottom: 22px;
+						line-height: inherit;
+						& > p,
+						& > div{
+							margin-bottom: 22px;
 
-					}
-					*:last-child{
-						margin-bottom: 0;
-					}
+						}
+						*:last-child{
+							margin-bottom: 0;
+						}
+					});	
 				}
 				&-why{
-					max-width: 690px;
-					line-height: 150%;
-					margin-bottom: 25px;
+					line-height: 145%;
+					margin-bottom: 30px;
 					.media-breakpoint-up(@md; {
-						margin-bottom: 24px;
-						//margin-bottom: 35px;
+						max-width: 690px;
+						margin-bottom: 25px;
 						line-height: inherit;
 					});
-					/*h3{
-						font-size: 1.8rem;
-						font-weight: 800;
-					}
-					.heading4();*/					
 				}
 			}
 			&-services{
