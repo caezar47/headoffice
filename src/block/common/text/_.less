@@ -136,7 +136,7 @@
 					color: @success;
 					& > p,
 					& > div{
-						margin-bottom: 15px;
+						margin-bottom: 20px;
 						&:last-child{
 							margin-bottom: 0;
 						}
@@ -154,13 +154,6 @@
 						b{
 							line-height: inherit;
 						}
-						& > p,
-						& > div{
-							margin-bottom: 22px;
-							&:last-child{
-								margin-bottom: 0;
-							}
-						}
 					});
 	    		}			
     			&-case{
@@ -176,8 +169,11 @@
 			&-contacts{
 				& > p,
 				& > div{
-					margin-bottom: 10px;
+					margin-bottom: 15px;
 				}
+				.media-breakpoint-up(@md; {
+					margin-bottom: 10px;
+				});
 				a{
 					color: @default;
 				}

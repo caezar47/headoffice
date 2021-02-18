@@ -1,5 +1,14 @@
 {% if view == "header" %}
 	<section class="{{content_prefix}}content  {{content_mod}}">
+		<div class="{{content_prefix}}container container  {{content_mod}}-xs  visible--md">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+		</div>
 		{% if bg %}<div class="{{content_prefix}}bg  {{content_mod}}" style="background-image: url({{bg}})"></div>{% endif %}
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<div class="{{content_prefix}}line-group  {{content_mod}}  is--page-line-right">
@@ -8,6 +17,7 @@
 				{% include "../common/page-header/elem.twig" with {
 					prefix:"page-header__", 
 					mod:heading_mod,
+					group:heading_group,
 					attr:heading_attr, 
 					level:heading_level, 
 					heading:heading
