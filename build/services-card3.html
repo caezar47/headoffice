@@ -90,16 +90,16 @@
 					<h1 class="card__heading  is--services-item">Решения для бизнеса</h1>
 					<div>
 												<div class="card__note  is--services-item  visible--md  is--xs"><p><b>Управление и развитие бизнеса клиентов.</b></p></div>
-												<picture class="card__preview  is--services-item" data-aos="fade-services-card" data-aos-once="true" >
-							<img src="./img/default/services-item3-card.png" class="img-responsive" alt="Решения для бизнеса">
+												<picture class="card__preview  is--services-item  is--v3" data-aos="fade-services-card" data-aos-once="true" >
+							<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Решения для бизнеса">
 							<div>
-								<img src="./img/default/services-item3-card.png" class="img-responsive" alt="Решения для бизнеса">
+								<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Решения для бизнеса">
 							</div>
 							<div>
-								<img src="./img/default/services-item3-card.png" class="img-responsive" alt="Решения для бизнеса">
+								<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Решения для бизнеса">
 							</div>
 							<div>
-								<img src="./img/default/services-item3-card.png" class="img-responsive" alt="Решения для бизнеса">
+								<img src="./img/default/services-item2-card.jpg" class="img-responsive" alt="Решения для бизнеса">
 							</div>
 						</picture>
 					</div>
@@ -216,6 +216,10 @@ setTimeout(function(){
 	});
 }, 5000);
 
+	AOS.init({
+		duration: 1500,
+		disable: 'mobile'
+	});
 /*
 jQuery.fn.extend({
   onAppearanceAddClass: function(class_to_add) {
