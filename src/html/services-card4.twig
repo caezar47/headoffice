@@ -1,217 +1,140 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>	
-    	{% include "../block/common/head/head.twig" with {title:"Юридические услуги"}  %}
+		{% include "../block/common/head/head.twig" with {title:"Юридические услуги"}  %}
 	</head>
 	<body>        
-        {% include "../block/common/navbar/navbar.twig" with {
-            prefix:"navbar__", 
-            nav: [
-                {
-                    "name":"О нас", 
-                    "link": page.about, 
-                    "active": '', 
-                },
-                {
-                    "name":"Наша команда", 
-                    "link": page.team, 
-                    "active": '', 
-                },
-                {
-                    "name":"Наши услуги", 
-                    "link": page.services, 
-                    "active": '', 
-                },
-                {
-                    "name":"Как мы работаем", 
-                    "link": page.works, 
-                    "active": '', 
-                },
-                {
-                    "name":"Контакты", 
-                    "link": page.contacts,  
-                    "active": '', 
-                },
-            ],
-            lang: '',
-            lang: [
-                {
-                    "name":"Ру", 
-                    "link": '', 
-                    "active": 'is--active', 
-                },
-                {
-                    "name":"En", 
-                    "link": '', 
-                    "active": '', 
-                }
-            ],
-        } %}
-        
-        <main class="{{prefix.section}}wrap">
-            {% include "../block/page/services.twig" with {
-                view:"card", 
-                content_prefix:prefix.section, 
-                content_mod:"is--page-services-card", 
-                heading_group:"", 
-                heading_attr:"",
-                heading_mod:"is--page-services-card  is--h1", 
-                heading_level:"h1", 
-                heading:"Юридические услуги",   
-                card_prefix: prefix.card,   
-                card_mod: "is--services-item", 
-                img: [path.img,"/default/services-item4-card.png"].join(""),
-                note:"<p><b>Юридические услуги и консультации, участие в переговорах и сопровождение сделок</b></p><p>Международное присутствие HeadOffice позволяет подобрать оптимальные решения для клиента в любой точке мира, с учетом всех правовых аспектов. Мы предоставляем юридические услуги как в области договорного права и сопровождения сделок, так и в вопросах структурирования, преемственности капитала, миграционного права и разрешения споров.</p>", 
-                note2:"<p><b>Юридические услуги и консультации, участие в переговорах и сопровождение сделок</b></p>", 
-                note3:"<p>Международное присутствие HeadOffice позволяет подобрать оптимальные решения для клиента в любой точке мира, с учетом всех правовых аспектов. Мы предоставляем юридические услуги как в области договорного права и сопровождения сделок, так и в вопросах структурирования, преемственности капитала, миграционного права и разрешения споров.</p>",                 
+		{% include "../block/common/navbar/navbar.twig" with {
+			prefix:"navbar__", 
+			nav: [
+				{
+					"name":"О нас", 
+					"link": page.about, 
+					"active": '', 
+				},
+				{
+					"name":"Наша команда", 
+					"link": page.team, 
+					"active": '', 
+				},
+				{
+					"name":"Наши услуги", 
+					"link": page.services, 
+					"active": '', 
+				},
+				{
+					"name":"Как мы работаем", 
+					"link": page.works, 
+					"active": '', 
+				},
+				{
+					"name":"Контакты", 
+					"link": page.contacts,  
+					"active": '', 
+				},
+			],
+			lang: '',
+			lang: [
+				{
+					"name":"Ру", 
+					"link": '', 
+					"active": 'is--active', 
+				},
+				{
+					"name":"En", 
+					"link": '', 
+					"active": '', 
+				}
+			],
+		} %}
+		
+		<main class="{{prefix.section}}wrap">
+			{% include "../block/page/services.twig" with {
+				view:"card", 
+				content_prefix:prefix.section, 
+				content_mod:"is--page-services-card", 
+				heading_group:"", 
+				heading_attr:"",
+				heading_mod:"is--page-services-card  is--h1", 
+				heading_level:"h1", 
+				heading:"Юридические услуги",   
+				card_prefix: prefix.card,   
+				card_mod: "is--services-item", 
+				img_animation: 'is--v3',
+				img: [path.img,"/default/services-item2-card.jpg"].join(""),
+				note:"<p>Международное присутствие HeadOffice позволяет подобрать оптимальные решения для Клиента в любой точке мира с учетом всех правовых аспектов.</p><p>Мы предоставляем юридические услуги как в области договорного права и сопровождения сделок, так и в вопросах структурирования, преемственности капитала, миграционного права и разрешения споров.</p>", 
+				note2:"<p><b>Юридические услуги и консультации, участие в переговорах и сопровождение сделок</b></p>", 
+				note3:"<p>Международное присутствие HeadOffice позволяет подобрать оптимальные решения для клиента в любой точке мира, с учетом всех правовых аспектов. Мы предоставляем юридические услуги как в области договорного права и сопровождения сделок, так и в вопросах структурирования, преемственности капитала, миграционного права и разрешения споров.</p>",                 
 
-                desc: [
-                    {
-                        id:"services-card-01", 
-                        heading:"Сопровождение сделок", 
-                        ul:[
-                            {
-                                "li":[
-                                    {"name": 'Структурирование сделок'},
-                                    {"name": 'Подготовка транзакционной документации'},
-                                ]
-                            },
-                            {
-                                "li":[
-                                    {"name": 'Закрытие сделки, мероприятия после закрытия'},
-                                    {"name": 'Due diligence'},
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        id:"services-card-01", 
-                        heading:"Структурирование активов", 
-                        ul:[
-                            {
-                                "li":[
-                                    {"name": 'Аудит текущих структур'},
-                                    {"name": 'Создание структур и реструктуризация'},
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        id:"services-card-02", 
-                        heading:"Администрирование структур", 
-                        ul:[
-                            {
-                                "li":[
-                                    {"name": 'Аудит текущего формата администрирования '},
-                                    {"name": 'Поддержание структур'},
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        id:"services-card-03", 
-                        heading:"Договорное право", 
-                        ul:[
-                            {
-                                "li":[
-                                    {"name": 'Проверка и подготовка договоров'},
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        id:"services-card-04", 
-                        heading:"Миграционное право", 
-                        ul:[
-                            {
-                                "li":[
-                                    {"name": 'Получение гражданства, вида на жительство'},
-                                    {"name": 'Отчетность по миграционным вопросам'},
-                                ]
-                            },
-                            {
-                                "li":[
-                                    {"name": 'Юридическое сопровождение смены места жительства'},
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        id:"services-card-05", 
-                        heading:"Преемственность капитала и семейное право", 
-                        ul:[
-                            {
-                                "li":[
-                                    {"name": 'Аудит текущих механизмов передачи'},
-                                    {"name": 'Разработка концепции, создание и обслуживание инструментов преемственности (трасты/фонды/завещания)'},
-                                    {"name": 'Бракоразводные процессы'},
-                                ]
-                            },
-                            {
-                                "li":[
-                                    {"name": 'Сопровождение благотворительных проектов'},
-                                    {"name": 'Сопровождение вступления в наследство'},
-                                    {"name": 'Брачные договоры'},
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        id:"services-card-06", 
-                        heading:"Разрешение споров", 
-                        ul:[
-                            {
-                                "li":[
-                                    {"name": 'Судебные разбирательства'},
-                                    {"name": 'Арбитраж'},
-                                ]
-                            },
-                            {
-                                "li":[
-                                    {"name": 'Медиация'},
-                                ]
-                            },
-                        ]
-                    },
-                ],
+				desc: [
+					{                     
+						heading:	"Сопровождение сделок", 
+						note:		'<ul class="is--styled"><li>Структурирование сделок </li><li>Due diligence </li><li>Подготовка транзакционной документации </li><li>Закрытие сделки, мероприятия после&nbsp;закрытия</li></ul>'
+					},
+					{
+						heading:	"Структурирование активов", 
+						note:		'<ul class="is--styled"><li>Аудит текущих структур</li><li>Создание структур и&nbsp;реструктуризация</li></ul>',
+					},
+					{
+						heading:	'Администрирование структур', 
+						note:		'<ul class="is--styled"><li>Аудит текущего формата администрирования</li><li>Поддержание работы структур</li></ul>',
+					},
+					{
+						heading:	"Договорное право", 
+						note:		'<ul class="is--styled"><li>Проверка и подготовка договоров</li></ul>',
+					},
+					{
+						heading:	'Преемственность капитала и семейное право', 
+						note:		'<ul class="is--styled"><li>Аудит текущих механизмов передачи</li><li>Разработка концепции, создание и&nbsp;обслуживание инструментов преемственности (трасты / фонды / завещания)</li><li>Сопровождение при вступлении в наследство</li><li>Брачные договоры</li><li>Бракоразводные процессы</li></ul>',
+					},
+					{
+						heading:	'Миграционное право', 
+						note:		'<ul class="is--styled"><li>Получение гражданства, вида&nbsp;на&nbsp;жительство</li><li>Отчетность по миграционным вопросам</li><li>Юридическое сопровождение смены места&nbsp;жительства</li></ul>',
+					},
+					{
+						heading:	'Разрешение споров', 
+						note:		'<ul class="is--styled"><li>Судебные разбирательства</li><li>Медиация</li><li>Арбитраж</li></ul>',
+					},
+				],
 
-                team_heading:'Команда по юридическим услугам',
-                team_heading_mod:'fw--800  is--page-services-team',
-                team_note:'Наша команда состоит из профессионалов, имеющих огромный опыт в решении вопросов, связанных с финансами. Ниже вы можете ознакомиться с их профилями',
-                team_note_mod:'is--page-services-team-note',
+				team_heading:'Команда по юридическим услугам',
+				team_heading_mod:'fw--800  is--page-services-team',
+				team_note:'Наша команда состоит из профессионалов, имеющих огромный опыт в решении вопросов, связанных с финансами. Ниже вы можете ознакомиться с их профилями',
+				team_note_mod:'is--page-services-team-note',
 
-                team_view: 'team-card',
-                team_mod: 'is--team-card',
-                team_list: [
-                    {
-                        "name":"Мария Деюнкер", 
-                        "img": [path.img,"/default/team-all-item2.jpg"].join(""),
-                        "link": page.team_card, 
-                    },
-                    {
-                        "name":"Виктория Ступина", 
-                        "img": [path.img,"/default/team-all-item10.jpg"].join(""),
-                        "link": page.team_card, 
-                    },
-                    {
-                        "name":"Шамиль Вафин", 
-                        "img": [path.img,"/default/team-all-item11.jpg"].join(""),
-                        "link": page.team_card, 
-                    },
-                ],
-            } %}
-        </main>
-        
-        {% include "../block/common/footer/footer.twig" with {
-            prefix:"footer__",
-        } %}
-        {% include "../block/common/cookies/tpl.twig" with {
-            prefix:"cookies__",
-        } %}
+				team_view: 'team-card',
+				team_mod: 'is--team-card',
+				team_list: [
+					{
+						"name":"Мария Деюнкер", 
+						"img": [path.img,"/default/team-all-item2.jpg"].join(""),
+						"link": page.team_card, 
+					},
+					{
+						"name":"Виктория Ступина", 
+						"img": [path.img,"/default/team-all-item10.jpg"].join(""),
+						"link": page.team_card, 
+					},
+					{
+						"name":"Шамиль Вафин", 
+						"img": [path.img,"/default/team-all-item11.jpg"].join(""),
+						"link": page.team_card, 
+					},
+				],
+			} %}
+		</main>
+		
+		{% include "../block/common/footer/footer.twig" with {
+			prefix:"footer__",
+		} %}
+		{% include "../block/common/cookies/tpl.twig" with {
+			prefix:"cookies__",
+		} %}
 
-        {# {% include "../block/common/modals/include.twig"%} #}
-        {% include "../block/common/script/script.twig" with {
-            cookies:"true",
-        }%}
+		{# {% include "../block/common/modals/include.twig"%} #}
+		{% include "../block/common/script/script.twig" with {
+            aos:"true",
+			cookies:"true",
+		}%}
 	</body>
 </html> 
