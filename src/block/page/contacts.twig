@@ -1,6 +1,6 @@
 {% if view == "page" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" >
-		<div id="carousel-example-generic" class="{{content_prefix}}slick  {{content_mod}}  carousel slide  carousel-fade" data-ride="carousel">
+		{# <div id="carousel-example-generic" class="{{content_prefix}}slick  {{content_mod}}  carousel slide  carousel-fade" data-ride="carousel">
 			<div class="carousel-inner">
 				{% for s in slider_list %}
 				<picture class="item {{s.active}}">
@@ -9,7 +9,8 @@
 				</picture>
 				{% endfor %}
 			</div>
-		</div>
+		</div> #}
+		{% if bg %}<div class="{{content_prefix}}bg  {{content_mod}}" style="background-image: url({{bg}})"></div>{% endif %}
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<div class="{{content_prefix}}line-group  {{content_mod}}">
                 <div class="{{content_prefix}}line-item  {{content_mod}}"></div>
@@ -29,8 +30,16 @@
 				} %}
 				<div class="text__block  {{content_mod}}">
 					<p><a href="mailto:{{contacts.email}}">{{contacts.email}}</a></p>
-					<p><a href="tel:{{contacts.phone_tel}}">{{contacts.phone}}</a></p>
-					<p>{{contacts.address}}</p>
+					{# <p><a href="tel:{{contacts.phone_tel}}">{{contacts.phone}}</a></p>
+					<p>{{contacts.address}}</p> #}
+				</div>
+				<div class="card__group  {{card_mod}}">
+					{% include "../common/card/card.twig" with {
+						view: card_view,
+						prefix:"card__", 
+						mod:  card_mod, 
+						list: card_list
+					} %}
 				</div>
 			</div>
 		</div>

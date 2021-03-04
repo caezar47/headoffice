@@ -130,3 +130,12 @@
 		{% endfor %}
 	</div>		
 {% endif %}
+
+{% if view == "contacts" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}">
+		<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
+		<a href="tel:{{value.phone}}" class="{{prefix}}value  {{mod}}">{{value.phone}}</a>		
+	</div>
+	{% endfor %}
+{% endif %}

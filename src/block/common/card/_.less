@@ -13,11 +13,12 @@
 			&-slider{
 				color: @success;
 				display: flex;
+				grid-gap: 24px;
 				@supports (display: grid){
 					display: grid;
-					grid-gap: 24px;
 				}
 				.media-breakpoint-up(@md; {
+					grid-gap: 30px;
 					& > *{
 						&:nth-child(1){
 							flex: 0 0 37%;
@@ -28,8 +29,7 @@
 						}
 					}
 					@supports (display: grid){
-						grid-gap: 64px;
-						grid-template-columns: 4.4fr 7.6fr;
+						grid-template-columns: 2.85fr 9.15fr;
 						& > *{
 							&:nth-child(1){
 								flex: initial;
@@ -136,6 +136,14 @@
 			margin-bottom: 10px;
 		}*/
 		&.is--works{
+			&-adv{
+				display: flex;
+				grid-gap: 17px;
+				margin-bottom: 24px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
 			&-map{
 				height: 100%;
 				&.collapsing {
@@ -197,16 +205,31 @@
 						padding: 10px;
 					}
 				});	
-
 			}
 			&-slider{
 				display: flex;
 				flex-direction: column;
 				height: 100%;
 				//justify-content: space-between;
+				.media-breakpoint-up(@md; {					
+					& > div:nth-child(2){
+						display: flex;
+						flex-direction: column;
+						margin-top: auto;
+					}
+				});
 			}
 		}
 		&.is--works{
+			&-adv{
+				.media-breakpoint-up(@md; {
+    				width: ~"calc(63% - 30px)";
+    				max-width: 730px;
+				});
+				.media-breakpoint-up(@xxl; {
+    				width: ~"calc(70% - 30px)";
+				});
+			}
 			&-map{
 				display: flex;
 				flex-direction: column;
@@ -217,6 +240,22 @@
 					opacity: 1;
 				}
 			}
+		}
+		&.is--contacts{
+			display: flex;
+			flex-wrap: wrap;
+			grid-gap: 12px 30px;
+			& > *{
+				flex: 0 0 45%;
+			}
+			.media-breakpoint-up(@sm; {
+				max-width: 335px;
+				& > *{
+					&:last-child{
+						margin-left: auto;
+					}
+				}
+			});
 		}
 	}
 	&preview{
@@ -247,10 +286,13 @@
 					margin-top: 15px;
 				}
 				.media-breakpoint-up(@md; {
+					clip-path: initial;
 					max-width: 377px;
 					max-height:initial;
 					&-sign{
-						margin-top: 15px;
+						order: -1;
+						margin-top: 0px;
+						margin-bottom: 25px;
 					}
 				});
 			}
@@ -337,32 +379,38 @@
 				&.is--v2{
 					& > div{
 						&:nth-of-type(1){
-							clip-path: polygon(0 0,34% 0,34% 77%,0% 77%);
+							clip-path: polygon(0 23%,34% 23%,34% 93%,0 93%);
 						}
 						&:nth-of-type(2){
-							clip-path: polygon(33% 14%, 66% 14%, 66% 100%, 33% 100%);
+							clip-path: polygon(33% 0%,66% 0%,66% 100%,33% 100%);
 						}
 						&:nth-of-type(3){
-							clip-path: polygon(65% 5%,100% 5%,100% 88%,65% 88%);
+							clip-path: polygon(65% 0%,100% 0%,100% 85%,65% 85%);
 						}
 					}
 				}
 				&.is--v3{
 					& > div{
 						&:nth-of-type(1){
-							clip-path: polygon(0 17%,34% 17%,34% 100%,0 100%);
+							clip-path: polygon(0 0%,34% 0%,34% 100%,0 100%);
 						}
 						&:nth-of-type(2){
-							clip-path: polygon(33% 0%, 66% 0%, 66% 84%, 33% 84%);
+							clip-path: polygon(33% 0,66% 0,66% 87%,33% 87%);
 						}
 						&:nth-of-type(3){
-							clip-path: polygon(65% 9%,100% 9%,100% 93%,65% 93%);
+							clip-path: polygon(65% 38%,100% 38%,100% 100%,65% 100%);
 						}
 					}
 				}
 	    		.media-breakpoint-up(@xl; {
 					margin-bottom: 0;
 	    		});
+			}
+		}
+		&.is--works{
+			&-adv{
+				min-width: 28px;
+				width: 28px;
 			}
 		}
 		/*&.is--works{
@@ -396,9 +444,9 @@
 					font-weight: 700;
 					margin-bottom: 5px;
 					//.heading4();
-					/*.media-breakpoint-up(@md; {
-						margin-bottom: 0;
-					});*/
+					.media-breakpoint-up(@md; {
+						margin-bottom: 10px;
+					});
 				}
 			}
 			&-full{
@@ -460,11 +508,19 @@
     		}
 		}
 		&.is--works{
+			&-adv{
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
 			&-map{
 				.heading4();
 				font-weight: 500;
 				margin-bottom: 20px;
 			}
+		}
+		&.is--contacts{
+			font-weight: 700;
+			margin-bottom: 6px;
 		}
 		/*&.is--works{
 			display: flex;
@@ -589,11 +645,11 @@
 		&.is--team{
 			&-slider{
 				line-height: 143%;
-				max-width: 485px;
+				//max-width: 485px;
 				margin-bottom: 25px;
 				.media-breakpoint-up(@md; {
 					line-height: @site_lh;
-					margin-bottom: 89px;
+					margin-bottom: 30px;
 				});
 				& > p,
 				& > div{
@@ -840,5 +896,10 @@
 				});
 			}
 		}*/
+	}
+	&value{
+		&.is--contacts{
+			color: @default;
+		}
 	}
 }

@@ -69,6 +69,7 @@ team_full.slick({
 	autoplay: false,
 });
 if($(document).width() > 767) {
+	team.slick('unslick');
 	adv.slick('unslick');
 	team_full.slick('unslick');
 }

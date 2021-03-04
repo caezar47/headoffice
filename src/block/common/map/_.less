@@ -14,29 +14,43 @@
 		cursor: pointer;
 		rect{
 			fill: @primary;
+			transition: @trs-site;
 			//transition:transform 0s, @trs-site;
 		}
 		text{
+			font-weight: 400;
 			fill: @primary;
 			font-size: 11px;
 			line-height: 140%;
 			transition: @trs-site;
+			//transition: @trs-site, font-weight 0.5s ease-in-out 1s;
 		}
-		&:hover{
-			text,
+		&:hover{						
+			text{
+				font-size: 14px;
+				
+			}
 			rect{
-				//fill: @default;
+				width: 12px;
+				height: 12px;
+				transform: translate(-3px, -3px);
 			}
 		}
 		[aria-expanded="true"] &{			
 			text{
 				font-size: 14px;
+				//font-weight: 700;
+				text-shadow:
+				    -0.5px -0.5px 0 @primary,
+				    0.5px -0.5px 0 @primary,
+				    -0.5px 0.5px 0 @primary,
+				    0.5px 0.5px 0 @primary;
+
 			}
 			rect{
-				/*transform:
-					//translate(140px, 105px)
-  					scale(1.7, 1.7)
- 					translate(-395px, -180px);*/
+				width: 12px;
+				height: 12px;
+				transform: translate(-3px, -3px);
 			}
 		}
 	}

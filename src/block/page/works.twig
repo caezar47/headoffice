@@ -22,9 +22,17 @@
 					level:heading_level, 
 					heading:heading
 				} %}
-				<div class="text__block  {{content_mod}}">
-					{{note}}
+				<div class="card__group  {{card_mod}}">
+				{% include "../common/card/card.twig" with {
+					view: card_view,
+					prefix:"card__", 
+					mod:  card_mod, 
+					list: card_list
+				} %}
 				</div>
+				{# <div class="text__block  {{content_mod}}">
+					{{note}}
+				</div> #}
 			</div>
 		</div>
 	</section>
