@@ -147,7 +147,8 @@
 	    	&-works{
 	    		&-header{
 		    		padding-top: 28px;
-		    		padding-bottom: 45px;
+		    		//padding-bottom: 45px;
+		    		padding-bottom: 20px;
 		    		&-xs{
 		    			padding-top:0;
 		    			padding-bottom: 25px;
@@ -158,7 +159,7 @@
 	    			padding-bottom: 35px;
 	    			&-section{
 		    			padding-top: 0px;
-		    			padding-bottom: 0px;
+		    			padding-bottom: 30px;
 		    			position: static;
 	    			}
 	    		}
@@ -317,6 +318,7 @@
 		    	&-works{
 		    		&-contacts{
 		    			&-section{
+			    			padding-bottom: 0px;
 							@supports (display: grid){
 								&::before{
 									content: '';
@@ -1316,20 +1318,24 @@
 	    	}
 	    	&-works{
 	    		&-contacts{
-	    			img{
-	    				width: 100%;
-	    			}
-	    			padding-top: 14px;
-    				padding-bottom: 23px;
-    				&.visible--md{
-
-    				}
+	    			//img{
+	    			//	width: 100%;
+	    			//}
+	    			//padding-top: 14px;
+    				//padding-bottom: 23px;
+    				width: 100%;
+    				height: 280px;
+    				overflow: auto;
+					margin-bottom: 17px;
     				.media-breakpoint-up(@xl; {
+    					margin-bottom: 0;
     					padding: 0;
     					position: absolute;
     					bottom: 0;
     					left: 0;
     					right: 0;
+    					height: initial;
+    					overflow: initial;
     				});
 	    		}
 	    		&-case{

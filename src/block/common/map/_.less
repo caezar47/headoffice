@@ -9,6 +9,10 @@
 		@supports (display: grid){
 			min-height: auto;
 		}
+		.media-breakpoint-down(@xl; {
+			width: auto;
+			height: 679px;
+		});
 	}
 	&item{
 		cursor: pointer;
@@ -51,6 +55,46 @@
 				width: 12px;
 				height: 12px;
 				transform: translate(-3px, -3px);
+			}
+		}
+		.media-breakpoint-down(@xl; {
+			text,rect{
+				opacity: 0;
+			}
+			[aria-expanded="true"] &{
+				text,rect{
+					opacity: 1;
+				}
+			}
+		});
+	}
+	&dropdown{
+		&{
+			font-weight: 500;
+			font-size: 1.11rem;
+    		line-height: 125%;
+			color: @default;
+    	}
+		&-trigger{
+			display: block;
+			color: @default;
+			padding: 10px 20px 10px 0px;
+    		border-bottom: 1px solid #CCD9F1;
+    		.icon-drop-open();
+    		background-position: center right;
+    		&[aria-expanded="true"]{
+    			.icon-drop-close();
+    		}
+		}
+		&-menu{
+			padding: 10px;
+			width: 100%;
+			height: 180px;
+			overflow: auto;
+			a{
+				display: block;
+				color: @default;
+				margin-bottom: 5px;
 			}
 		}
 	}
