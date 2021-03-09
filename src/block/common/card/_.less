@@ -14,6 +14,10 @@
 				color: @success;
 				display: flex;
 				grid-gap: 24px;
+				margin-bottom: 50px;
+				&:last-child{
+					margin-bottom: 0;
+				}
 				@supports (display: grid){
 					display: grid;
 				}
@@ -244,16 +248,18 @@
 		&.is--contacts{
 			display: flex;
 			flex-wrap: wrap;
-			grid-gap: 12px 30px;
+			grid-gap: 20px 30px;
 			& > *{
-				flex: 0 0 45%;
+				flex: 0 0 43%;
+				&:last-child{
+					margin-left: auto;
+				}
 			}
 			.media-breakpoint-up(@sm; {
 				max-width: 335px;
+				grid-gap: 12px 30px;
 				& > *{
-					&:last-child{
-						margin-left: auto;
-					}
+					flex: 0 0 45%;
 				}
 			});
 		}
@@ -278,7 +284,7 @@
 		}
 		&.is--team{
 			&-slider{
-				clip-path: polygon(0 0,75% 0,75% 26%,100% 26%,100% 100%,25% 100%, 25% 81%, 0 81%);
+				//clip-path: polygon(0 0,75% 0,75% 26%,100% 26%,100% 100%,25% 100%, 25% 81%, 0 81%);
 				
 				margin: 0 auto;
 				max-height: 400px;
@@ -346,6 +352,7 @@
 				margin-bottom: 5px;
 				.media-breakpoint-down(@md; {
 					opacity: 1!important;
+				    height: 395px;
 					& > div{
 						//display: none;
 					}

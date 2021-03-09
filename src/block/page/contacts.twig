@@ -10,7 +10,12 @@
 				{% endfor %}
 			</div>
 		</div> #}
-		{% if bg %}<div class="{{content_prefix}}bg  {{content_mod}}" style="background-image: url({{bg}})"></div>{% endif %}
+		{% if bg %}
+			<picture class="{{content_prefix}}bg  {{content_mod}}" >
+				<source media="(max-width: 575px)" srcset="{{bg_xs}}">
+				<img src="{{bg}}" class="img-responsive" alt="">
+			</picture>
+		{% endif %}
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<div class="{{content_prefix}}line-group  {{content_mod}}">
                 <div class="{{content_prefix}}line-item  {{content_mod}}"></div>

@@ -82,7 +82,11 @@
         <main class="section__wrap">
             	<section class="section__content  is--page-contacts" >
 		
-		<div class="section__bg  is--page-contacts" style="background-image: url(./img/default/contacts-bg-item1.png)"></div>		<div class="section__container container  is--page-contacts">
+					<picture class="section__bg  is--page-contacts" >
+				<source media="(max-width: 575px)" srcset="./img/default/contacts-bg-item1-xs.png">
+				<img src="./img/default/contacts-bg-item1.png" class="img-responsive" alt="">
+			</picture>
+				<div class="section__container container  is--page-contacts">
 			<div class="section__line-group  is--page-contacts">
                 <div class="section__line-item  is--page-contacts"></div>
                 <div class="section__line-item  is--page-contacts"></div>

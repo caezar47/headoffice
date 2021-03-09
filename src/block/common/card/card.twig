@@ -36,10 +36,10 @@
 {% endif %}
 {% if view == "team-slider" %}
 	{% for value in list %}
-	<div>	
+	{# <div>	 #}
 		<div class="{{prefix}}item  {{mod}}">
 			<picture class="{{prefix}}preview  {{mod}}">
-				{# <source media="(max-width: 575px)" srcset="{{value.img_xs}}"> #}
+				<source media="(max-width: 575px)" srcset="{{value.img_xs}}">
 				<img src="{{value.img}}" class="img-responsive" alt="">
 			</picture>
 			<div class="{{prefix}}group  {{mod}}">
@@ -66,7 +66,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	{# </div> #}
 	{% endfor %}
 {% endif %}
 {% if view == "team-card" %}
