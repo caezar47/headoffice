@@ -595,22 +595,25 @@
 				line-height: 110%;
 				font-weight: 500;
 				padding-top: 5px;
-				.media-breakpoint-up(@md; {
-					//display: none;
-					.text14();
-				});	
 				.is--page-services-card-team &{
-					transition: @trs-site;
 					line-height: 110%;
 					opacity: 0.6;
-					overflow: hidden;
-    				max-height: 0;
-    				transition: max-height 0.15s ease-out;
-				}		
-				.is--page-services-card-team .card__item:hover &{
-				    max-height: 300px;
-				    transition: max-height 0.65s ease-in;
-				}
+				}	
+				.media-breakpoint-up(@md; {
+					.text14();
+					.is--page-services-card-team &{
+						transition: @trs-site;
+						line-height: 110%;
+						opacity: 0.6;
+						overflow: hidden;
+	    				max-height: 0;
+	    				transition: max-height 0.15s ease-out;
+					}		
+					.is--page-services-card-team .card__item:hover &{
+					    max-height: 300px;
+					    transition: max-height 0.65s ease-in;
+					}	
+				});	
 			}
 			&-slider{
 				/*font-size: 1rem;
