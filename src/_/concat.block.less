@@ -597,8 +597,8 @@
     			.media-breakpoint-up(@sm; {
     				z-index: 3;
 				    margin-left: 1px;
-				    background: linear-gradient(to left, #f6f6f8 0%, #f6f6f8 100%);
-				    background: @site_bg;
+				    //background: linear-gradient(to left, #f6f6f8 0%, #f6f6f8 100%);
+				    //background: @site_bg;
 				    padding: 20px 0;
 				});
     		}
@@ -4376,10 +4376,14 @@
 	    		}
 	    	}
 	    	&-contacts{
-	    		margin-bottom: 15px;
+	    		padding-bottom: 15px;
 				.media-breakpoint-down(@md; {
 					font-size: 1.714rem;
 					line-height: 115%;
+				});
+
+    			.media-breakpoint-up(@sm; {
+				    background: @site_bg;
 				});
 	    	}
 		}
@@ -4787,7 +4791,11 @@
 					margin-bottom: 15px;
 				}
 				.media-breakpoint-up(@md; {
-					margin-bottom: 37px;
+					margin-bottom: 17px;
+					padding-bottom: 20px;
+				});
+    			.media-breakpoint-up(@sm; {
+				    background: @site_bg;
 				});
 				a{
 					color: @default;
