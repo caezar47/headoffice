@@ -27,7 +27,7 @@
 			font-size: 11px;
 			line-height: 140%;
 			transition: @trs-site;
-			//transition: @trs-site, font-weight 0.5s ease-in-out 1s;
+			//transition: @trs-site, font-weight 0.1s ease-in-out 0.7s;
 		}
 		&:hover{						
 			text{
@@ -91,6 +91,20 @@
 			width: 100%;
 			height: 180px;
 			overflow: auto;
+			li{
+				position: relative;
+				&.is--active{
+					&::before{						
+						content: '';
+						position: absolute;
+						z-index: 1;
+						top: 0px;
+						left: 0px;
+						right: 0px;
+						bottom: 0px;
+					}
+				}
+			}
 			a{
 				display: block;
 				color: @default;

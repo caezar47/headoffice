@@ -109,12 +109,12 @@
 			}
 			&-card{
 				position: relative;
-				height: 190px;
+				//height: auto;
 				.is--page-services-card-team &{
-					height: 190px;
+					//height: 190px;
 					overflow: hidden;
 				}
-				.media-breakpoint-up(@md; {
+				.media-breakpoint-up(@xl; {
 					height: 350px;
 					.is--page-services-card-team &{
 						height: 225px;
@@ -142,7 +142,7 @@
 		&.is--works{
 			&-adv{
 				display: flex;
-				grid-gap: 17px;
+				//grid-gap: 17px;
 				margin-bottom: 24px;
 				&:last-child{
 					margin-bottom: 0;
@@ -166,7 +166,7 @@
 				margin-left: -@container_gap + 5;
 				margin-right: -@container_gap + 5;
 				& > *{
-					height: 190px;
+					//height: auto;
 					flex: 0 0 ~"calc(50% - (@{container_gap} - 5px)*2)";
 					margin-bottom: (@container_gap - 5) * 2;
 					margin-left: @container_gap - 5;
@@ -270,6 +270,8 @@
 			display: flex;
 			flex-wrap: wrap;
 			grid-gap: 20px 30px;
+			max-width: 300px;
+			justify-content: space-between;
 			& > *{
 				flex: 0 0 43%;
 				&:last-child{
@@ -439,6 +441,7 @@
 			&-adv{
 				min-width: 28px;
 				width: 28px;
+				margin-right: 17px;
 			}
 		}
 		/*&.is--works{
@@ -588,11 +591,13 @@
 	&position{		
 		&.is--team{
 			&-card{
-				.text14();
+				font-size: 10px;
+				line-height: 110%;
 				font-weight: 500;
 				padding-top: 5px;
-				.media-breakpoint-down(@md; {
-					display: none;
+				.media-breakpoint-up(@md; {
+					//display: none;
+					.text14();
 				});	
 				.is--page-services-card-team &{
 					transition: @trs-site;

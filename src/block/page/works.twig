@@ -72,11 +72,13 @@
 			</div>
 		</div>
 		{# <div class="{{content_prefix}}img  {{content_mod}}  hidden--xl"> #}
-		<div class="{{content_prefix}}img  {{content_mod}}">
-			{% include "../common/map/tpl.twig" with {
-				prefix:"map__",
-				list: list
-			} %}
+		<div class="{{content_prefix}}img-group  {{content_mod}}">
+			<div class="{{content_prefix}}img  {{content_mod}}">
+				{% include "../common/map/tpl.twig" with {
+					prefix:"map__",
+					list: list
+				} %}
+			</div>
 		</div>
 
 		{# <div class="{{content_prefix}}container container  {{content_mod}}-section  hidden--xl"> #}

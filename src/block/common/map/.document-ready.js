@@ -11,6 +11,8 @@ $('#contacts-map').on('show.bs.collapse', function (e) {
 	var city_x = clicked.attr('data-x');
 	var city_y = clicked.attr('data-y');
 	var city_name = clicked.text();
+	$('.map__dropdown-menu li').removeClass('is--active');
+	clicked.parent().addClass('is--active');
 	$('.section__img.is--page-works-contacts').animate({
 		scrollLeft: (city_x - w/2),
 		scrollTop: (city_y - h/2)
