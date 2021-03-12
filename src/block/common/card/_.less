@@ -119,6 +119,30 @@
 					.is--page-services-card-team &{
 						height: 225px;
 					}
+					.is--works-map &{
+						.card__position{
+						transform-origin: bottom;
+						transform: scaleY(0);
+						max-height: 0;
+						opacity: 0;
+						transition: 
+							transform 300ms, 
+							max-height 300ms ,
+							opacity 300ms 300ms;
+  						}
+						&:hover{
+							.card__position{
+								max-height: 200px;
+								opacity: 1;
+								transform: scaleY(1);
+								transition: 
+									opacity 300ms , 
+									transform 300ms  250ms, 
+									max-height 300ms  250ms;
+							}
+						}
+  
+					}
 				});	
 			}
 		}
@@ -224,7 +248,9 @@
 				.media-breakpoint-up(@md; {
 					padding: 15px;
 					.is--works-map &{
-						padding: 10px;
+						padding: 0px;
+						margin: 10px;
+						overflow: hidden;
 					}
 					.is--page-services-card-team &{
 						padding: 10px;
@@ -496,6 +522,7 @@
 				//line-height: 100%;
 				font-weight: 500;
 				line-height: 100%;
+				margin-bottom: 5px;
 				.is--works-map &{
 					font-size: 14px;
 					line-height: 110%;
@@ -594,7 +621,7 @@
 				font-size: 10px;
 				line-height: 110%;
 				font-weight: 500;
-				padding-top: 5px;
+				//margin-top: 5px;
 				.is--page-services-card-team &{
 					line-height: 110%;
 					opacity: 0.6;
@@ -603,7 +630,7 @@
 					.text14();
 					.is--works-map &{
 						font-size: 10px;
-						line-height: 110%;						
+						line-height: 110%;  
 					}
 					.is--page-services-card-team &{
 						transition: @trs-site;
