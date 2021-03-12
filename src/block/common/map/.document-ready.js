@@ -1,11 +1,32 @@
 var w = $('body').innerWidth();
 var h = $('.section__img.is--page-works-contacts').innerHeight();
-var center_x = $('.map__block').attr('data-center-x');
-var center_y = $('.map__block').attr('data-center-y');
+var map_base = $('.map__dropdown-menu li:first a');
+
+var center_href = map_base.attr('href');
+var center_x = map_base.attr('data-x');
+var center_y = map_base.attr('data-y');
+var center_name = map_base.text();
+
+$('.map__dropdown-trigger').text(center_name);
 $('.section__img.is--page-works-contacts').animate({
 	scrollTop: (center_y - h/2),
 	scrollLeft: (center_x - w/2)
 }, 777);
+
+if($(document).width() < 992) {
+	$('[href="'+center_href+'"]').collapse({
+	  toggle: true
+	});
+	$(center_href).addClass('in is--show-card');
+	$('#contacts-map').on('show.bs.collapse', function (e) {
+		$('html, body').animate({
+			scrollTop: ($('.map__dropdown').offset().top - 30)
+		}, 1200);
+	})
+
+} 
+
+map_base.parent().addClass('is--active');
 $('#contacts-map').on('show.bs.collapse', function (e) {
 	var	clicked = $('.map__dropdown').find("[href='#" + $(e.target).attr('id') + "']");
 	var city_x = clicked.attr('data-x');

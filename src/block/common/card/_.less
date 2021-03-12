@@ -374,7 +374,7 @@
 	    		position: relative;
 				margin-bottom: 5px;
 				.media-breakpoint-down(@md; {
-					opacity: 1!important;
+					//opacity: 1!important;
 				    height: 395px;
 					& > div{
 						//display: none;
@@ -601,6 +601,10 @@
 				}	
 				.media-breakpoint-up(@md; {
 					.text14();
+					.is--works-map &{
+						font-size: 10px;
+						line-height: 110%;						
+					}
 					.is--page-services-card-team &{
 						transition: @trs-site;
 						line-height: 110%;
