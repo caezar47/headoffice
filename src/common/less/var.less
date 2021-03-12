@@ -59,8 +59,12 @@
 @black-25 					: 	#000025;
 @black-35 					: 	#353C57;
 @green 						: 	#4AB969;
+@green-p 					: 	#00B451;
+@green-d 					: 	#BEEEC8;
 
 @primary 					:	@green;
+@primary-p 					:	@green-p;
+@primary-d 					:	@green-d;
 @default 					:	@black-25;
 @warning 					:	@white-e5;
 @success 					:	@black-25;
@@ -192,7 +196,8 @@
 @btn_lh 					:	140%;
 
 @btn_hover_color 			:	fadeout(@white, 0%);
-@btn_hover_bg 				:	fadeout(@primary, 50%);
+@btn_hover_bg 				:	@primary-p;
+@btn_disabled_bg 			:	@primary-d;
 
 @btn_focus_shadow 			:	inset 0px 4px 4px fadeout(@black, 75%);	
 //===== end's button =====//

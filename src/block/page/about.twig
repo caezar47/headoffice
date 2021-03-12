@@ -19,7 +19,8 @@
 {% endif %}
 {% if view == "mission" %}
 	<section class="{{content_prefix}}content  {{content_mod}}">
-		{% if bg %}<div class="{{content_prefix}}bg  {{content_mod}}" style="background-image: url({{bg}})"></div>{% endif %}
+		{# {% if bg %}<div class="{{content_prefix}}bg  {{content_mod}}" style="background-image: url({{bg}})"></div>{% endif %} #}
+		{% if bg %}<div class="{{content_prefix}}bg  {{content_mod}}"><img src="{{bg}}" class="img-responsive" alt=""></div>{% endif %}
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<div class="{{content_prefix}}line-group  {{content_mod}}"></div>
 			<div class="{{content_prefix}}inner  {{content_mod}}  is--page-index">
