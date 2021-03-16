@@ -12,18 +12,18 @@ $('.section__img.is--page-works-contacts').animate({
 	scrollTop: (center_y - h/2),
 	scrollLeft: (center_x - w/2)
 }, 777);
-
-if($(document).width() < 992) {
+$('.section__section.is--page-works-contacts').addClass('is--show');
 	$('[href="'+center_href+'"]').collapse({
 	  toggle: true
 	});
 	$(center_href).addClass('in is--show-card');
+	
+if($(document).width() < 992) {
 	$('#contacts-map').on('show.bs.collapse', function (e) {
 		$('html, body').animate({
 			scrollTop: ($('.map__dropdown').offset().top - 30)
 		}, 1200);
 	})
-
 } 
 
 map_base.parent().addClass('is--active');
@@ -40,3 +40,16 @@ $('#contacts-map').on('show.bs.collapse', function (e) {
 	}, 777);
 	$('.map__dropdown-trigger').text(city_name);
 })
+
+$('.card__item.is--works-map').on('show.bs.collapse', function () {
+	$('.card__item.is--works-map').collapse('hide');
+	$('.section__section.is--page-works-contacts').addClass('is--show');
+});
+$('.card__item.is--works-map').on('shown.bs.collapse', function () {
+	$(this).addClass('is--show-card');
+	$('.section__section.is--page-works-contacts').addClass('is--show');
+});
+$('.card__item.is--works-map').on('hide.bs.collapse', function () {
+	$(this).removeClass('is--show-card');
+	$('.section__section.is--page-works-contacts').removeClass('is--show');
+});
