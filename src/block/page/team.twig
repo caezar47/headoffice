@@ -65,14 +65,31 @@
 					level:heading_level, 
 					heading:heading
 				} %}
-				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				{% for value in card_list %}
+					<div class="{{content_prefix}}section  panel  {{card_mod}}">
+						<h4>
+							<a data-toggle="collapse" href="#{{value.id}}" aria-expanded="false">{{value.name}}</a>
+						</h4>
+						<div id="{{value.id}}" class="collapse">
+							<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+								{% include "../common/card/card.twig" with {
+									view: card_view,
+									prefix:"card__", 
+									mod:  card_mod, 
+									list: value.list
+								} %}
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+				{# <div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 					{% include "../common/card/card.twig" with {
 						view: card_view,
 						prefix:"card__", 
 						mod:  card_mod, 
 						list: card_list
 					} %}
-				</div>
+				</div> #}
 			</div>
 		</div>
 	</section>

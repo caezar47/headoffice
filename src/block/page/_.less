@@ -128,7 +128,7 @@
 	    			padding-bottom: 30px;
 	    		}
 	    		&-list{
-	    			padding-top: 30px;
+	    			padding-top: 60px;
 	    			padding-bottom: 65px;
 	    		}
 		    	&-card{
@@ -278,7 +278,7 @@
 		    			padding-bottom: 55px;
 			    	}
 			    	&-list{
-		    			padding-top: 80px;
+		    			padding-top: 75px;
 		    			padding-bottom: 107px;
 			    	}
 			    	&-card{
@@ -638,6 +638,40 @@
 	    		}
 	    	}
 		}
+		&.is--team-card{
+			margin-bottom: 60px;
+			&:last-child{
+				padding-bottom: 0!important;
+				margin-bottom: 0!important;
+				border-bottom: 0!important;
+			}
+			h4{
+				.heading2();
+				margin-bottom: 25px;				
+				& > a{
+					display: block;
+					color: @default;
+					.icon-plus();
+					background-position: right 0px;
+					padding-right: 30px;
+					&[aria-expanded="true"]{
+						.icon-minus();
+					}
+				}
+			}
+			.media-breakpoint-up(@xl; {
+				padding-bottom: 55px;
+				margin-bottom: 75px;
+				border-bottom: 1px solid fadeout(@custom, 30%);
+				h4{
+					margin-bottom: 35px;
+					& > a{
+						background-position: center right 35px;
+						padding-right: 60px;
+					}
+				}
+			});
+		}
 	}
 	&grid{
 		&.is--page{
@@ -945,6 +979,7 @@
 							}
 						}
 	    				@supports (display: grid){
+			    			grid-gap: 40px 30px;
 	    					& > *{
 								margin: 0!important;
 							}
